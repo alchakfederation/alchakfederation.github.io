@@ -32,3 +32,4 @@ jobs:
           git add towns.json
           git commit -m "Update towns.json (automated)" || echo "No changes"
           git push
+          cp .github/workflows/towns.json towns.json
