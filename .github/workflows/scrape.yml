@@ -1,9 +1,9 @@
 name: Scrape nations map
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0/30 * * * *' # every 6 hours
+    - cron: '0 0 * * *'   # daily 12:00 AM UTC
+  workflow_dispatch: 
 
 jobs:
   scrape:
