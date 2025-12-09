@@ -95,7 +95,7 @@ function buildNationList(){
 }
 
 function render(){
-  const maxDays = Math.min(10, Math.max(1, Number(daysInput.value) || 10));
+  const maxDays = Math.min(10, Math.max(1, Number(daysInput.value) || 67));
   const nation = nationSelect.value;
   const list = data.towns.filter(t => {
     const days = t.days_rounded == null ? Infinity : t.days_rounded;
