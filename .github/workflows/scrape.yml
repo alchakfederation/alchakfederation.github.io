@@ -4,26 +4,40 @@ on:
   schedule:
     - cron: '0 0 * * *'   # daily 12:00 AM UTC
   workflow_dispatch: 
+  
+permissions:
+  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
+      # Checkout repo with credentials for push
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
+      # Setup Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      # Install npm dependencies
       - name: Install deps
         run: npm install
-        
+        working-directory: ./  # adjust if package.json is in subfolder
+
+      # Install Playwright browsers
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      # Run scraper
       - name: Run scraper
         run: node scraper.js
+        working-directory: ./  # adjust if scraper.js is in subfolder
 
+      # Commit and push updated towns.json
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -31,4 +45,3 @@ jobs:
           git add towns.json
           git commit -m "Update towns.json (automated)" || echo "No changes"
           git push
-          cp .github/workflows/towns.json towns.json
