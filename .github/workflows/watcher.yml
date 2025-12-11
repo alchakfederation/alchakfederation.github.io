@@ -23,6 +23,6 @@ jobs:
         run: npm ci
 
       - name: Run dynmap watcher
-        run: node watch_dynmap_simple.js
+        run: node sigma.js
         env:
           NODE_ENV: production
