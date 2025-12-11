@@ -459,83 +459,77 @@
         });
 
         async function fetchServerFiles() {
-            try {
-                const res = await fetch('/processed_dynmap/list.json');
-                if (!res.ok) throw new Error('list.json not found');
-                const list = await res.json();
-                if (!Array.isArray(list)) throw new Error('list.json not an array');
-                // include every .json file listed on server
-                const jsonFiles = list.filter(n => typeof n === 'string' && n.toLowerCase().endsWith('.json'));
-                const toFetch = jsonFiles.slice(0, 10000);
-                for (const name of toFetch) {
-                    try {
-                        // skip if already loaded
-                        if (filesMeta.some(f => f.name === name)) continue;
-                        const r = await fetch(`/processed_dynmap/${name}`);
-                        if (!r.ok) {
-                            console.warn('skip', name);
-                            continue;
-                        }
-                        const js = await r.json();
-                        const dateMs = parseTimestampFromFilename(name);
-                        filesMeta.push({
-                            name,
-                            dateMs,
-                            source: 'server',
-                            data: js
-                        });
-                    } catch (e) {
-                        console.warn('fetch fail', name, e);
-                    }
+    try {
+        // Fetch the directory index page
+        const dirRes = await fetch('/processed_dynmap/');
+        if (!dirRes.ok) {
+            console.warn('Directory listing not available');
+            return;
+        }
+
+        const txt = await dirRes.text();
+        const found = new Set();
+
+        // Try DOM parsing of directory listing
+        try {
+            const doc = new DOMParser().parseFromString(txt, 'text/html');
+            Array.from(doc.querySelectorAll('a')).forEach(a => {
+                const href = a.getAttribute('href');
+                if (!href) return;
+                const clean = href.replace(/^\.\//, '').split('?')[0].split('#')[0];
+                if (clean.toLowerCase().endsWith('.json')) {
+                    found.add(clean);
                 }
-                renderFileList();
-                rebuildPlayers();
-            } catch (e) {
-            console.warn('list.json fetch failed, attempting directory index parse:', e.message);
+            });
+        } catch (err) {
+            // Ignore parse errors
+        }
+
+        // Regex fallback to find JSON filenames
+        const regex = /([\w\-\.]+\.json)/gi;
+        let m;
+        while ((m = regex.exec(txt)) !== null) {
+            found.add(m[1]);
+        }
+
+        const names = Array.from(found);
+
+        console.log("JSON files detected in folder:", names);
+
+        // Fetch each JSON file
+        for (const name of names) {
             try {
-                const dirRes = await fetch('/processed_dynmap/');
-                if (dirRes.ok) {
-                    const txt = await dirRes.text();
-                    const found = new Set();
-                    try {
-                        const doc = new DOMParser().parseFromString(txt, 'text/html');
-                        Array.from(doc.querySelectorAll('a')).forEach(a => {
-                            const href = a.getAttribute('href');
-                            if (!href) return;
-                            const name = href.replace(/^\.\//, '').split('?')[0].split('#')[0];
-                            if (name.toLowerCase().endsWith('.json')) found.add(name);
-                        });
-                    } catch (parseErr) {
-                        // ignore DOM parse errors
-                    }
-                    // fallback regex search for .json filenames
-                    const regex = /([\w\-\.\/]+?\.json)/gi;
-                    let m;
-                    while ((m = regex.exec(txt)) !== null) found.add(m[1]);
-                    const toFetch = Array.from(found).slice(0, 10000);
-                    for (const name of toFetch) {
-                        try {
-                            if (filesMeta.some(f => f.name === name)) continue;
-                            const r = await fetch(`/processed_dynmap/${name}`);
-                            if (!r.ok) {
-                                console.warn('skip', name);
-                                continue;
-                            }
-                            const js = await r.json();
-                            const dateMs = parseTimestampFromFilename(name);
-                            filesMeta.push({ name, dateMs, source: 'server', data: js });
-                        } catch (ee) {
-                            console.warn('fetch fail', name, ee);
-                        }
-                    }
-                    renderFileList();
-                    rebuildPlayers();
+                // Skip already loaded files
+                if (filesMeta.some(f => f.name === name)) continue;
+
+                const r = await fetch(`/processed_dynmap/${name}`);
+                if (!r.ok) {
+                    console.warn('Skip (not fetchable):', name);
+                    continue;
                 }
-            } catch (ee) {
-                console.warn('Directory parse attempt failed:', ee.message || ee);
-            }
+
+                const js = await r.json();
+                const dateMs = parseTimestampFromFilename(name);
+
+                filesMeta.push({
+                    name,
+                    dateMs,
+                    source: 'server',
+                    data: js
+                });
+
+            } catch (err) {
+                console.warn('Error loading', name, err);
             }
         }
+
+        renderFileList();
+        rebuildPlayers();
+
+    } catch (e) {
+        console.warn("Directory scan failed:", e.message || e);
+    }
+}
         $('#tryServer').addEventListener('click', fetchServerFiles);
         // periodically poll the server list every 60s
         setInterval(fetchServerFiles, 60 * 1000);
