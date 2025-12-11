@@ -460,84 +460,58 @@
 
         async function fetchServerFiles() {
     try {
-        // Fetch the directory index page
-                fetch("processed_dynmap/index.json")
-          .then(r => r.json())
-          .then(data => {
-            for (const file of data.files) {
-              fetch("processed_dynmap/" + file)
-                .then(r => r.json())
-                .then(processFile);
-            }
-          });
-        if (!dirRes.ok) {
-            console.warn('Directory listing not available');
+        // Load generated index.json that lists all files
+        const r = await fetch("processed_dynmap/index.json", { cache: "no-store" });
+
+        if (!r.ok) {
+            console.warn("index.json not found on server");
             return;
         }
 
-        const txt = await dirRes.text();
-        const found = new Set();
-
-        // Try DOM parsing of directory listing
-        try {
-            const doc = new DOMParser().parseFromString(txt, 'text/html');
-            Array.from(doc.querySelectorAll('a')).forEach(a => {
-                const href = a.getAttribute('href');
-                if (!href) return;
-                const clean = href.replace(/^\.\//, '').split('?')[0].split('#')[0];
-                if (clean.toLowerCase().endsWith('.json')) {
-                    found.add(clean);
-                }
-            });
-        } catch (err) {
-            // Ignore parse errors
+        const data = await r.json();
+        if (!data || !Array.isArray(data.files)) {
+            console.warn("index.json missing 'files' array");
+            return;
         }
 
-        // Regex fallback to find JSON filenames
-        const regex = /([\w\-\.]+\.json)/gi;
-        let m;
-        while ((m = regex.exec(txt)) !== null) {
-            found.add(m[1]);
-        }
+        const fileList = data.files;
+        console.log("Server file list:", fileList);
 
-        const names = Array.from(found);
-
-        console.log("JSON files detected in folder:", names);
-
-        // Fetch each JSON file
-        for (const name of names) {
+        for (const file of fileList) {
             try {
                 // Skip already loaded files
-                if (filesMeta.some(f => f.name === name)) continue;
+                if (filesMeta.some(f => f.name === file)) continue;
 
-                const r = await fetch(`/processed_dynmap/${name}`);
-                if (!r.ok) {
-                    console.warn('Skip (not fetchable):', name);
+                const fr = await fetch(`processed_dynmap/${file}`, { cache: "no-store" });
+                if (!fr.ok) {
+                    console.warn("Failed to fetch:", file);
                     continue;
                 }
 
-                const js = await r.json();
-                const dateMs = parseTimestampFromFilename(name);
+                const js = await fr.json();
+                const dateMs = parseTimestampFromFilename(file);
 
                 filesMeta.push({
-                    name,
+                    name: file,
                     dateMs,
-                    source: 'server',
+                    source: "server",
                     data: js
                 });
 
             } catch (err) {
-                console.warn('Error loading', name, err);
+                console.warn("Error loading file:", file, err);
             }
         }
 
+        // update UI + map
         renderFileList();
         rebuildPlayers();
 
     } catch (e) {
-        console.warn("Directory scan failed:", e.message || e);
+        console.warn("fetchServerFiles() failed:", e.message || e);
     }
 }
+
         $('#tryServer').addEventListener('click', fetchServerFiles);
         // periodically poll the server list every 60s
         setInterval(fetchServerFiles, 60 * 1000);
