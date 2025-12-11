@@ -2,7 +2,7 @@ name: Dynmap Watcher
 
 on:
   schedule:
-    - cron: '*/2 * * * *'   # runs every 2 minutes
+    - cron: '*/3 * * * *'   # runs every 2 minutes
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Run watcher for 40 seconds
-        run: timeout 40s node sigma.js
+        run: timeout -s SIGKILL 80s node watch_dynmap_simple.js
         env:
           NODE_ENV: production
 
