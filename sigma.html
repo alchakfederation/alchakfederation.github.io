@@ -461,7 +461,15 @@
         async function fetchServerFiles() {
     try {
         // Fetch the directory index page
-        const dirRes = await fetch('/processed_dynmap/');
+                fetch("processed_dynmap/index.json")
+          .then(r => r.json())
+          .then(data => {
+            for (const file of data.files) {
+              fetch("processed_dynmap/" + file)
+                .then(r => r.json())
+                .then(processFile);
+            }
+          });
         if (!dirRes.ok) {
             console.warn('Directory listing not available');
             return;
