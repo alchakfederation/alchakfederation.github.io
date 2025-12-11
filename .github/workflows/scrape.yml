@@ -19,7 +19,7 @@ jobs:
       - name: Run scraper
         run: |
           node --version
-          node scraper_markerjson.js
+          node scraper.js
 
       - name: Commit towns.json
         run: |
