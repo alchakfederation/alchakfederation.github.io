@@ -124,6 +124,26 @@ repoEl.value=localStorage.getItem('gh_repo')||'';
 workflowEl.value=localStorage.getItem('gh_workflow')||'.github/workflows/scrape.yml';
 patEl.value=localStorage.getItem('gh_pat')||'';
 
+function updateFilterVisibility(){
+  const mode = filterMode.value;
+  // Show/hide inputs based on mode
+  document.getElementById('daysLabel').style.display = (mode==='days' || mode==='both') ? 'block' : 'none';
+  document.getElementById('daysInput').style.display = (mode==='days' || mode==='both') ? 'block' : 'none';
+  document.getElementById('nationLabel').style.display = (mode==='nation' || mode==='both') ? 'block' : 'none';
+  document.getElementById('nationSelect').style.display = (mode==='nation' || mode==='both') ? 'block' : 'none';
+}
+
+// Call this whenever the filter mode changes
+filterMode.addEventListener('change', () => {
+  updateFilterVisibility();
+  currentPage = 1;
+  render();
+});
+
+// Initial setup
+updateFilterVisibility();
+
+
 async function loadJSON(){
   try{
     const r=await fetch('towns.json');
@@ -144,19 +164,31 @@ function buildNationList(){
   for(const n of nations){const o=document.createElement('option'); o.value=n; o.textContent=n; nationSelect.appendChild(o);}
 }
 
-function render(){
-  let maxDays=Math.min(10, Math.max(1, Number(daysInput.value)||10));
-  let nation=nationSelect.value;
-  let mode=filterMode.value;
-  let search=searchInput.value.toLowerCase();
-  let list=data.towns.filter(t=>{
-    let days=t.days_rounded==null?Infinity:t.days_rounded;
-    let ok=true;
-    if((mode==='days'||mode==='both') && days>maxDays) ok=false;
-    if((mode==='nation'||mode==='both') && nation && (t.nation||'')!==nation) ok=false;
-    if(search && !t.town.toLowerCase().includes(search)) ok=false;
-    return ok;
-  });
+let list = data.towns.filter(t => {
+  const days = t.days_rounded == null ? Infinity : t.days_rounded;
+  const mode = filterMode.value;
+  const nation = nationSelect.value;
+  const search = searchInput.value.toLowerCase();
+
+  let ok = true;
+
+  // Only check days if input is visible
+  if((mode==='days' || mode==='both') && document.getElementById('daysInput').style.display !== 'none') {
+    const maxDays = Math.min(10, Math.max(1, Number(daysInput.value) || 10));
+    if(days > maxDays) ok = false;
+  }
+
+  // Only check nation if input is visible
+  if((mode==='nation' || mode==='both') && document.getElementById('nationSelect').style.display !== 'none') {
+    if(nation && (t.nation||'') !== nation) ok = false;
+  }
+
+  // Always filter by search if typed
+  if(search && !t.town.toLowerCase().includes(search)) ok = false;
+
+  return ok;
+});
+
 
   // sorting
   list.sort((a,b)=>{
