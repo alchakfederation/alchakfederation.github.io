@@ -1,10 +1,10 @@
-name: Scrape nations map
+name: Scrape marker JSON
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # daily 12:00 AM UTC
-  workflow_dispatch: 
-  
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
 permissions:
   contents: write
 
@@ -12,33 +12,16 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-      # Checkout repo with credentials for push
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      # Setup Node.js
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # Install npm dependencies
-      - name: Install deps
-        run: npm install
-        working-directory: ./  # adjust if package.json is in subfolder
-
-      # Install Playwright browsers
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      # Run scraper
       - name: Run scraper
-        run: node scraper.js
-        working-directory: ./  # adjust if scraper.js is in subfolder
+        run: |
+          node --version
+          node scraper_markerjson.js
 
-      # Commit and push updated towns.json
-      - name: Commit results
+      - name: Commit towns.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
