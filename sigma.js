@@ -82,43 +82,36 @@ function stripHtml(html) {
   // Remove all HTML tags
   return html.replace(/<[^>]*>/g, "");
 }
-function updateIndexHtml() {
+function updateIndexJson() {
   const files = fs.readdirSync(OUTPUT_DIR)
     .filter(f => f.endsWith(".json"))
     .sort();
 
-  const items = files.map(f =>
-    `<li><a href="${f}" target="_blank">${f}</a></li>`
-  ).join("\n");
+  const indexData = {
+    generatedAt: Date.now(),
+    count: files.length,
+    files
+  };
 
-  const html = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Processed Dynmap Files</title>
-  <style>
-    body { background:#0f1724; color:white; font-family:Arial; padding:20px; }
-    a { color:#56b6f9; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-  </style>
-</head>
-<body>
-<h2>Processed Dynmap Files</h2>
-<ul>
-${items}
-</ul>
-</body>
-</html>`;
+  fs.writeFileSync(
+    path.join(OUTPUT_DIR, "index.json"),
+    JSON.stringify(indexData, null, 2),
+    "utf8"
+  );
+}
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), html, "utf8");
 }
 function saveFinal(data, label, ts) {
   const filename = `players_${label}_${readableTs(ts)}.json`;
   const full = path.join(OUTPUT_DIR, filename);
   fs.writeFileSync(full, JSON.stringify(data, null, 2), "utf8");
+
   console.log("Saved:", full);
+
+  // update the file listing
+  updateIndexJson();
 }
+
 
 // cache stores objects: { url, json, capturedAt }
 const rawCache = new NodeCache({ stdTTL: RAW_CACHE_TTL, checkperiod: 1, useClones: false });
