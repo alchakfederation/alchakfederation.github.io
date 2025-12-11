@@ -33,19 +33,20 @@ tr.high{background:#524d1033}      /* 6-10 days yellow tint */
 
   <div class="card">
     <h2>Filters</h2>
-    <label for="filterMode">Filter mode</label>
-    <select id="filterMode">
-      <option value="all">Show ALL towns</option>
-      <option value="days">Show towns under X days</option>
-      <option value="nation">Show towns of selected nation only</option>
-      <option value="both">Combined (nation + days)</option>
-    </select>
+  <label for="filterMode">Filter mode</label>
+  <select id="filterMode">
+    <option value="all">Show ALL towns</option>
+    <option value="days">Show towns under X days</option>
+    <option value="nation">Show towns of selected nation only</option>
+    <option value="both">Combined (nation + days)</option>
+  </select>
+  
+  <label for="nationSelect" id="nationLabel">Nation</label>
+  <select id="nationSelect"><option>Loading...</option></select>
+  
+  <label for="daysInput" id="daysLabel">Show towns under X days (max 10)</label>
+  <input id="daysInput" type="number" min="1" max="10" value="10">
 
-    <label for="nationSelect">Nation</label>
-    <select id="nationSelect"><option>Loading...</option></select>
-
-    <label for="daysInput">Show towns under X days (max 10)</label>
-    <input id="daysInput" type="number" min="1" max="10" value="10">
 
     <label for="searchInput">Search Town</label>
     <input id="searchInput" type="text" placeholder="Type to search...">
