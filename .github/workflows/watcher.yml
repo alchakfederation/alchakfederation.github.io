@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Run watcher for 40 seconds
-        run: timeout -s SIGKILL 80s node watch_dynmap_simple.js
+        run: timeout -s SIGKILL 80s node sigma.js
         env:
           NODE_ENV: production
 
