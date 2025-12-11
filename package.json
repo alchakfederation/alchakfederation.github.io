@@ -4,9 +4,29 @@
   "private": true,
   "dependencies": {
     "@playwright/test": "^1.57.0",
-    "playwright": "^1.57.0"
+    "axios": "^1.13.2",
+    "canvas": "^3.2.0",
+    "fs-extra": "^11.3.2",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.7.0",
+    "path": "^0.12.7",
+    "playwright": "^1.57.0",
+    "puppeteer": "^24.32.1"
   },
   "scripts": {
     "scrape": "node scraper.js"
-  }
+  },
+  "description": "",
+  "main": "scraper.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchakfederation/alchakfederation.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alchakfederation/alchakfederation.github.io/issues"
+  },
+  "homepage": "https://github.com/alchakfederation/alchakfederation.github.io#readme"
 }

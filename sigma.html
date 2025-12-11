@@ -1,0 +1,1317 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dynmap Player History Viewer</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #9aa7bd;
+            --accent: #56b6f9;
+            --accent-2: #7ef6c9;
+            --glass: rgba(255, 255, 255, 0.02);
+            color-scheme: dark;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(180deg, #071025, #071827);
+            font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+        }
+
+        .app {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        aside.panel {
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            width: 420px;
+            height: calc(100% - 28px);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main.map-wrap {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            z-index: 1;
+        }
+
+        .panel {
+            background: var(--card);
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 6px 18px rgba(2, 6, 23, .6);
+            overflow: auto;
+        }
+
+        header {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 16px;
+            margin: 0;
+            color: white;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(180deg, var(--accent), #2b9fdc);
+            border-radius: 8px;
+            padding: 8px 10px;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        label.small {
+            font-size: 12px;
+            color: var(--muted);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .searchbox {
+            display: flex;
+            gap: 8px;
+        }
+
+        .searchbox input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: var(--glass);
+            color: white;
+        }
+
+        .info {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #e6eef8;
+        }
+
+        th,
+        td {
+            padding: 6px 8px;
+            text-align: left;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        th {
+            cursor: pointer;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .table-wrap {
+            max-height: 46vh;
+            overflow: auto;
+            border-radius: 6px;
+        }
+
+        .map-wrap {
+            position: relative;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #08141c;
+        }
+
+        canvas#map {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: grab;
+        }
+
+        .legend {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: rgba(2, 6, 23, 0.6);
+            padding: 8px;
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .player-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .player-row .name {
+            font-weight: 600;
+        }
+
+        .player-row .rank {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .online-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0f0;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .offline-dot {
+            background: #777;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .footer {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .tooltip {
+            position: absolute;
+            padding: 6px 8px;
+            background: rgba(3, 6, 15, 0.9);
+            color: white;
+            border-radius: 6px;
+            font-size: 13px;
+            pointer-events: none;
+            transform: translate(-50%, -140%);
+        }
+
+        .small-muted {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .player-highlight {
+            background: linear-gradient(90deg, rgba(86, 182, 249, 0.1), rgba(126, 246, 201, 0.04));
+        }
+
+        .file-list {
+            max-height: 8vh;
+            overflow: auto;
+            border-radius: 6px;
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .link {
+            color: var(--accent);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .slider-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .btn.tiny {
+            padding: 6px 8px;
+            font-size: 13px;
+        }
+
+        .export {
+            margin-top: 8px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <aside class="panel" style="display:flex;flex-direction:column;">
+            <header>
+                <div style="flex:1">
+                    <h1>Dynmap Player Viewer</h1>
+                    <div class="small">Load processed_dynmap player JSON files & explore histories</div>
+                </div>
+                <div>
+                    <button id="openMapBtn" class="btn tiny">Open map</button>
+                    <button id="helpBtn" class="btn tiny">Help</button>
+                </div>
+            </header>
+            <div class="controls">
+                <div>
+                    <label class="small">Load JSON files (drag & drop multiple files here or use file picker)</label>
+                    <div id="dropzone" style="border:2px dashed rgba(255,255,255,0.03);padding:10px;border-radius:8px;background:rgba(255,255,255,0.01)">
+                        <div style="display:flex;gap:8px;">
+                            <button id="pickFiles" class="btn tiny">Select files</button>
+                            <input id="fileInput" type="file" multiple accept=".json" />
+                            <button id="tryServer" class="btn tiny secondary">Try server /processed_dynmap/ (list.json)</button>
+                        </div>
+                        <div class="file-list small-muted" id="fileList">No files loaded</div>
+                    </div>
+                    <div class="info">Filenames should be like <code>players_random_2025-12-11_19-47-49.json</code> or contain an epoch number.</div>
+                </div>
+                <div class="controls-grid" style="margin-top:8px;">
+                    <div>
+                        <label class="small">Search player</label>
+                        <div class="searchbox"><input id="search" placeholder="Search by name..." /></div>
+                    </div>
+                    <div>
+                        <label class="small">Filter</label>
+                        <div style="display:flex;gap:8px;">
+                            <button id="filterOnline" class="btn tiny secondary">Currently online</button>
+                            <button id="clearFilters" class="btn tiny secondary">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="small">Max age (hours) — up to 72</label>
+                    <div class="slider-row">
+                        <input id="hoursRange" type="range" min="1" max="72" value="24" />
+                        <div class="small-muted" id="hoursLabel">24h</div>
+                    </div>
+                </div>
+                <div>
+                    <label class="small">Decimation target per-player (approx)</label>
+                    <input id="decimateTarget" type="number" min="50" max="2000" value="400" style="width:100%" />
+                </div>
+                <div class="footer">
+                    <div class="small-muted">Players: <span id="playerCount">0</span></div>
+                    <div style="flex:1"></div>
+                    <button id="refreshBtn" class="btn tiny">Refresh view</button>
+                </div>
+            </div>
+            <div style="margin-top:10px;" class="panel" id="tablePanel">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                    <div class="small-muted">Players</div>
+                    <div><button id="exportAll" class="btn tiny">Export all CSV</button></div>
+                </div>
+                <div class="table-wrap">
+                    <table id="playersTable" aria-label="players">
+                        <thead>
+                            <tr>
+                                <th data-sort="player">Player</th>
+                                <th data-sort="rank">Rank</th>
+                                <th data-sort="lastSeen">Last seen</th>
+                                <th data-sort="x">X</th>
+                                <th data-sort="z">Z</th>
+                                <th data-sort="count">Points</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </aside>
+        <main class="map-wrap">
+            <div class="legend">
+                <div style="font-weight:700;color:white;margin-bottom:6px">Map</div>
+                <div class="small-muted">Zoom: <span id="zoomLabel">1.0x</span></div>
+                <div class="small-muted">Pan: drag • Zoom: wheel</div>
+                <div style="margin-top:6px"><button id="fitBtn" class="btn tiny secondary">Fit all</button> <button id="clearSel" class="btn tiny secondary">Clear selection</button></div>
+            </div>
+            <canvas id="map" width="1200" height="800"></canvas>
+            <div id="tooltip" class="tooltip" style="display:none"></div>
+        </main>
+    </div>
+    <!-- Modal popup for map -->
+    <div id="mapModal" style="display:none; position:fixed; inset:0; z-index:9999;">
+        <div id="mapModalOverlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.6);"></div>
+        <div id="mapModalContent" style="position:relative;max-width:1200px;margin:40px auto;background:transparent;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6);height:80%;display:flex;flex-direction:column;">
+            <div id="mapModalHeader" style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:linear-gradient(90deg, rgba(2,6,23,0.95), rgba(2,6,23,0.9));color:white;">
+                <div style="font-weight:700">Map viewer</div>
+                <div style="display:flex;gap:8px;align-items:center">
+                    <button id="fitBtnModal" class="btn tiny secondary">Fit all</button>
+                    <button id="closeMapBtn" class="btn tiny">Close</button>
+                </div>
+            </div>
+            <div id="mapModalBody" style="flex:1;padding:0;background:#071217;display:flex;align-items:stretch;">
+                <!-- canvas will be moved here dynamically -->
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Dynmap Player History Viewer (single-file)
+         - Drop JSONs or request /processed_dynmap/list.json (server must return filenames)
+         - Parses filenames for timestamps (epoch or YYYY-MM-DD_HH-MM-SS)
+         - Uses filename timestamp (not originalTimestamp in objects)
+         - Merges, dedups per player, supports filtering & decimation
+        */
+
+        /* ----------------------------- Utilities ------------------------------*/
+        const $ = sel => document.querySelector(sel);
+        const $$ = sel => Array.from(document.querySelectorAll(sel));
+        const humanAgo = ts => {
+            if (!ts) return 'never';
+            const s = Math.floor((Date.now() - ts) / 1000);
+            if (s < 60) return s + 's';
+            if (s < 3600) return Math.floor(s / 60) + 'm';
+            if (s < 86400) return Math.floor(s / 3600) + 'h';
+            return Math.floor(s / 86400) + 'd';
+        };
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+        /* ----------------------------- App state ------------------------------*/
+        let filesMeta = []; // [{name, dateMs, source, dataArray}]
+        let players = new Map(); // player -> {rank, points: [{x,z,ts}], lastSeenMs}
+        let visiblePlayers = []; // sorted array for table
+        let selectedPlayer = null;
+        let currentMaxHours = parseInt($('#hoursRange').value, 10);
+        let decimateTarget = parseInt($('#decimateTarget').value, 10);
+        // load world map image
+        let worldMapImg = null;
+        const mapImg = new Image();
+
+        /* ----------------------------- File loading ------------------------------*/
+        $('#pickFiles').addEventListener('click', () => $('#fileInput').click());
+
+        $('#fileInput').addEventListener('change', async (ev) => {
+            const fl = Array.from(ev.target.files);
+            if (!fl.length) return;
+            await loadLocalFiles(fl);
+        });
+
+        async function loadLocalFiles(fileList) {
+            for (const f of fileList) {
+                try {
+                    const txt = await f.text();
+                    const js = JSON.parse(txt);
+                    const dateMs = parseTimestampFromFilename(f.name);
+                    filesMeta.push({
+                        name: f.name,
+                        dateMs,
+                        source: 'local',
+                        data: js
+                    });
+                } catch (e) {
+                    console.warn('skip file', f.name, e);
+                }
+            }
+            renderFileList();
+            rebuildPlayers();
+        }
+
+        $('#dropzone').addEventListener('dragover', e => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+        });
+
+        $('#dropzone').addEventListener('drop', async (e) => {
+            e.preventDefault();
+            const fl = Array.from(e.dataTransfer.files || []);
+            await loadLocalFiles(fl);
+        });
+
+        async function fetchServerFiles() {
+            try {
+                const res = await fetch('/processed_dynmap/list.json');
+                if (!res.ok) throw new Error('list.json not found');
+                const list = await res.json();
+                if (!Array.isArray(list)) throw new Error('list.json not an array');
+                // include every .json file listed on server
+                const jsonFiles = list.filter(n => typeof n === 'string' && n.toLowerCase().endsWith('.json'));
+                const toFetch = jsonFiles.slice(0, 10000);
+                for (const name of toFetch) {
+                    try {
+                        // skip if already loaded
+                        if (filesMeta.some(f => f.name === name)) continue;
+                        const r = await fetch(`/processed_dynmap/${name}`);
+                        if (!r.ok) {
+                            console.warn('skip', name);
+                            continue;
+                        }
+                        const js = await r.json();
+                        const dateMs = parseTimestampFromFilename(name);
+                        filesMeta.push({
+                            name,
+                            dateMs,
+                            source: 'server',
+                            data: js
+                        });
+                    } catch (e) {
+                        console.warn('fetch fail', name, e);
+                    }
+                }
+                renderFileList();
+                rebuildPlayers();
+            } catch (e) {
+            console.warn('list.json fetch failed, attempting directory index parse:', e.message);
+            try {
+                const dirRes = await fetch('/processed_dynmap/');
+                if (dirRes.ok) {
+                    const txt = await dirRes.text();
+                    const found = new Set();
+                    try {
+                        const doc = new DOMParser().parseFromString(txt, 'text/html');
+                        Array.from(doc.querySelectorAll('a')).forEach(a => {
+                            const href = a.getAttribute('href');
+                            if (!href) return;
+                            const name = href.replace(/^\.\//, '').split('?')[0].split('#')[0];
+                            if (name.toLowerCase().endsWith('.json')) found.add(name);
+                        });
+                    } catch (parseErr) {
+                        // ignore DOM parse errors
+                    }
+                    // fallback regex search for .json filenames
+                    const regex = /([\w\-\.\/]+?\.json)/gi;
+                    let m;
+                    while ((m = regex.exec(txt)) !== null) found.add(m[1]);
+                    const toFetch = Array.from(found).slice(0, 10000);
+                    for (const name of toFetch) {
+                        try {
+                            if (filesMeta.some(f => f.name === name)) continue;
+                            const r = await fetch(`/processed_dynmap/${name}`);
+                            if (!r.ok) {
+                                console.warn('skip', name);
+                                continue;
+                            }
+                            const js = await r.json();
+                            const dateMs = parseTimestampFromFilename(name);
+                            filesMeta.push({ name, dateMs, source: 'server', data: js });
+                        } catch (ee) {
+                            console.warn('fetch fail', name, ee);
+                        }
+                    }
+                    renderFileList();
+                    rebuildPlayers();
+                }
+            } catch (ee) {
+                console.warn('Directory parse attempt failed:', ee.message || ee);
+            }
+            }
+        }
+        $('#tryServer').addEventListener('click', fetchServerFiles);
+        // periodically poll the server list every 60s
+        setInterval(fetchServerFiles, 60 * 1000);
+        // run once on load to auto-scan if available
+        fetchServerFiles().catch(() => {});
+
+        /* ----------------------------- Parse timestamp from filename 
+           Supports:
+           - an epoch number present in name (e.g. players_1765478862827_2025-12-11_19-47-49.json)
+           - or a YYYY-MM-DD_HH-MM-SS suffix
+        ------------------------------*/
+        function parseTimestampFromFilename(name) {
+            if (!name) return Date.now();
+            // try epoch number of 13 digits
+            const epochMatch = name.match(/(1[5-9]\d{11}|\d{13})/);
+            if (epochMatch) {
+                const ms = parseInt(epochMatch[0], 10);
+                if (!isNaN(ms) && ms > 1000000000000) return ms;
+            }
+            // try date like 2025-12-11_19-47-49
+            const dateMatch = name.match(/(\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2})/);
+            if (dateMatch) {
+                const s = dateMatch[1].replace('_', ' ').replace(/-/g, (m, i) => i === 4 || i === 7 ? '-' : ':');
+                // better parse manually:
+                const parts = dateMatch[1].split('_');
+                const d = parts[0].split('-').map(n => parseInt(n, 10));
+                const t = parts[1].split('-').map(n => parseInt(n, 10));
+                const dt = new Date(d[0], d[1] - 1, d[2], t[0], t[1], t[2]);
+                if (!isNaN(dt)) return dt.getTime();
+            }
+            // fallback: try ISO
+            const iso = name.match(/\d{4}-\d{2}-\d{2}/);
+            if (iso) {
+                const dt = new Date(iso[0]);
+                if (!isNaN(dt)) return dt.getTime();
+            }
+            return Date.now();
+        }
+
+        /* ----------------------------- Render file list UI ------------------------------*/
+        function renderFileList() {
+            const el = $('#fileList');
+            if (!filesMeta.length) {
+                el.textContent = 'No files loaded';
+                return;
+            }
+            el.innerHTML = filesMeta.map(f => `<div style="display:flex;justify-content:space-between"><div style="font-size:13px">${escapeHtml(f.name)}</div><div class="small-muted">${new Date(f.dateMs).toLocaleString()}</div></div>`).join('');
+        }
+
+        /* ----------------------------- Rebuild players map from loaded files
+           Uses filename time as timestamp for each entry
+        ------------------------------*/
+        function rebuildPlayers() {
+            players = new Map();
+            for (const file of filesMeta) {
+                const ts = file.dateMs || Date.now();
+                if (!Array.isArray(file.data)) continue;
+                for (const entry of file.data) {
+                    if (!entry || !entry.player) continue;
+                    const name = String(entry.player);
+                    const rank = entry.rank || '';
+                    const x = Number(entry.x) || 0;
+                    const z = Number(entry.z) || 0;
+                    const p = players.get(name) || {
+                        rank,
+                        points: [],
+                        lastSeen: 0
+                    };
+                    p.rank = p.rank || rank;
+                    p.points.push({
+                        x,
+                        z,
+                        ts
+                    });
+                    if (!p.lastSeen || ts > p.lastSeen) p.lastSeen = ts;
+                    players.set(name, p);
+                }
+            }
+            // sort players into array
+            visiblePlayers = Array.from(players.entries()).map(([name, p]) => ({
+                name,
+                rank: p.rank,
+                lastSeen: p.lastSeen,
+                count: p.points.length,
+                x: p.points[p.points.length - 1]?.x,
+                z: p.points[p.points.length - 1]?.z
+            }));
+            $('#playerCount').textContent = visiblePlayers.length;
+            renderPlayersTable();
+            // auto-fit all players in view on load with left offset
+            if (visiblePlayers.length > 0) {
+                let minx = Infinity, minz = Infinity, maxx = -Infinity, maxz = -Infinity;
+                for (const p of visiblePlayers) {
+                    if (p.x !== undefined && p.z !== undefined) {
+                        minx = Math.min(minx, p.x);
+                        maxx = Math.max(maxx, p.x);
+                        minz = Math.min(minz, p.z);
+                        maxz = Math.max(maxz, p.z);
+                    }
+                }
+                if (isFinite(minx)) {
+                    const centerX = (minx + maxx) / 2 - 150;
+                    const centerZ = (minz + maxz) / 2;
+                    cam.x = centerX;
+                    cam.y = centerZ;
+                    const worldW = maxx - minx || 1;
+                    const worldH = maxz - minz || 1;
+                    const zoomX = canvas.width / (worldW * 1.2);
+                    const zoomY = canvas.height / (worldH * 1.2);
+                    cam.zoom = clamp(Math.min(zoomX, zoomY), 0.05, 6);
+                }
+            }
+            drawMap();
+        }
+
+        /* ----------------------------- Table UI ------------------------------*/
+        let currentSort = {
+            key: 'lastSeen',
+            dir: -1
+        };
+
+        function renderPlayersTable() {
+            const tbody = $('#playersTable tbody');
+            const q = $('#search').value.trim().toLowerCase();
+            const maxAgeMs = currentMaxHours * 3600 * 1000;
+            const now = Date.now();
+            const onlineCut = now - 3600 * 1000; // 1 hour
+            const filterOnline = $('#filterOnline').classList.contains('active');
+            let arr = visiblePlayers.slice();
+            if (q) {
+                arr = arr.filter(p => p.name.toLowerCase().includes(q));
+            }
+            if (filterOnline) {
+                arr = arr.filter(p => {
+                    const pl = players.get(p.name);
+                    return pl && pl.lastSeen >= onlineCut;
+                });
+            }
+            // also apply max-age: if player's lastSeen older than maxAge, hide them
+            arr = arr.filter(p => (now - p.lastSeen) <= maxAgeMs);
+            // sorting
+            arr.sort((a, b) => {
+                let v = 0;
+                if (currentSort.key === 'player') v = a.name.localeCompare(b.name);
+                if (currentSort.key === 'rank') v = (a.rank || '').localeCompare(b.rank || '');
+                if (currentSort.key === 'lastSeen') v = (a.lastSeen || 0) - (b.lastSeen || 0);
+                if (currentSort.key === 'x') v = (a.x || 0) - (b.x || 0);
+                if (currentSort.key === 'z') v = (a.z || 0) - (b.z || 0);
+                if (currentSort.key === 'count') v = (a.count || 0) - (b.count || 0);
+                return currentSort.dir * v;
+            });
+            tbody.innerHTML = arr.map(p => {
+                const online = players.get(p.name).lastSeen >= (Date.now() - 3600 * 1000);
+                return `<tr data-player="${escapeHtml(p.name)}" class="${selectedPlayer===p.name?'player-highlight':''}"> 
+                    <td><span style="margin-right:8px" class="${online?'online-dot':'offline-dot'}"></span><strong>${escapeHtml(p.name)}</strong><div class="rank small-muted">${escapeHtml(p.rank||'')}</div></td> 
+                    <td>${escapeHtml(p.rank||'')}</td> 
+                    <td>${new Date(p.lastSeen).toLocaleString()}<div class="small-muted">${humanAgo(p.lastSeen)} ago</div></td> 
+                    <td>${p.x||0}</td> 
+                    <td>${p.z||0}</td> 
+                    <td>${p.count||0}</td> 
+                    <td><button class="btn tiny showBtn" data-player="${escapeHtml(p.name)}">View</button></td> 
+                    </tr>`;
+            }).join('');
+            // attach view handlers
+            Array.from(document.getElementsByClassName('showBtn')).forEach(btn => {
+                btn.onclick = (e) => {
+                    const name = btn.dataset.player;
+                    selectPlayer(name);
+                }
+            });
+        }
+
+        /* table sort clicks */
+        $$('#playersTable th').forEach(th => {
+            th.addEventListener('click', () => {
+                const key = th.dataset.sort || 'player';
+                if (currentSort.key === key) currentSort.dir *= -1;
+                else {
+                    currentSort.key = key;
+                    currentSort.dir = -1;
+                }
+                renderPlayersTable();
+            });
+        });
+
+        /* filters */
+        $('#filterOnline').addEventListener('click', () => {
+            $('#filterOnline').classList.toggle('active');
+            if ($('#filterOnline').classList.contains('active')) {
+                $('#filterOnline').classList.add('btn');
+                $('#filterOnline').classList.remove('secondary');
+            } else {
+                $('#filterOnline').classList.remove('btn');
+                $('#filterOnline').classList.add('secondary');
+            }
+            renderPlayersTable();
+        });
+
+        $('#clearFilters').addEventListener('click', () => {
+            $('#search').value = '';
+            $('#filterOnline').classList.remove('active');
+            renderPlayersTable();
+        });
+
+        $('#search').addEventListener('input', () => renderPlayersTable());
+
+        $('#hoursRange').addEventListener('input', (e) => {
+            currentMaxHours = parseInt(e.target.value, 10);
+            $('#hoursLabel').textContent = currentMaxHours + 'h';
+            renderPlayersTable();
+            drawMap();
+        });
+
+        $('#decimateTarget').addEventListener('input', (e) => {
+            decimateTarget = parseInt(e.target.value, 10) || 400;
+            drawMap();
+        });
+
+        /* ----------------------------- Player selection & decimation ------------------------------*/
+        function selectPlayer(name) {
+            selectedPlayer = name;
+            renderPlayersTable();
+            // fit map to this player's path
+            const pts = getDecimatedPoints(name);
+            if (pts.length) {
+                let minx = Infinity, minz = Infinity, maxx = -Infinity, maxz = -Infinity;
+                for (const pt of pts) {
+                    minx = Math.min(minx, pt.x);
+                    maxx = Math.max(maxx, pt.x);
+                    minz = Math.min(minz, pt.z);
+                    maxz = Math.max(maxz, pt.z);
+                }
+                const centerX = (minx + maxx) / 2;
+                const centerZ = (minz + maxz) / 2;
+                cam.x = centerX;
+                cam.y = centerZ;
+                const worldW = maxx - minx || 1;
+                const worldH = maxz - minz || 1;
+                const zoomX = canvas.width / (worldW * 1.2);
+                const zoomY = canvas.height / (worldH * 1.2);
+                cam.zoom = clamp(Math.min(zoomX, zoomY), 0.05, 6);
+            }
+            drawMap();
+            // show export button for player
+            const btn = document.createElement('button');
+            btn.textContent = 'Export CSV';
+            btn.className = 'btn tiny export';
+            btn.onclick = () => exportPlayerCSV(name);
+            const legend = document.querySelector('.legend');
+            const existing = legend.querySelector('.export');
+            if (existing) existing.remove();
+            btn.style.marginTop = '6px';
+            legend.appendChild(btn);
+            // open the map popup to show this player's path
+            openMapModal();
+        }
+
+        /* decimation strategy:
+           - keep points newer than maxAge
+           - if count <= target return all
+           - else: bucket the time range into N buckets = target and pick one point per bucket (first)
+        */
+        function getDecimatedPoints(name) {
+            const p = players.get(name);
+            if (!p) return [];
+            const now = Date.now();
+            const maxAgeMs = currentMaxHours * 3600 * 1000;
+            const cutoff = now - maxAgeMs;
+            let pts = p.points.filter(pt => pt.ts >= cutoff).slice().sort((a, b) => a.ts - b.ts);
+            if (!pts.length) return [];
+            if (pts.length <= decimateTarget) return pts;
+            const start = pts[0].ts;
+            const end = pts[pts.length - 1].ts;
+            const total = pts.length;
+            const buckets = decimateTarget;
+            const bucketMs = Math.max(1, Math.floor((end - start) / buckets));
+            const sampled = [];
+            let bucketStart = start;
+            let i = 0;
+            for (let b = 0; b < buckets && i < pts.length; b++) {
+                const bucketEnd = bucketStart + bucketMs;
+                // choose the first point in this bucket
+                while (i < pts.length && pts[i].ts < bucketEnd) {
+                    sampled.push(pts[i]);
+                    i++;
+                    break;
+                }
+                bucketStart = bucketEnd;
+            }
+            // if still fewer than target and some points left, append spaced points
+            if (sampled.length < Math.min(decimateTarget, total)) {
+                // fill from remaining evenly
+                const remaining = pts.slice(i);
+                const needed = Math.min(decimateTarget - sampled.length, remaining.length);
+                if (needed > 0) {
+                    const step = Math.max(1, Math.floor(remaining.length / needed));
+                    for (let k = 0; k < remaining.length && sampled.length < decimateTarget; k += step) sampled.push(remaining[k]);
+                }
+            }
+            return sampled;
+        }
+
+        /* ----------------------------- Export CSV ------------------------------*/
+        function exportPlayerCSV(name) {
+            const points = getDecimatedPoints(name);
+            if (!points.length) {
+                alert('No points in selected time window');
+                return;
+            }
+            const rows = ['player,rank,x,z,ts_iso,ts_ms'];
+            const p = players.get(name);
+            for (const pt of points) rows.push(`${name},${p.rank||''},${pt.x},${pt.z},${new Date(pt.ts).toISOString()},${pt.ts}`);
+            const blob = new Blob([rows.join('\n')], {
+                type: 'text/csv'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${name}_history.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        $('#exportAll').addEventListener('click', () => {
+            // produce one CSV with all decimated histories concatenated
+            const rows = ['player,rank,x,z,ts_iso,ts_ms'];
+            for (const [name, p] of players) {
+                const pts = getDecimatedPoints(name);
+                for (const pt of pts) rows.push(`${name},${p.rank||''},${pt.x},${pt.z},${new Date(pt.ts).toISOString()},${pt.ts}`);
+            }
+            const blob = new Blob([rows.join('\n')], {
+                type: 'text/csv'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `all_players_history.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        /* ----------------------------- Map canvas drawing ------------------------------*/
+        const canvas = $('#map');
+        const ctx = canvas.getContext('2d');
+        let cam = {
+            x: 0,
+            y: 0,
+            zoom: 0.06
+        };
+        let dragging = false,
+            lastMouse = null;
+        let mapBounds = null;
+
+        function worldToScreen(x, z) {
+            const sx = (x - cam.x) * cam.zoom + canvas.width / 2;
+            const sy = (z - cam.y) * cam.zoom + canvas.height / 2;
+            return [sx, sy];
+        }
+
+        function screenToWorld(sx, sy) {
+            const x = (sx - canvas.width / 2) / cam.zoom + cam.x;
+            const z = (sy - canvas.height / 2) / cam.zoom + cam.y;
+            return [x, z];
+        }
+
+        function drawMap() {
+            // clear
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // background
+            ctx.fillStyle = '#071217';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // draw world map image if loaded
+            if (worldMapImg) {
+                ctx.globalAlpha = 0.7;
+                ctx.drawImage(worldMapImg, 0, 0, canvas.width, canvas.height);
+                ctx.globalAlpha = 1;
+            }
+            ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+            ctx.lineWidth = 1;
+            // draw axis lines every 2048 blocks (scaled)
+            const step = 2048;
+            const center = worldToScreen(0, 0);
+            // draw grid world lines
+            const range = 3;
+            for (let gx = -4; gx <= 4; gx++) {
+                for (let gz = -4; gz <= 4; gz++) {
+                    // no-op (placeholder if you later want tile background)
+                }
+            }
+            // draw players (current pos)
+            const now = Date.now();
+            const cutoff = now - currentMaxHours * 3600 * 1000;
+            // Color palette
+            const palette = [
+                '#56b6f9', '#7ef6c9', '#e06c75', '#c678dd', '#98c379', '#e5c07b', '#61afef', '#ff9e64'
+            ];
+            let idx = 0;
+            for (const [name, p] of players) {
+                // skip players with no points in window
+                const pts = p.points.filter(pt => pt.ts >= cutoff);
+                if (!pts.length) continue;
+                // last point
+                const last = pts[pts.length - 1];
+                const col = palette[idx % palette.length];
+                idx++;
+                const [sx, sy] = worldToScreen(last.x, last.z);
+                // draw shadow
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(0,0,0,0.4)';
+                ctx.arc(sx + 1, sy + 1, 6, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.beginPath();
+                ctx.fillStyle = col;
+                ctx.arc(sx, sy, 5, 0, Math.PI * 2);
+                ctx.fill();
+                // name label small
+                ctx.font = '12px Inter, Arial';
+                ctx.fillStyle = 'rgba(255,255,255,0.85)';
+                ctx.fillText(name, sx + 8, sy - 8);
+            }
+            // selected player's path
+            if (selectedPlayer) {
+                const pts = getDecimatedPoints(selectedPlayer);
+                if (pts.length) {
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = '#56b6f9';
+                    ctx.beginPath();
+                    for (let i = 0; i < pts.length; i++) {
+                        const [sx, sy] = worldToScreen(pts[i].x, pts[i].z);
+                        if (i === 0) ctx.moveTo(sx, sy);
+                        else ctx.lineTo(sx, sy);
+                    }
+                    ctx.stroke();
+                    // draw last point emphasized
+                    const last = pts[pts.length - 1];
+                    const [sx, sy] = worldToScreen(last.x, last.z);
+                    ctx.fillStyle = '#7ef6c9';
+                    ctx.beginPath();
+                    ctx.arc(sx, sy, 7, 0, Math.PI * 2);
+                    ctx.fill();
+                    // show detail box
+                    const info = players.get(selectedPlayer);
+                    if (info) {
+                        const box = `${selectedPlayer} • ${info.rank||''}\nLast: ${new Date(info.lastSeen).toLocaleString()}`;
+                        // tooltip-like on top-left of canvas
+                        ctx.fillStyle = 'rgba(2,6,23,0.7)';
+                        ctx.fillRect(10, 10, 300, 54);
+                        ctx.fillStyle = '#fff';
+                        ctx.font = '12px Inter';
+                        ctx.fillText(selectedPlayer, 16, 28);
+                        ctx.fillStyle = 'rgba(255,255,255,0.7)';
+                        ctx.font = '11px Inter';
+                        ctx.fillText(info.rank || '', 16, 44);
+                        ctx.fillText('Last: ' + new Date(info.lastSeen).toLocaleString(), 16, 60);
+                    }
+                }
+            }
+            // zoom label
+            $('#zoomLabel').textContent = cam.zoom.toFixed(2) + 'x';
+        }
+
+        /* canvas interactions */
+        canvas.addEventListener('mousedown', (ev) => {
+            dragging = true;
+            canvas.style.cursor = 'grabbing';
+            lastMouse = {
+                x: ev.clientX,
+                y: ev.clientY
+            };
+        });
+
+        canvas.addEventListener('mousemove', (ev) => {
+            if (!dragging) return;
+            const dx = ev.clientX - lastMouse.x;
+            const dy = ev.clientY - lastMouse.y;
+            // convert to world delta (reverse because dragging map moves camera)
+            cam.x -= dx / cam.zoom;
+            cam.y -= dy / cam.zoom;
+            lastMouse = {
+                x: ev.clientX,
+                y: ev.clientY
+            };
+            drawMap();
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            dragging = false;
+            canvas.style.cursor = 'grab';
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            dragging = false;
+            canvas.style.cursor = 'grab';
+        });
+
+        canvas.addEventListener('wheel', (ev) => {
+            ev.preventDefault();
+            const delta = -ev.deltaY * 0.001;
+            const oldZoom = cam.zoom;
+            cam.zoom = clamp(cam.zoom * (1 + delta), 0.05, 6);
+            // zoom towards mouse position
+            const rect = canvas.getBoundingClientRect();
+            const mx = ev.clientX - rect.left,
+                my = ev.clientY - rect.top;
+            const before = screenToWorld(mx, my);
+            const after = screenToWorld(mx, my);
+            // adjust cam.x/cam.y so that point under cursor stays stable
+            cam.x += (before[0] - after[0]);
+            cam.y += (before[1] - after[1]);
+            drawMap();
+        });
+
+        /* resize canvas on window */
+        function fitCanvas() {
+            const r = canvas.getBoundingClientRect();
+            canvas.width = Math.max(600, Math.floor(r.width));
+            canvas.height = Math.max(400, Math.floor(r.height));
+            drawMap();
+        }
+        window.addEventListener('resize', fitCanvas);
+        fitCanvas();
+
+        /* Fit all: compute bounding box from all visible points and center/zoom to show them */
+        $('#fitBtn').addEventListener('click', () => {
+            let minx = Infinity,
+                minz = Infinity,
+                maxx = -Infinity,
+                maxz = -Infinity;
+            const now = Date.now();
+            const cutoff = now - currentMaxHours * 3600 * 1000;
+            for (const [name, p] of players) {
+                const pts = p.points.filter(pt => pt.ts >= cutoff);
+                if (!pts.length) continue;
+                for (const pt of pts) {
+                    minx = Math.min(minx, pt.x);
+                    maxx = Math.max(maxx, pt.x);
+                    minz = Math.min(minz, pt.z);
+                    maxz = Math.max(maxz, pt.z);
+                }
+            }
+            if (!isFinite(minx)) {
+                alert('No visible points in current time window');
+                return;
+            }
+            const centerX = (minx + maxx) / 2;
+            const centerZ = (minz + maxz) / 2;
+            cam.x = centerX;
+            cam.y = centerZ;
+            // compute zoom so bounding box fits
+            const worldW = maxx - minx || 1;
+            const worldH = maxz - minz || 1;
+            const zoomX = canvas.width / (worldW * 1.2);
+            const zoomY = canvas.height / (worldH * 1.2);
+            cam.zoom = clamp(Math.min(zoomX, zoomY), 0.05, 6);
+            drawMap();
+        });
+
+        $('#clearSel').addEventListener('click', () => {
+            selectedPlayer = null;
+            renderPlayersTable();
+            drawMap();
+        });
+
+        /* Tooltip simple implementation on hover */
+        canvas.addEventListener('mousemove', (ev) => {
+            const rect = canvas.getBoundingClientRect();
+            const mx = ev.clientX - rect.left,
+                my = ev.clientY - rect.top;
+            // find nearest player within 12 px
+            let nearest = null;
+            let nd = 9999;
+            for (const [name, p] of players) {
+                const pts = p.points.filter(pt => pt.ts >= Date.now() - currentMaxHours * 3600 * 1000);
+                if (!pts.length) continue;
+                const last = pts[pts.length - 1];
+                const [sx, sy] = worldToScreen(last.x, last.z);
+                const d = Math.hypot(sx - mx, sy - my);
+                if (d < 12 && d < nd) {
+                    nd = d;
+                    nearest = {
+                        name,
+                        last
+                    };
+                }
+            }
+            const tip = $('#tooltip');
+            if (nearest) {
+                tip.style.display = 'block';
+                tip.style.left = (ev.clientX) + 'px';
+                tip.style.top = (ev.clientY) + 'px';
+                    tip.innerHTML = `<strong>${escapeHtml(nearest.name)}</strong><div class="small-muted">Last: ${new Date(nearest.last.ts).toLocaleString()}</div>`;
+                } else tip.style.display = 'none';
+        });
+
+        /* ----------------------------- Helpers ------------------------------*/
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, (m) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[m]));
+        }
+
+        /* ----------------------------- UI: refresh button ------------------------------*/
+        $('#refreshBtn').addEventListener('click', () => {
+            rebuildPlayers();
+        });
+
+        /* ----------------------------- Initial demo: load example if user hasn't loaded any files 
+           This is that sample data you provided (keeps UI alive) 
+        ------------------------------*/
+        const sampleName = 'players_sample_2025-12-11_19-47-49.json';
+        const sampleData = [{
+                "player": "RussianTycoon",
+                "rank": "Excelsior",
+                "x": 8696,
+                "z": -2880
+            },
+            {
+                "player": "MutapaMonke",
+                "rank": "Supporter",
+                "x": 2564,
+                "z": 3568
+            },
+            {
+                "player": "JDanielsito",
+                "rank": "Member",
+                "x": -7797,
+                "z": 3930
+            },
+            {
+                "player": "nicealtsnkasH",
+                "rank": "Member",
+                "x": 15891,
+                "z": 2059
+            },
+            {
+                "player": "Vissenkop6",
+                "rank": "Voyager",
+                "x": 6974,
+                "z": -4697
+            },
+            {
+                "player": "prettyevr3nk",
+                "rank": "Supporter",
+                "x": 144,
+                "z": -5847
+            },
+            {
+                "player": "phphphg",
+                "rank": "Archduke",
+                "x": -863,
+                "z": -7395
+            },
+            {
+                "player": "SilentPee",
+                "rank": "Conquistador",
+                "x": 14214,
+                "z": -4252
+            },
+            {
+                "player": "BopBopLittle",
+                "rank": "Supporter",
+                "x": 833,
+                "z": -5982
+            },
+            {
+                "player": "Jc499",
+                "rank": "Voyager",
+                "x": -8547,
+                "z": 3921
+            },
+            {
+                "player": "Chuar",
+                "rank": "Voyager",
+                "x": -8624,
+                "z": 4062
+            },
+            {
+                "player": "Gawkan",
+                "rank": "Noble",
+                "x": 16996,
+                "z": -7109
+            },
+            {
+                "player": "Makuferis",
+                "rank": "Supporter",
+                "x": -9090,
+                "z": -323
+            },
+            {
+                "player": "Kjellse7",
+                "rank": "Member",
+                "x": 5030,
+                "z": -273
+            },
+            {
+                "player": "kinsukghoshXD",
+                "rank": "Noble",
+                "x": 15895,
+                "z": 2061
+            }
+        ];
+
+        if (!filesMeta.length) {
+            filesMeta.push({
+                name: sampleName,
+                dateMs: Date.now(),
+                source: 'sample',
+                data: sampleData
+            });
+            renderFileList();
+            rebuildPlayers();
+        }
+
+        /* ----------------------------- Help dialog ------------------------------*/
+        $('#helpBtn').addEventListener('click', () => {
+            alert('Usage hints: - Drag & drop multiple players_ * .json files(or use the file picker).Filenames containing either a 13 - digit epoch or a date like 2025 - 12 - 11_19 - 47 - 49 will be parsed for timestamp. - The app uses the filename timestamp as the record time for each file.originalTimestamp inside the JSON is ignored. - Use the Max age slider to decide how old logs may be(up to 72 hours). - "Currently online"filter uses last 1 hour of logs. - Click a player row "View"to highlight their path on the map.Use Export CSV to download decimated points. - If you host the files on a webserver, optionally provide / processed_dynmap / list.json containing an array of filenames and the app will fetch them from / processed_dynmap / < filename > .');
+        });
+
+        /* ----------------------------- Map modal handling ------------------------------*/
+        let canvasPlaceholder = null;
+        const mapModal = document.getElementById('mapModal');
+        const mapModalBody = document.getElementById('mapModalBody');
+        const openMapBtn = document.getElementById('openMapBtn');
+        const closeMapBtn = document.getElementById('closeMapBtn');
+        const fitBtnModal = document.getElementById('fitBtnModal');
+
+        function openMapModal() {
+            if (!canvasPlaceholder) {
+                canvasPlaceholder = document.createElement('div');
+                canvasPlaceholder.style.width = canvas.width + 'px';
+            }
+            // move canvas into modal body
+            const origParent = canvas.parentNode;
+            if (canvasPlaceholder.parentNode !== origParent) origParent.insertBefore(canvasPlaceholder, canvas);
+            mapModalBody.appendChild(canvas);
+            mapModal.style.display = 'block';
+            // prevent background scroll
+            document.body.style.overflow = 'hidden';
+            // redraw and resize to modal area
+            fitCanvas();
+            drawMap();
+        }
+
+        function closeMapModal() {
+            if (!canvasPlaceholder) return;
+            const origParent = document.querySelector('.map-wrap');
+            if (origParent) origParent.insertBefore(canvas, canvasPlaceholder);
+            canvasPlaceholder.remove();
+            canvasPlaceholder = null;
+            mapModal.style.display = 'none';
+            document.body.style.overflow = '';
+            fitCanvas();
+            drawMap();
+        }
+
+        // wire modal buttons
+        if (openMapBtn) openMapBtn.addEventListener('click', openMapModal);
+        if (closeMapBtn) closeMapBtn.addEventListener('click', closeMapModal);
+        if (fitBtnModal) fitBtnModal.addEventListener('click', () => {
+            // reuse existing fit behavior
+            $('#fitBtn').click();
+        });
+        // click on overlay closes
+        document.getElementById('mapModalOverlay').addEventListener('click', closeMapModal);
+        // close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mapModal.style.display === 'block') closeMapModal();
+        });
+
+
+        /* end of script */
+    </script>
+</body>
+
+</html>

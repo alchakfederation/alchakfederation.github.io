@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang='en' dir='ltr' class="dark" id="html">
+	<head>
+	  
+		<!-- Optimization -->
+		<link rel="preload" href="/custom/templates/Cobalt/js/core/mod.min.js" as="script">
+		
+		
+				<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" as="style">
+		
+		<!-- Early loading scripts -->
+		<script src="/custom/templates/Cobalt/js/core/mod.min.js" type="4861828f1f05a003a08324fd-text/javascript"></script>
+
+		<title>404 &bull; CCNet</title>
+		<meta name="title" content="404 &bull; CCNet">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="theme-color" content="#1d1d1d">
+		<meta name="keywords" content=" "/>
+		<meta name="description" content=" "/>
+					<link rel="shortcut icon" href="/uploads/favicons/6515ab3896ca65.64336361_geifhpjqlmnok.png" type="image/x-icon"/>
+		
+		<!-- Opengraph / Facebook -->
+		<meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ccnetmc.com/nationsmap/"/>
+		<meta property="og:site_name" content="CCNet"/>
+					<meta property="og:title" content="404 &bull; CCNet"/>
+			<meta property="og:description" content=" "/>
+					
+		<!-- Twitter -->
+		<meta property="twitter:url" content="https://www.ccnetmc.com/nationsmap/">
+					<meta property="twitter:title" content="404 &bull; CCNet">
+			<meta property="twitter:description" content=" "/>
+					
+					<link rel="stylesheet" href="/core/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+					
+                <link rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+					
+                <link rel="stylesheet" 
+                href="/custom/templates/Cobalt/css/cobalt.css?v=1.7.3">
+					
+                <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4861828f1f05a003a08324fd-|49"></script><link rel="preload" 
+                href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+					<style>
+		
+			:root {
+		        --p-color: #DE8216;
+		    }
+		
+		    /* Primary Color */
+		    .discord-text .st0, .status-text path, .discord-icon .st0, .status-icon path {fill: var(--p-color) !important;}
+			.swal2-icon.swal2-info, .cobalt-update-box .update-icon, .header-theme, .news-title, .top-text, .error-title, .lr-title, .p-icon, .theme-text, .other-btn:after, .other-btn:focus:after, .footer-text-header:after, .widget-header-txt:after, .discord-text .icon:after, .status-text .icon:after, .dropdown-item.d-header, .rules-menu .active span, .rules-menu .active i, .welcome-title {color: var(--p-color) !important;}
+			a, a:hover, a:focus {color: var(--p-color)}
+			.color-overlay {background: linear-gradient(var(--p-color), #101010);}
+			.swal2-icon.swal2-info, .page-item.active .page-link, .user-nav-link.active, .profile-about-box, .rules-menu-link.active {border-color: #DE8216 !important;}
+			.swal2-styled.swal2-confirm, .widget-header-txt:after, .discord-text .icon:after, .status-text .icon:after, .nav-link.store-link, .footer-text-header:after, .badge-theme, #toast-container, .progress-bar, .login-overlay, .register-overlay, .vote-tabs .btn.btn-theme.active, .p-color-overlay, .modal-header, .btn-theme, .button-checkbox>.active, .spoiler .spoiler-toggle, .spoiler .spoiler-title, .page-item.active .page-link, .btn.profile-btn.active:after, .cc-window.cc-floating .cc-highlight .cc-btn.cc-allow {background-color: var(--p-color) !important;}
+			.swal2-styled.swal2-confirm:hover, .spoiler .spoiler-toggle:hover, .spoiler .spoiler-title:hover, .btn-theme:hover {background-color: var(--p-color) !important; filter: brightness(0.85)}
+			.wiki-menu .active.dropdown-toggle::after {
+				border-top-color: var(--p-color) !important;
+				border-bottom-color: var(--p-color) !important;
+			}			
+			
+			/* Header */
+			.header:after {height: 227.5px; background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);} .header:before {background: linear-gradient(rgba(0, 0, 0, 0.4), #101010);}
+			.header {background-position: center top !important}
+			@media (min-width: 769px) {.header {height: 475px}}
+			@media (max-width: 768px) {.header {height: 340px}}
+		    @media (min-width: 769px) {.logo {height: 300px; margin-top: 77.5px}}
+		    @media (max-width: 768px) {.logo {height: 130px; margin-top: 90px}}
+		    .status-text, .discord-text {margin-top: 203.5px}
+		    @media (max-width: 1050px) {.status-box-container .text, .discord-box-container .text {display: none}}
+		    .line-scale > div {background-color: #FFFFFF;}
+		    
+		    /* Other */
+		    .login-overlay, .register-overlay {opacity: 0.5 !important}
+		
+		</style>
+					<style>.navbar-nav .nav-item:first-child {margin-left: -15px !important}</style>
+					<style>.webp .header {background: url('/uploads/a2f3bd189f5b24450209d80b3e96d790625f5911headerbg.webp') no-repeat;}</style>
+					<style>.no-webp .header {background: url('/uploads/banner.jpg') no-repeat;}</style>
+					<style>.navbar-bottom .store-link:after, .navbar-bottom .store-link:focus:after, .navbar-top-new .store-link:after, .navbar-top-new .store-link:focus:after {box-shadow: 0px 0px 12px 0px #DE8216}</style>
+					<style>.p-image-frame {z-index: 1; opacity: 0.7}</style>
+					<style>
+				.store-box {
+					border: 3px solid #DE8216;
+					box-shadow: 0 0 10px rgb(222 130 22 / 50%);
+				}
+				.webp .store-box {
+					background: linear-gradient(to bottom, rgba(222 130 22 / 70%), rgba(222 130 22 / 70%));
+				}
+				.no-webp .store-box {
+					background: linear-gradient(to bottom, rgba(222 130 22 / 70%), rgba(222 130 22 / 70%));
+				}
+		</style>
+					
+                <link rel="stylesheet" 
+                href="/modules/Cookie Consent/assets/css/cookieconsent.min.css">
+									
+			  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MC9ED1F95G" type="4861828f1f05a003a08324fd-text/javascript"></script>
+			  <script type="4861828f1f05a003a08324fd-text/javascript">
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+	  
+				gtag('config', 'G-MC9ED1F95G');
+			  </script>
+			
+		
+		<meta name="robots" content="noindex">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card error-card text-center">
+                    <div class="card-body">
+                        <span class="error-title">404</span>
+                        <br />
+                        <span>Sorry! We couldn't find that page.</span>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-theme float-right" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:history.go(-1)" data-cf-modified-4861828f1f05a003a08324fd-="">Go back</button>
+                            </div>
+                            <div class="col-6">
+                                <a href="/" class="btn btn-theme float-left">Home</a>
+                            </div>
+                        </div>
+                        <br />If you believe this to be an error, please contact an administrator
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<script type="4861828f1f05a003a08324fd-text/javascript" src="/core/assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script type="4861828f1f05a003a08324fd-text/javascript" src="/core/assets/vendor/jquery.cookie/jquery.cookie.js"></script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.0/dist/sweetalert2.all.min.js" integrity="sha256-tGZXBB9uK3MK1zLsI8b/1gZYQcBl8TMTi52kA2RmEKc=" crossorigin="anonymous"></script>
+	<script type="4861828f1f05a003a08324fd-text/javascript">
+			var particles = "no";
+			var winter = "no";
+			var swal_server_copy = "Now go join the server!";
+			var discord_server = "184403250609520641";
+			var mc_server = "play.ccnetmc.com";
+			var ds_box = "yes";
+			var ds_breakpoint = "1050";
+			var users_online = "users online";
+			var user_online = "user online";
+			var players_online = "players online";
+			var player_online = "player online";
+			var server_offline = "Server is offline";
+		</script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="/modules/Cookie Consent/assets/js/cookieconsent.min.js"></script>
+	<script type="4861828f1f05a003a08324fd-text/javascript">if (window.cookieconsent === undefined) {
+  console.warn('Failed to initialise cookie consent, it may be blocked by your browser or a browser extension');
+} else {
+  window.cookieconsent.initialise({
+    onStatusChange: function() {
+      window.location.reload();
+    },
+    
+    "position": "bottom-right",
+    "type": "opt-in",
+    "palette": {
+        "button": {
+            "background": "transparent",
+            "text": "#f1d600",
+            "border": "#f1d600"
+        },
+        "popup": {
+            "background": "#000",
+            "text": "#000"
+        }
+    },
+    "content": {
+        "policy": "Cookies",
+        "message": "This website uses cookies to enhance your browsing experience.",
+        "deny": "Disallow cookies",
+        "allow": "Allow cookies",
+        "link": "More info",
+        "href": "\/cookies\/"
+    }
+
+  });
+}
+</script>
+	<script type="4861828f1f05a003a08324fd-text/javascript">var siteName = "CCNet", siteURL = "\/", fullSiteUrl = "https:\/\/www.ccnetmc.com\/", page = 404, pjsPath = "\/custom\/templates\/Cobalt\/js\/particles-settings.json", copied = "Copied!", close = "Close", loading = "Loading...", cookieNotice = "This website uses cookies to enhance your browsing experience. By registering on our website or closing this notice you agree with their use.", cookieAgree = "general\/cookie_agree", noMessages = "No new messages", newMessage1 = "You have 1 new message", newMessagesX = "You have {{count}} new messages", noAlerts = "No new alerts", newAlert1 = "You have 1 new alert", newAlertsX = "You have {{count}} new alerts", debugging = "0", loggedIn = "0", cookie = "0", confirmDelete = "Are you sure you wish to delete this?", offline = "Offline", noPlayersOnline = "There are no players online.", bungeeInstance = "This server is a Bungee instance.", online = "Online", avatarSource = "https:\/\/crafthead.net\/helm\/{identifier}\/{size}", andMoreX = "and {{count}} more", loadingTime = "", route = "\/nationsmap", csrfToken = "6af4a21bd693ebaa776e1d5412762539"</script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="/custom/templates/Cobalt/js/core/core.js?v=17"></script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="/custom/templates/Cobalt/js/core/user.js?v=5"></script>
+	
+                <script type="4861828f1f05a003a08324fd-text/javascript" src="/custom/templates/Cobalt/js/core/pages.js?v=5"></script>
+	<script type="4861828f1f05a003a08324fd-text/javascript">$.getJSON('/queries/servers/', function(data) {});</script>
+	<script type="4861828f1f05a003a08324fd-text/javascript">$.getJSON('/queries/queue/', function(data) {});</script>
+
+<script src="//instant.page/5.1.0" type="4861828f1f05a003a08324fd-module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4861828f1f05a003a08324fd-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ac706eb2a3efa43',t:'MTc2NTQ3NzU1MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b53b56a224a84ced905f07bd96920312","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+  </html>
