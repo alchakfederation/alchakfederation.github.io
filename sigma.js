@@ -12,6 +12,7 @@ const path = require("path");
 const START_URL = "https://map.ccnetmc.com/nationsmap/"; // <- use the correct map URL
 const WATCH_SUBSTRING = "dynmap_world.json";            // match any dynmap_world.json?=...
 const RAW_CACHE_TTL = 60; // seconds for raw dynmap JSON
+const PROCESSED_CACHE_TTL = 60 * 60 * 24 * 3; // seconds (3 days) for processed cache
 const PROCESS_INTERVAL_MS = 500;    // background worker frequency
 const OUTPUT_DIR = path.resolve(process.cwd(), "processed_dynmap");
 
@@ -118,9 +119,9 @@ let processingInterval = null;
 function startWorker() {
   if (processingInterval) return;
   processingInterval = setInterval(() => {
-    const keys = cache.keys();
+    const keys = rawCache.keys();
     for (const k of keys) {
-      const entry = cache.get(k);
+      const entry = rawCache.get(k);
       if (!entry) continue;
       try {
         // CPU work performed repeatedly while cached; here we run extractPlayers (no file writes)
@@ -160,7 +161,7 @@ async function run() {
 
       const capturedAt = Date.now();
       // store under full URL (including timestamp query)
-      cache.set(url, { url, json, capturedAt });
+      rawCache.set(url, { url, json, capturedAt });
 
       // ensure worker runs while there are cached entries
       startWorker();
