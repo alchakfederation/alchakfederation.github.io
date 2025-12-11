@@ -30,8 +30,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run scraper
-      run: node sigma.js
+    - name: Run watcher for 80s (forced kill)
+      run: timeout -s SIGKILL 80s node sigma.js || true
+      env:
+        NODE_ENV: production
 
     - name: Commit and Push results
       run: |
