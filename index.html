@@ -16,9 +16,9 @@ table{width:100%;border-collapse:collapse;margin-top:12px}
 th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:left;cursor:default}
 th.sortable{cursor:pointer;text-decoration:underline}
 th{color:var(--muted);font-weight:600}
-tr.low{background:#52101033}       /* 0-2 days red tint */
-tr.medium{background:#52421033}    /* 3-5 days orange tint */
-tr.high{background:#524d1033}      /* 6-10 days yellow tint */
+tr.low{background:#ff1d1d33}       /* 0-2 days red tint */
+tr.medium{background:#ffa62133}    /* 3-5 days orange tint */
+tr.high{background:#fffb0033}      /* 6-10 days yellow tint */
 .small{font-size:13px;color:var(--muted)}
 .pagination{display:flex;gap:8px;align-items:center;margin-top:12px}
 .pagination button{padding:6px 10px;font-size:13px}
@@ -33,20 +33,19 @@ tr.high{background:#524d1033}      /* 6-10 days yellow tint */
 
   <div class="card">
     <h2>Filters</h2>
-  <label for="filterMode">Filter mode</label>
-  <select id="filterMode">
-    <option value="all">Show ALL towns</option>
-    <option value="days">Show towns under X days</option>
-    <option value="nation">Show towns of selected nation only</option>
-    <option value="both">Combined (nation + days)</option>
-  </select>
-  
-  <label for="nationSelect" id="nationLabel">Nation</label>
-  <select id="nationSelect"><option>Loading...</option></select>
-  
-  <label for="daysInput" id="daysLabel">Show towns under X days (max 10)</label>
-  <input id="daysInput" type="number" min="1" max="10" value="10">
+    <label for="filterMode">Filter mode</label>
+    <select id="filterMode">
+      <option value="all">Show ALL towns</option>
+      <option value="days">Show towns under X days</option>
+      <option value="nation">Show towns of selected nation only</option>
+      <option value="both">Combined (nation + days)</option>
+    </select>
 
+    <label for="nationSelect" id="nationLabel">Nation</label>
+    <select id="nationSelect"><option>Loading...</option></select>
+
+    <label for="daysInput" id="daysLabel">Show towns under X days (max 10)</label>
+    <input id="daysInput" type="number" min="1" max="10" value="10">
 
     <label for="searchInput">Search Town</label>
     <input id="searchInput" type="text" placeholder="Type to search...">
@@ -124,26 +123,6 @@ repoEl.value=localStorage.getItem('gh_repo')||'';
 workflowEl.value=localStorage.getItem('gh_workflow')||'.github/workflows/scrape.yml';
 patEl.value=localStorage.getItem('gh_pat')||'';
 
-function updateFilterVisibility(){
-  const mode = filterMode.value;
-  // Show/hide inputs based on mode
-  document.getElementById('daysLabel').style.display = (mode==='days' || mode==='both') ? 'block' : 'none';
-  document.getElementById('daysInput').style.display = (mode==='days' || mode==='both') ? 'block' : 'none';
-  document.getElementById('nationLabel').style.display = (mode==='nation' || mode==='both') ? 'block' : 'none';
-  document.getElementById('nationSelect').style.display = (mode==='nation' || mode==='both') ? 'block' : 'none';
-}
-
-// Call this whenever the filter mode changes
-filterMode.addEventListener('change', () => {
-  updateFilterVisibility();
-  currentPage = 1;
-  render();
-});
-
-// Initial setup
-updateFilterVisibility();
-
-
 async function loadJSON(){
   try{
     const r=await fetch('towns.json');
@@ -154,6 +133,7 @@ async function loadJSON(){
     console.warn(e);
   }
   buildNationList();
+  updateFilterVisibility();
   render();
 }
 
@@ -164,35 +144,37 @@ function buildNationList(){
   for(const n of nations){const o=document.createElement('option'); o.value=n; o.textContent=n; nationSelect.appendChild(o);}
 }
 
-let list = data.towns.filter(t => {
-  const days = t.days_rounded == null ? Infinity : t.days_rounded;
+function updateFilterVisibility(){
   const mode = filterMode.value;
-  const nation = nationSelect.value;
+  document.getElementById('daysLabel').style.display = (mode==='days'||mode==='both')?'block':'none';
+  daysInput.style.display = (mode==='days'||mode==='both')?'block':'none';
+  document.getElementById('nationLabel').style.display = (mode==='nation'||mode==='both')?'block':'none';
+  nationSelect.style.display = (mode==='nation'||mode==='both')?'block':'none';
+}
+
+function render(){
+  const mode = filterMode.value;
   const search = searchInput.value.toLowerCase();
+  let list = data.towns.filter(t=>{
+    const days = t.days_rounded == null ? Infinity : t.days_rounded;
+    let ok = true;
 
-  let ok = true;
+    if((mode==='days'||mode==='both') && daysInput.style.display!=='none'){
+      const maxDays = Math.min(10, Math.max(1, Number(daysInput.value) || 10));
+      if(days>maxDays) ok=false;
+    }
 
-  // Only check days if input is visible
-  if((mode==='days' || mode==='both') && document.getElementById('daysInput').style.display !== 'none') {
-    const maxDays = Math.min(10, Math.max(1, Number(daysInput.value) || 10));
-    if(days > maxDays) ok = false;
-  }
+    if((mode==='nation'||mode==='both') && nationSelect.style.display!=='none'){
+      if(nationSelect.value && (t.nation||'')!==nationSelect.value) ok=false;
+    }
 
-  // Only check nation if input is visible
-  if((mode==='nation' || mode==='both') && document.getElementById('nationSelect').style.display !== 'none') {
-    if(nation && (t.nation||'') !== nation) ok = false;
-  }
+    if(search && !t.town.toLowerCase().includes(search)) ok=false;
+    return ok;
+  });
 
-  // Always filter by search if typed
-  if(search && !t.town.toLowerCase().includes(search)) ok = false;
-
-  return ok;
-});
-
-
-  // sorting
+  // Sorting
   list.sort((a,b)=>{
-    let va=a[sortKey]||0, vb=b[sortKey]||0;
+    let va=a[sortKey]||0,vb=b[sortKey]||0;
     if(typeof va==='string') va=va.toLowerCase();
     if(typeof vb==='string') vb=vb.toLowerCase();
     if(va>vb) return sortAsc?1:-1;
@@ -200,12 +182,12 @@ let list = data.towns.filter(t => {
     return 0;
   });
 
-  // pagination
-  let perPage=perPageSelect.value==='all'?list.length:Number(perPageSelect.value);
-  let totalPages=Math.ceil(list.length/perPage)||1;
+  // Pagination
+  let perPage = perPageSelect.value==='all'?list.length:Number(perPageSelect.value);
+  let totalPages = Math.ceil(list.length/perPage)||1;
   if(currentPage>totalPages) currentPage=totalPages;
-  let start=(currentPage-1)*perPage, end=start+perPage;
-  let pageList=list.slice(start,end);
+  let start = (currentPage-1)*perPage, end = start+perPage;
+  let pageList = list.slice(start,end);
 
   townsTable.innerHTML='';
   for(const t of pageList){
@@ -213,15 +195,19 @@ let list = data.towns.filter(t => {
     if(t.days_rounded!=null){
       if(t.days_rounded<=2) tr.classList.add('low');
       else if(t.days_rounded<=5) tr.classList.add('medium');
-      else tr.classList.add('high');
+      else if(t.days_rounded<=10) tr.classList.add('high');
+      else if(t.upkeep != null && t.upkeep > 10){
+        tr.style.background = '#029c4044'; // subtle green tint
+      }
     }
-    tr.innerHTML=`<td>${escapeHtml(t.town)}</td>
-      <td>${escapeHtml(t.nation||'—')}</td>
-      <td>${t.bank==null?'N/A':numberFormat(t.bank)}</td>
-      <td>${t.upkeep==null?'N/A':numberFormat(t.upkeep)}</td>
-      <td>${t.days_rounded==null?'∞':t.days_rounded}</td>`;
-    townsTable.appendChild(tr);
-  }
+      tr.innerHTML = `
+        <td>${escapeHtml(t.town)}</td>
+        <td>${escapeHtml(t.nation||'—')}</td>
+        <td>${t.bank==null?'N/A':numberFormat(t.bank)}</td>
+        <td>${t.upkeep==null?'N/A':numberFormat(t.upkeep)}</td>
+        <td>${t.days_rounded==null?'∞':t.days_rounded}</td>`;
+  townsTable.appendChild(tr);
+}
 
   meta.textContent=`Loaded ${data.towns.length} towns — showing ${pageList.length}.`;
   pageInfo.textContent=`Page ${currentPage} of ${totalPages}`;
@@ -232,6 +218,7 @@ function numberFormat(n){return new Intl.NumberFormat().format(n);}
 
 // Event listeners
 [nationSelect,daysInput,filterMode,searchInput,perPageSelect].forEach(el=>el.addEventListener('input',()=>{currentPage=1;render();}));
+filterMode.addEventListener('change',()=>{updateFilterVisibility(); currentPage=1; render();});
 
 // Pagination buttons
 prevPageBtn.addEventListener('click',()=>{if(currentPage>1){currentPage--;render();}});
@@ -246,12 +233,14 @@ document.querySelectorAll('th.sortable').forEach(th=>{
   });
 });
 
+// Download JSON
 downloadBtn.addEventListener('click',()=>{
   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob);
   const a=document.createElement('a'); a.href=url; a.download='towns.json'; a.click(); URL.revokeObjectURL(url);
 });
 
+// Refresh / GitHub Action
 refreshBtn.addEventListener('click',async ()=>{
   const owner=ownerEl.value.trim(), repo=repoEl.value.trim(), workflow=workflowEl.value.trim(), pat=patEl.value.trim();
   if(!owner||!repo||!workflow){alert('Set owner, repo and workflow path');return;}
