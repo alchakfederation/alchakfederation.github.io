@@ -2,9 +2,8 @@ name: Dynmap Watcher
 
 on:
   schedule:
-    # Runs at 00:00, 07:00, 14:00, 21:00 UTC (approx every 7 hours)
-    - cron:  '0 0,7,14,21 * * *'
-  workflow_dispatch: # allows manual trigger
+    - cron: '*/2 * * * *'   # runs every 2 minutes
+  workflow_dispatch:
 
 jobs:
   run-watcher:
@@ -13,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +23,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run dynmap watcher
-        run: node sigma.js
+      - name: Run watcher for 40 seconds
+        run: timeout 40s node sigma.js
         env:
           NODE_ENV: production
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add processed_dynmap/*.json || true
+          git commit -m "Automatic dynmap update" || true
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }} || true
