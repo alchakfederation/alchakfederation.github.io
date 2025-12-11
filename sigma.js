@@ -100,7 +100,6 @@ function updateIndexJson() {
   );
 }
 
-}
 function saveFinal(data, label, ts) {
   const filename = `players_${label}_${readableTs(ts)}.json`;
   const full = path.join(OUTPUT_DIR, filename);
