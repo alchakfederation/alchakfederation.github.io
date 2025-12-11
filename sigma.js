@@ -187,3 +187,12 @@ run().catch(err => {
   console.error("Fatal error:", err);
   process.exit(1);
 });
+process.on("SIGTERM", () => {
+  console.log("Received SIGTERM, shutting down...");
+  process.exit(0);
+});
+
+process.on("SIGINT", () => {
+  console.log("Received SIGINT, shutting down...");
+  process.exit(0);
+});
