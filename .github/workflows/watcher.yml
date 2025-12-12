@@ -30,8 +30,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run watcher for 80s (forced kill)
-      run: timeout -s SIGKILL 80s node sigma.js || true
+    - name: Run watcher for 200s (forced kill)
+      run: timeout -s SIGKILL 200s node sigma.js || true
       env:
         NODE_ENV: production
 
