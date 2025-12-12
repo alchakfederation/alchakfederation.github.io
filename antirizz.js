@@ -6,7 +6,7 @@
  * - Opens the map URL
  * - Finds the first <canvas> on the page (LiveAtlas WebGL canvas)
  * - Raster-scans the map by dragging, captures canvas.toDataURL() per step
- * - Detects edges by comparing MD5 of successive captures
+ * - Detects edges by comparing MD5 of successive captureh
  * - Saves captures into captures/ folder
  * - Stitches saved PNGs into a single huge PNG using node-canvas
  *
