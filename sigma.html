@@ -15,6 +15,8 @@
             color-scheme: dark;
         }
 
+        *, *::before, *::after { box-sizing: border-box; }
+
         html,
         body {
             height: 100%;
@@ -39,6 +41,8 @@
             z-index: 100;
             display: flex;
             flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
         main.map-wrap {
@@ -55,7 +59,24 @@
             border-radius: 10px;
             padding: 12px;
             box-shadow: 0 6px 18px rgba(2, 6, 23, .6);
-            overflow: auto;
+            overflow: visible;
+            max-width: 100%;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,0.12) transparent;
+        }
+        *::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        *::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.12);
+            border-radius: 8px;
+        }
+        *::-webkit-scrollbar-track {
+            background: transparent;
         }
 
         header {
@@ -137,6 +158,7 @@
             width: 100%;
             border-collapse: collapse;
             color: #e6eef8;
+            table-layout: fixed;
         }
 
         th,
@@ -145,6 +167,7 @@
             text-align: left;
             font-size: 13px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            overflow-wrap: anywhere;
         }
 
         th {
@@ -172,6 +195,9 @@
             height: 100%;
             display: block;
             cursor: grab;
+            position: relative;
+            z-index: 1;
+            background: transparent;
         }
 
         .legend {
@@ -254,6 +280,7 @@
             border-radius: 6px;
             padding: 6px;
             background: rgba(255, 255, 255, 0.02);
+            overflow-wrap: anywhere;
         }
 
         .link {
@@ -336,6 +363,7 @@
                     <button id="refreshBtn" class="btn tiny">Refresh view</button>
                 </div>
             </div>
+            
             <div style="margin-top:10px;" class="panel" id="tablePanel">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
                     <div class="small-muted">Players</div>
@@ -407,6 +435,22 @@
         };
         const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
+        const MAP_TPL = 'https://map.ccnetmc.com/nationsmap/#world;flat;{x},64,{z};{zoom}';
+        const CAM_LEVEL_BREAKS = [0.07, 0.10, 0.16, 0.26, 0.42, 0.68, 1.10];
+        function camZoomToLevel(z) {
+            for (let i = 0; i < CAM_LEVEL_BREAKS.length; i++) if (z <= CAM_LEVEL_BREAKS[i]) return i;
+            return 7;
+        }
+        function resolveZoomUrl(idx, x, z) {
+            const zoomNum = (idx + 1);
+            let u = MAP_TPL;
+            u = u.replace(/\{x\}/g, String(Math.round(x || 0)));
+            u = u.replace(/\{z\}/g, String(Math.round(z || 0)));
+            u = u.replace(/\{zoom\}/g, String(zoomNum));
+            return u;
+        }
+        function updateIframeFromCam() { /* no-op when using world map image */ }
+
         /* ----------------------------- App state ------------------------------*/
         let filesMeta = []; // [{name, dateMs, source, dataArray}]
         let players = new Map(); // player -> {rank, points: [{x,z,ts}], lastSeenMs}
@@ -414,9 +458,27 @@
         let selectedPlayer = null;
         let currentMaxHours = parseInt($('#hoursRange').value, 10);
         let decimateTarget = parseInt($('#decimateTarget').value, 10);
-        // load world map image
         let worldMapImg = null;
         const mapImg = new Image();
+        const DEFAULT_MARKERS = [
+            { name: 'Beograd', x: 2565, z: -5387 },
+            { name: 'Thexan', x: 512, z: -5656 },
+            { name: 'Lartace', x: 4996, z: -5368 },
+            { name: 'Crimea', x: 4096, z: -5432 },
+            { name: 'Alsban', x: 4164, z: -5044 }
+        ];
+        let staticMarkers = DEFAULT_MARKERS.slice();
+        (async function(){
+            try {
+                const r = await fetch('/markers.json');
+                if (r.ok) {
+                    const data = await r.json();
+                    const arr = Array.isArray(data) ? data : [];
+                    staticMarkers = arr.map(m => ({ name: String(m.name||''), x: Number(m.x)||0, z: Number(m.z)||0 })).filter(m => m.name);
+                    if (!staticMarkers.length) staticMarkers = DEFAULT_MARKERS.slice();
+                }
+            } catch {}
+        })();
 
         /* ----------------------------- File loading ------------------------------*/
         $('#pickFiles').addEventListener('click', () => $('#fileInput').click());
@@ -460,58 +522,39 @@
 
         async function fetchServerFiles() {
     try {
-        // Load generated index.json that lists all files
         const r = await fetch("processed_dynmap/index.json", { cache: "no-store" });
-
         if (!r.ok) {
             console.warn("index.json not found on server");
             return;
         }
-
         const data = await r.json();
         if (!data || !Array.isArray(data.files)) {
             console.warn("index.json missing 'files' array");
             return;
         }
-
         const fileList = data.files;
         console.log("Server file list:", fileList);
-
         for (const file of fileList) {
             try {
-                // Skip already loaded files
                 if (filesMeta.some(f => f.name === file)) continue;
-
                 const fr = await fetch(`processed_dynmap/${file}`, { cache: "no-store" });
                 if (!fr.ok) {
                     console.warn("Failed to fetch:", file);
                     continue;
                 }
-
                 const js = await fr.json();
                 const dateMs = parseTimestampFromFilename(file);
-
-                filesMeta.push({
-                    name: file,
-                    dateMs,
-                    source: "server",
-                    data: js
-                });
-
+                filesMeta.push({ name: file, dateMs, source: "server", data: js });
             } catch (err) {
                 console.warn("Error loading file:", file, err);
             }
         }
-
-        // update UI + map
         renderFileList();
         rebuildPlayers();
-
     } catch (e) {
         console.warn("fetchServerFiles() failed:", e.message || e);
     }
 }
-
         $('#tryServer').addEventListener('click', fetchServerFiles);
         // periodically poll the server list every 60s
         setInterval(fetchServerFiles, 60 * 1000);
@@ -625,6 +668,7 @@
                 }
             }
             drawMap();
+            updateIframeFromCam();
         }
 
         /* ----------------------------- Table UI ------------------------------*/
@@ -734,7 +778,6 @@
         function selectPlayer(name) {
             selectedPlayer = name;
             renderPlayersTable();
-            // fit map to this player's path
             const pts = getDecimatedPoints(name);
             if (pts.length) {
                 let minx = Infinity, minz = Infinity, maxx = -Infinity, maxz = -Infinity;
@@ -755,7 +798,7 @@
                 cam.zoom = clamp(Math.min(zoomX, zoomY), 0.05, 6);
             }
             drawMap();
-            // show export button for player
+            updateIframeFromCam();
             const btn = document.createElement('button');
             btn.textContent = 'Export CSV';
             btn.className = 'btn tiny export';
@@ -864,6 +907,33 @@
         let dragging = false,
             lastMouse = null;
         let mapBounds = null;
+        const HALO_RADIUS = 50;
+        const MARKER_COLOR = '#ffd166';
+        const HALO_FILL = 'rgba(255,209,102,0.22)';
+        const HALO_STROKE = 'rgba(255,209,102,0.12)';
+        let selectedMarker = null;
+        function computeHaloRadius(z) {
+            if (z <= 0.05) return 10;
+            const zz = Math.min(z, 1);
+            const r = 10 + (zz - 0.05) * (20 / 0.95);
+            return Math.max(10, Math.min(30, r));
+        }
+        const legendSelEl = (function(){
+            const legend = document.querySelector('.legend');
+            if (!legend) return null;
+            let el = document.getElementById('selectionInfo');
+            if (!el) {
+                el = document.createElement('div');
+                el.id = 'selectionInfo';
+                el.className = 'small-muted';
+                legend.appendChild(el);
+            }
+            return el;
+        })();
+        function updateSelectionInfo(name, x, z) {
+            if (!legendSelEl) return;
+            legendSelEl.textContent = name ? (name + ' (' + Math.round(x) + ', ' + Math.round(z) + ')') : '';
+        }
 
         function worldToScreen(x, z) {
             const sx = (x - cam.x) * cam.zoom + canvas.width / 2;
@@ -880,15 +950,6 @@
         function drawMap() {
             // clear
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // background
-            ctx.fillStyle = '#071217';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            // draw world map image if loaded
-            if (worldMapImg) {
-                ctx.globalAlpha = 0.7;
-                ctx.drawImage(worldMapImg, 0, 0, canvas.width, canvas.height);
-                ctx.globalAlpha = 1;
-            }
             ctx.strokeStyle = 'rgba(255,255,255,0.03)';
             ctx.lineWidth = 1;
             // draw axis lines every 2048 blocks (scaled)
@@ -969,6 +1030,24 @@
                     }
                 }
             }
+            for (const m of staticMarkers) {
+                const [sx, sy] = worldToScreen(m.x, m.z);
+                const haloR = computeHaloRadius(cam.zoom);
+                ctx.beginPath();
+                ctx.arc(sx, sy, haloR, 0, Math.PI * 2);
+                ctx.fillStyle = HALO_FILL;
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = HALO_STROKE;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.fillStyle = MARKER_COLOR;
+                ctx.arc(sx, sy, 7, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.font = '13px Inter, Arial';
+                ctx.fillStyle = '#ffffff';
+                ctx.fillText(String(m.name||''), sx + 10, sy - 10);
+            }
             // zoom label
             $('#zoomLabel').textContent = cam.zoom.toFixed(2) + 'x';
         }
@@ -1000,6 +1079,7 @@
         canvas.addEventListener('mouseup', () => {
             dragging = false;
             canvas.style.cursor = 'grab';
+            updateIframeFromCam();
         });
 
         canvas.addEventListener('mouseleave', () => {
@@ -1022,6 +1102,42 @@
             cam.x += (before[0] - after[0]);
             cam.y += (before[1] - after[1]);
             drawMap();
+            updateIframeFromCam();
+        });
+        canvas.addEventListener('click', (ev) => {
+            const rect = canvas.getBoundingClientRect();
+            const mx = ev.clientX - rect.left;
+            const my = ev.clientY - rect.top;
+            let nearestMarker = null, ndm = Infinity;
+            const haloR = computeHaloRadius(cam.zoom);
+            for (const m of staticMarkers) {
+                const [sx, sy] = worldToScreen(m.x, m.z);
+                const d = Math.hypot(sx - mx, sy - my);
+                if (d < haloR && d < ndm) { ndm = d; nearestMarker = m; }
+            }
+            let nearestPlayer = null, ndp = Infinity, lastPt = null;
+            const now = Date.now();
+            const cutoff = now - currentMaxHours * 3600 * 1000;
+            for (const [name, p] of players) {
+                const pts = p.points.filter(pt => pt.ts >= cutoff);
+                if (!pts.length) continue;
+                const last = pts[pts.length - 1];
+                const [sx, sy] = worldToScreen(last.x, last.z);
+                const d = Math.hypot(sx - mx, sy - my);
+                if (d < 14 && d < ndp) { ndp = d; nearestPlayer = name; lastPt = last; }
+            }
+            if (nearestMarker && (ndm <= ndp || !nearestPlayer)) {
+                selectedMarker = nearestMarker;
+                updateSelectionInfo(nearestMarker.name, nearestMarker.x, nearestMarker.z);
+                drawMap();
+                return;
+            }
+            if (nearestPlayer) {
+                selectPlayer(nearestPlayer);
+                if (lastPt) updateSelectionInfo(nearestPlayer, lastPt.x, lastPt.z);
+                return;
+            }
+            updateSelectionInfo('', 0, 0);
         });
 
         /* resize canvas on window */
@@ -1067,6 +1183,7 @@
             const zoomY = canvas.height / (worldH * 1.2);
             cam.zoom = clamp(Math.min(zoomX, zoomY), 0.05, 6);
             drawMap();
+            updateIframeFromCam();
         });
 
         $('#clearSel').addEventListener('click', () => {
@@ -1125,109 +1242,6 @@
         /* ----------------------------- Initial demo: load example if user hasn't loaded any files 
            This is that sample data you provided (keeps UI alive) 
         ------------------------------*/
-        const sampleName = 'players_sample_2025-12-11_19-47-49.json';
-        const sampleData = [{
-                "player": "RussianTycoon",
-                "rank": "Excelsior",
-                "x": 8696,
-                "z": -2880
-            },
-            {
-                "player": "MutapaMonke",
-                "rank": "Supporter",
-                "x": 2564,
-                "z": 3568
-            },
-            {
-                "player": "JDanielsito",
-                "rank": "Member",
-                "x": -7797,
-                "z": 3930
-            },
-            {
-                "player": "nicealtsnkasH",
-                "rank": "Member",
-                "x": 15891,
-                "z": 2059
-            },
-            {
-                "player": "Vissenkop6",
-                "rank": "Voyager",
-                "x": 6974,
-                "z": -4697
-            },
-            {
-                "player": "prettyevr3nk",
-                "rank": "Supporter",
-                "x": 144,
-                "z": -5847
-            },
-            {
-                "player": "phphphg",
-                "rank": "Archduke",
-                "x": -863,
-                "z": -7395
-            },
-            {
-                "player": "SilentPee",
-                "rank": "Conquistador",
-                "x": 14214,
-                "z": -4252
-            },
-            {
-                "player": "BopBopLittle",
-                "rank": "Supporter",
-                "x": 833,
-                "z": -5982
-            },
-            {
-                "player": "Jc499",
-                "rank": "Voyager",
-                "x": -8547,
-                "z": 3921
-            },
-            {
-                "player": "Chuar",
-                "rank": "Voyager",
-                "x": -8624,
-                "z": 4062
-            },
-            {
-                "player": "Gawkan",
-                "rank": "Noble",
-                "x": 16996,
-                "z": -7109
-            },
-            {
-                "player": "Makuferis",
-                "rank": "Supporter",
-                "x": -9090,
-                "z": -323
-            },
-            {
-                "player": "Kjellse7",
-                "rank": "Member",
-                "x": 5030,
-                "z": -273
-            },
-            {
-                "player": "kinsukghoshXD",
-                "rank": "Noble",
-                "x": 15895,
-                "z": 2061
-            }
-        ];
-
-        if (!filesMeta.length) {
-            filesMeta.push({
-                name: sampleName,
-                dateMs: Date.now(),
-                source: 'sample',
-                data: sampleData
-            });
-            renderFileList();
-            rebuildPlayers();
-        }
 
         /* ----------------------------- Help dialog ------------------------------*/
         $('#helpBtn').addEventListener('click', () => {
@@ -1257,6 +1271,8 @@
             // redraw and resize to modal area
             fitCanvas();
             drawMap();
+            // ensure iframe for map preview exists in modal body
+            ensureModalIframe();
         }
 
         function closeMapModal() {
@@ -1284,6 +1300,132 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && mapModal.style.display === 'block') closeMapModal();
         });
+
+        /* ----------------------------- Map iframe & zoom-levels ------------------------------*/
+        const ZOOM_KEY = 'sigma_zoom_levels_v1';
+        let zoomLevels = [];
+        let selectedZoom = 0;
+
+        const FIXED_ZOOM_COUNT = 8;
+
+        function loadZoomLevels() {
+            try {
+                const raw = localStorage.getItem(ZOOM_KEY);
+                if (raw) zoomLevels = JSON.parse(raw) || [];
+            } catch (e) { zoomLevels = []; }
+            // enforce exactly 8 slots: pad with empty slots or truncate
+            zoomLevels = (zoomLevels || []).slice(0, FIXED_ZOOM_COUNT);
+            for (let i = 0; i < FIXED_ZOOM_COUNT; i++) {
+                if (!zoomLevels[i]) zoomLevels[i] = { name: `zoom${i+1}`, url: '' };
+            }
+            if (selectedZoom >= FIXED_ZOOM_COUNT) selectedZoom = FIXED_ZOOM_COUNT - 1;
+            renderZoomList();
+            saveZoomLevels();
+        }
+
+        function saveZoomLevels() {
+            // always persist exactly 8 entries
+            localStorage.setItem(ZOOM_KEY, JSON.stringify(zoomLevels.slice(0, FIXED_ZOOM_COUNT)));
+            renderZoomList();
+        }
+
+        function renderZoomList() {
+            const el = document.getElementById('zoomList');
+            if (!el) return;
+            el.innerHTML = zoomLevels.map((z, i) => `
+                <div style="display:flex;align-items:center;gap:8px;padding:6px;border-radius:6px;background:${i===selectedZoom? 'rgba(86,182,249,0.06)' : 'transparent'}">
+                    <input type="radio" name="zoomSel" data-idx="${i}" ${i===selectedZoom? 'checked' : ''} />
+                    <div style="flex:1"><strong style="color:#fff">${escapeHtml(z.name||`zoom${i+1}`)}</strong><div class="small-muted" style="font-size:12px">${escapeHtml(z.url||'')}</div></div>
+                    <button data-idx="${i}" class="btn tiny editZoom">Edit</button>
+                    <button data-idx="${i}" class="btn tiny secondary removeZoom">Clear</button>
+                </div>
+            `).join('');
+            Array.from(el.querySelectorAll('input[name=zoomSel]')).forEach(r => r.addEventListener('change', (e) => {
+                selectedZoom = parseInt(e.target.dataset.idx, 10);
+                applySelectedZoomForCurrentPlayer();
+            }));
+            Array.from(el.getElementsByClassName('removeZoom')).forEach(b => b.addEventListener('click', (ev) => {
+                const i = parseInt(ev.target.dataset.idx, 10);
+                // clear slot instead of removing to keep exactly 8 entries
+                zoomLevels[i] = { name: `zoom${i+1}`, url: '' };
+                if (selectedZoom >= zoomLevels.length) selectedZoom = zoomLevels.length - 1;
+                saveZoomLevels();
+            }));
+            Array.from(el.getElementsByClassName('editZoom')).forEach(b => b.addEventListener('click', (ev) => {
+                const i = parseInt(ev.target.dataset.idx, 10);
+                const z = zoomLevels[i];
+                $('#zoomName').value = z.name || '';
+                $('#zoomUrl').value = z.url || '';
+                selectedZoom = i;
+                renderZoomList();
+            }));
+        }
+
+        function ensureModalIframe() { return null; }
+
+        // moved earlier
+
+        function applySelectedZoomForCurrentPlayer() {
+            updateIframeFromCam();
+        }
+
+        // moved earlier
+
+        const addZoomBtnEl = document.getElementById('addZoomBtn');
+        if (addZoomBtnEl) addZoomBtnEl.addEventListener('click', () => {
+            const name = $('#zoomName').value.trim();
+            const url = $('#zoomUrl').value.trim();
+            if (!url) return alert('Enter a URL template');
+            // write into selected slot or first empty slot
+            let idx = selectedZoom != null ? selectedZoom : -1;
+            if (idx < 0 || idx >= FIXED_ZOOM_COUNT) {
+                idx = zoomLevels.findIndex(z => !z.url);
+                if (idx === -1) idx = 0;
+            }
+            zoomLevels[idx] = { name: name || `zoom${idx+1}`, url };
+            selectedZoom = idx;
+            $('#zoomName').value = '';
+            $('#zoomUrl').value = '';
+            saveZoomLevels();
+        });
+
+        const addDefaultZoomEl = document.getElementById('addDefaultZoom');
+        if (addDefaultZoomEl) addDefaultZoomEl.addEventListener('click', () => {
+            // populate 8 sensible defaults (zoom 1..8)
+            zoomLevels = [];
+            for (let i = 1; i <= FIXED_ZOOM_COUNT; i++) {
+                zoomLevels.push({ name: `zoom${i}`, url: `https://map.ccnetmc.com/nationsmap//#world;flat;{x},64,{z};${i}` });
+            }
+            selectedZoom = 0;
+            saveZoomLevels();
+        });
+
+        const prevZoomEl = document.getElementById('prevZoom');
+        if (prevZoomEl) prevZoomEl.addEventListener('click', () => {
+            selectedZoom = (selectedZoom - 1 + FIXED_ZOOM_COUNT) % FIXED_ZOOM_COUNT;
+            renderZoomList();
+            applySelectedZoomForCurrentPlayer();
+        });
+        const nextZoomEl = document.getElementById('nextZoom');
+        if (nextZoomEl) nextZoomEl.addEventListener('click', () => {
+            selectedZoom = (selectedZoom + 1) % FIXED_ZOOM_COUNT;
+            renderZoomList();
+            applySelectedZoomForCurrentPlayer();
+        });
+
+        const applyZoomBtnEl = document.getElementById('applyZoomBtn');
+        if (applyZoomBtnEl) applyZoomBtnEl.addEventListener('click', () => {
+            applySelectedZoomForCurrentPlayer();
+        });
+
+        function stripIframePanel() {
+            const panel = document.getElementById('iframePanel');
+            if (!panel) return;
+            panel.innerHTML = '<div class="small-muted">Map preview</div>';
+        }
+        stripIframePanel();
+        ensureModalIframe();
+        applySelectedZoomForCurrentPlayer();
 
 
         /* end of script */
