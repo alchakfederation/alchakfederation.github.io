@@ -1,489 +1,475 @@
 {
-  "scraped_at": "2026-07-11T02:35:00.592Z",
+  "scraped_at": "2026-07-12T02:42:03.564Z",
   "source": "https://map.ccnetmc.com/nationsmap",
   "towns": [
     {
       "town": "North_Prague",
       "nation": "Polish_Empire",
-      "bank": 1516.87,
+      "bank": 1208.54,
       "upkeep": 278,
-      "days_rounded": 6
-    },
-    {
-      "town": "Barcelona",
-      "nation": "Spanish_Empire",
-      "bank": 3657.32,
-      "upkeep": 944,
-      "days_rounded": 4
+      "days_rounded": 5
     },
     {
       "town": "Chakbashevo",
       "nation": "Alchak_Federation",
-      "bank": 1209,
+      "bank": 992,
       "upkeep": 217,
-      "days_rounded": 6
+      "days_rounded": 5
+    },
+    {
+      "town": "Barcelona",
+      "nation": "Spanish_Empire",
+      "bank": 2640.17,
+      "upkeep": 944,
+      "days_rounded": 3
     },
     {
       "town": "Tsargrad",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3939.87,
+      "bank": 3751.38,
       "upkeep": 188.49,
-      "days_rounded": 21
+      "days_rounded": 20
     },
     {
       "town": "Leningrad",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2881.88,
+      "bank": 2350.4,
       "upkeep": 531.48,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Lawless",
       "nation": "Imperial_North",
-      "bank": 15291.13,
+      "bank": 14839.35,
       "upkeep": 451.77,
-      "days_rounded": 34
+      "days_rounded": 33
     },
     {
       "town": "Topaz",
       "nation": "Russo_Japanese_Empire",
-      "bank": 30929.28,
+      "bank": 30496.68,
       "upkeep": 432.6,
-      "days_rounded": 72
-    },
-    {
-      "town": "Bali",
-      "nation": "Oceanic_Empire",
-      "bank": 24243.72,
-      "upkeep": 527.42,
-      "days_rounded": 46
+      "days_rounded": 71
     },
     {
       "town": "Moroni",
       "nation": "East_African_Federation",
-      "bank": 713,
+      "bank": 556,
       "upkeep": 157,
-      "days_rounded": 5
+      "days_rounded": 4
+    },
+    {
+      "town": "Bali",
+      "nation": "Oceanic_Empire",
+      "bank": 25552.3,
+      "upkeep": 527.42,
+      "days_rounded": 49
     },
     {
       "town": "Krasnoturyinsk",
       "nation": "Russo_Japanese_Empire",
-      "bank": 86893.29,
+      "bank": 86596.65,
       "upkeep": 296.64,
-      "days_rounded": 293
+      "days_rounded": 292
     },
     {
       "town": "Halvarad",
       "nation": "Polish_Empire",
-      "bank": 2943.09,
+      "bank": 2594.23,
       "upkeep": 290,
-      "days_rounded": 11
+      "days_rounded": 9
     },
     {
       "town": "Slovakia",
       "nation": null,
-      "bank": 2099,
+      "bank": 2069,
       "upkeep": 30,
-      "days_rounded": 70
+      "days_rounded": 69
     },
     {
       "town": "Axiang_Dynasty",
       "nation": "Russo_Japanese_Empire",
-      "bank": 11771.24,
+      "bank": 11580.69,
       "upkeep": 190.55,
-      "days_rounded": 62
+      "days_rounded": 61
     },
     {
       "town": "OE_Vengeance",
       "nation": "Eastern_Syndicate",
-      "bank": 750.73,
+      "bank": 389.2,
       "upkeep": 361.53,
-      "days_rounded": 3
-    },
-    {
-      "town": "Solarity",
-      "nation": "Imperium_Romanum",
-      "bank": 4599.4,
-      "upkeep": 435.69,
-      "days_rounded": 11
-    },
-    {
-      "town": "Hazelton",
-      "nation": "West_Coast_Republic",
-      "bank": 1434.28,
-      "upkeep": 295.93,
-      "days_rounded": 5
-    },
-    {
-      "town": "Príamo",
-      "nation": "Macuxa &amp; Floritania. Built by SirRafaelo21, contibued by the British Empire, onward to glory",
-      "bank": 373.51,
-      "upkeep": 587,
-      "days_rounded": 1
+      "days_rounded": 2
     },
     {
       "town": "Phoenix_Point",
       "nation": null,
-      "bank": 904162.56,
+      "bank": 903562.56,
       "upkeep": 600,
-      "days_rounded": 1507
+      "days_rounded": 1506
+    },
+    {
+      "town": "Hazelton",
+      "nation": "West_Coast_Republic",
+      "bank": 5232.6,
+      "upkeep": 295.93,
+      "days_rounded": 18
+    },
+    {
+      "town": "Príamo",
+      "nation": "Macuxa &amp; Floritania. Built by SirRafaelo21, contibued by the British Empire, onward to glory",
+      "bank": 2786.51,
+      "upkeep": 587,
+      "days_rounded": 5
+    },
+    {
+      "town": "Solarity",
+      "nation": "Imperium_Romanum",
+      "bank": 4163.71,
+      "upkeep": 435.69,
+      "days_rounded": 10
     },
     {
       "town": "Borneo",
       "nation": "Oceanic_Empire",
-      "bank": 4766.98,
+      "bank": 4643.97,
       "upkeep": 123.01,
-      "days_rounded": 39
-    },
-    {
-      "town": "Tehran",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 2269.61,
-      "upkeep": 163.77,
-      "days_rounded": 14
+      "days_rounded": 38
     },
     {
       "town": "Bougainville",
       "nation": "Gold_Hoarders",
-      "bank": 3691,
+      "bank": 3607,
       "upkeep": 84,
-      "days_rounded": 44
+      "days_rounded": 43
     },
     {
-      "town": "Denmark",
-      "nation": "Imperium_Romanum",
-      "bank": 3315.98,
-      "upkeep": 312.09,
-      "days_rounded": 11
+      "town": "Tehran",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 2105.84,
+      "upkeep": 163.77,
+      "days_rounded": 13
     },
     {
       "town": "Nunivak",
       "nation": "West_Coast_Republic",
-      "bank": 261.65,
+      "bank": 193.98,
       "upkeep": 67.67,
-      "days_rounded": 4
+      "days_rounded": 3
+    },
+    {
+      "town": "Denmark",
+      "nation": "Imperium_Romanum",
+      "bank": 3003.89,
+      "upkeep": 312.09,
+      "days_rounded": 10
     },
     {
       "town": "Ironforge",
       "nation": "Elite_Penguin_Force",
-      "bank": 5927.81,
+      "bank": 5862.81,
       "upkeep": 65,
-      "days_rounded": 92
+      "days_rounded": 91
     },
     {
       "town": "Glaciera_Prime",
       "nation": "Polaris",
-      "bank": 2173,
+      "bank": 2063,
       "upkeep": 110,
-      "days_rounded": 20
+      "days_rounded": 19
     },
     {
       "town": "Niguarda",
       "nation": "Vanaco",
-      "bank": 1694,
+      "bank": 11312.83,
       "upkeep": 380,
-      "days_rounded": 5
+      "days_rounded": 30
     },
     {
       "town": "Catterbury",
       "nation": "Imperium_Romanum",
-      "bank": 2724.14,
+      "bank": 2463.55,
       "upkeep": 260.59,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Austria",
       "nation": "Alchak_Federation",
-      "bank": 1121.61,
+      "bank": 528.61,
       "upkeep": 593,
-      "days_rounded": 2
+      "days_rounded": 1
     },
     {
       "town": "Swamp",
       "nation": "Thracian_Dominion",
-      "bank": 140.25,
+      "bank": 3.27,
       "upkeep": 143.42,
-      "days_rounded": 1
+      "days_rounded": 0
     },
     {
       "town": "Bonebrook",
       "nation": null,
-      "bank": 5624.33,
+      "bank": 5422.33,
       "upkeep": 202,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Camomille",
       "nation": "Imperial_North",
-      "bank": 1728.29,
+      "bank": 1487.91,
       "upkeep": 240.37,
+      "days_rounded": 7
+    },
+    {
+      "town": "Cuarteles",
+      "nation": "Spanish_Empire",
+      "bank": 1182.79,
+      "upkeep": 148,
       "days_rounded": 8
     },
     {
       "town": "New_Wallachia",
       "nation": "Thracian_Dominion",
-      "bank": 1672.58,
+      "bank": 1533.1,
       "upkeep": 139.38,
-      "days_rounded": 13
-    },
-    {
-      "town": "Cuarteles",
-      "nation": "Spanish_Empire",
-      "bank": 1357.94,
-      "upkeep": 148,
-      "days_rounded": 10
+      "days_rounded": 11
     },
     {
       "town": "Alhambra",
       "nation": "Spanish_Empire",
-      "bank": 1768.15,
+      "bank": 1480.79,
       "upkeep": 252,
-      "days_rounded": 8
+      "days_rounded": 6
     },
     {
       "town": "Lower_Mirage",
       "nation": null,
-      "bank": 788.62,
+      "bank": 731.62,
       "upkeep": 57,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Merton",
       "nation": "Imperial_North",
-      "bank": 1671.12,
+      "bank": 1447.71,
       "upkeep": 223.41,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Kyodograd",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1062.67,
+      "bank": 748.52,
       "upkeep": 314.15,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Elephantia",
       "nation": "Gran_Colombia",
-      "bank": 6299.95,
+      "bank": 6310.21,
       "upkeep": 54.54,
       "days_rounded": 116
     },
     {
       "town": "Volgograd",
       "nation": "Thracian_Dominion",
-      "bank": 2273.58,
+      "bank": 1955.33,
       "upkeep": 318.15,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "ColoSpgs",
       "nation": "Imperial_North",
-      "bank": 3460.93,
+      "bank": 3264.43,
       "upkeep": 201.49,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Aurora",
       "nation": "Imperial_North",
-      "bank": 8910.11,
+      "bank": 8517.73,
       "upkeep": 392.38,
-      "days_rounded": 23
+      "days_rounded": 22
     },
     {
       "town": "Nyako",
       "nation": "Eastern_Syndicate",
-      "bank": 812756.39,
+      "bank": 812649.27,
       "upkeep": 107.12,
-      "days_rounded": 7588
+      "days_rounded": 7587
     },
     {
       "town": "Guantánamo",
       "nation": "Gran_Colombia",
-      "bank": 2826.42,
+      "bank": 2603.21,
       "upkeep": 223.21,
-      "days_rounded": 13
+      "days_rounded": 12
     },
     {
       "town": "Texarkana",
       "nation": null,
-      "bank": 8593.19,
+      "bank": 8329.19,
       "upkeep": 264,
-      "days_rounded": 33
+      "days_rounded": 32
     },
     {
       "town": "New_Zwolle",
       "nation": "Oceanic_Empire",
-      "bank": 6394.15,
+      "bank": 6250.63,
       "upkeep": 143.52,
-      "days_rounded": 45
+      "days_rounded": 44
     },
     {
       "town": "Fort_Valor",
       "nation": "California_Republic",
-      "bank": 1345.32,
+      "bank": 1220.32,
       "upkeep": 125,
-      "days_rounded": 11
-    },
-    {
-      "town": "Mompracem",
-      "nation": "Oceanic_Empire",
-      "bank": 19651.55,
-      "upkeep": 158.36,
-      "days_rounded": 125
+      "days_rounded": 10
     },
     {
       "town": "Old_Rorikstead",
       "nation": "Russo_Japanese_Empire",
-      "bank": 428.83,
+      "bank": 179.57,
       "upkeep": 249.26,
-      "days_rounded": 2
+      "days_rounded": 1
+    },
+    {
+      "town": "Mompracem",
+      "nation": "Oceanic_Empire",
+      "bank": 19493.18,
+      "upkeep": 158.36,
+      "days_rounded": 124
     },
     {
       "town": "Vero",
       "nation": "Imperium_Romanum",
-      "bank": 7080.49,
+      "bank": 6383.18,
       "upkeep": 697.31,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Qaleh_Zarif",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1350.19,
+      "bank": 1129.77,
       "upkeep": 220.42,
-      "days_rounded": 7
-    },
-    {
-      "town": "Acapulco",
-      "nation": "California_Republic",
-      "bank": 22178.39,
-      "upkeep": 96,
-      "days_rounded": 232
+      "days_rounded": 6
     },
     {
       "town": "South_Sakhalin",
       "nation": "Russo_Japanese_Empire",
-      "bank": 5093.59,
+      "bank": 4922.61,
       "upkeep": 170.98,
-      "days_rounded": 30
+      "days_rounded": 29
+    },
+    {
+      "town": "Acapulco",
+      "nation": "California_Republic",
+      "bank": 22082.39,
+      "upkeep": 96,
+      "days_rounded": 231
     },
     {
       "town": "Liberia",
       "nation": "Quintessence_Syndicate",
-      "bank": 33417.49,
+      "bank": 32477.1,
       "upkeep": 940.39,
-      "days_rounded": 36
+      "days_rounded": 35
     },
     {
       "town": "Homestead_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 2262.99,
+      "bank": 2190.89,
       "upkeep": 72.1,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "Puerto_Azul",
       "nation": "Potarian_Seaguards",
-      "bank": 2297,
+      "bank": 2257,
       "upkeep": 40,
-      "days_rounded": 58
+      "days_rounded": 57
     },
     {
       "town": "Hoshinohoshi",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1850.93,
+      "bank": 1562.53,
       "upkeep": 288.4,
-      "days_rounded": 7
-    },
-    {
-      "town": "South_Ordelle",
-      "nation": "Oceanic_Empire",
-      "bank": 414.73,
-      "upkeep": 81.3,
       "days_rounded": 6
     },
     {
       "town": "Althergard",
       "nation": null,
-      "bank": 11859.1,
+      "bank": 11542.1,
       "upkeep": 317,
-      "days_rounded": 38
+      "days_rounded": 37
+    },
+    {
+      "town": "South_Ordelle",
+      "nation": "Oceanic_Empire",
+      "bank": 333.42,
+      "upkeep": 81.3,
+      "days_rounded": 5
     },
     {
       "town": "Al_Maghreb",
       "nation": "Spanish_Empire",
-      "bank": 1038.23,
+      "bank": 917.47,
       "upkeep": 100,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Reunion",
       "nation": null,
-      "bank": 10168.59,
+      "bank": 10110.59,
       "upkeep": 58,
-      "days_rounded": 176
+      "days_rounded": 175
     },
     {
       "town": "Azure_Bay",
       "nation": "Landinian_Federation",
-      "bank": 1154.89,
+      "bank": 761.89,
       "upkeep": 393,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Aeternum",
       "nation": "Quintessence_Syndicate",
-      "bank": 6397.17,
+      "bank": 6105.69,
       "upkeep": 291.49,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "Port_Nightjar",
       "nation": "Potarian_Seaguards",
-      "bank": 11468.99,
+      "bank": 11195.99,
       "upkeep": 273,
-      "days_rounded": 43
+      "days_rounded": 42
     },
     {
       "town": "Sun_Harvest",
       "nation": "Gran_Colombia",
-      "bank": 6835.5,
+      "bank": 6524.42,
       "upkeep": 311.08,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "New_Hague",
       "nation": "Oceanic_Empire",
-      "bank": 11868.65,
+      "bank": 11510.55,
       "upkeep": 361.27,
-      "days_rounded": 33
+      "days_rounded": 32
     },
     {
       "town": "Noli",
       "nation": "East_African_Federation",
-      "bank": 1583.56,
+      "bank": 1379.56,
       "upkeep": 204,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Port_Silentium",
       "nation": "Persian_Empire",
-      "bank": 480.62,
-      "upkeep": 172.31,
-      "days_rounded": 3
-    },
-    {
-      "town": "Aurum",
-      "nation": null,
-      "bank": 336084.21,
-      "upkeep": 1260,
-      "days_rounded": 267
-    },
-    {
-      "town": "Sinoe",
-      "nation": "Quintessence_Syndicate",
-      "bank": 7175.2,
-      "upkeep": 471.74,
-      "days_rounded": 16
+      "bank": 311.65,
+      "upkeep": 168.97,
+      "days_rounded": 2
     },
     {
       "town": "Luminoir",
@@ -493,53 +479,67 @@
       "days_rounded": 288
     },
     {
+      "town": "Sinoe",
+      "nation": "Quintessence_Syndicate",
+      "bank": 6703.46,
+      "upkeep": 471.74,
+      "days_rounded": 15
+    },
+    {
+      "town": "Aurum",
+      "nation": null,
+      "bank": 334824.21,
+      "upkeep": 1260,
+      "days_rounded": 266
+    },
+    {
       "town": "Newdubai",
       "nation": "Persian_Empire",
-      "bank": 734.19,
-      "upkeep": 145.64,
-      "days_rounded": 6
+      "bank": 591.37,
+      "upkeep": 142.81,
+      "days_rounded": 5
     },
     {
       "town": "Scapa_Scrapyards",
       "nation": "Imperium_Romanum",
-      "bank": 27547.78,
+      "bank": 27240.84,
       "upkeep": 306.94,
-      "days_rounded": 90
+      "days_rounded": 89
     },
     {
       "town": "Poznan",
       "nation": "Imperium_Romanum",
-      "bank": 57298.77,
+      "bank": 56892.95,
       "upkeep": 405.82,
-      "days_rounded": 142
-    },
-    {
-      "town": "Skxlzstan",
-      "nation": "East_African_Federation",
-      "bank": 755,
-      "upkeep": 155,
-      "days_rounded": 5
+      "days_rounded": 141
     },
     {
       "town": "Puerto_Cultista",
       "nation": "Gran_Colombia",
-      "bank": 8418.82,
+      "bank": 7913.82,
       "upkeep": 505,
-      "days_rounded": 17
+      "days_rounded": 16
     },
     {
-      "town": "Venezgrad",
-      "nation": "Gran_Colombia",
-      "bank": 13131.05,
-      "upkeep": 110.09,
-      "days_rounded": 120
+      "town": "Skxlzstan",
+      "nation": "East_African_Federation",
+      "bank": 600,
+      "upkeep": 155,
+      "days_rounded": 4
     },
     {
       "town": "Shindar",
       "nation": "Eastern_Syndicate",
-      "bank": 1481.89,
+      "bank": 1296.49,
       "upkeep": 185.4,
-      "days_rounded": 8
+      "days_rounded": 7
+    },
+    {
+      "town": "Venezgrad",
+      "nation": "Gran_Colombia",
+      "bank": 13020.96,
+      "upkeep": 110.09,
+      "days_rounded": 119
     },
     {
       "town": "Panama_Canal",
@@ -551,58 +551,58 @@
     {
       "town": "Livland_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 4181.55,
+      "bank": 3893.15,
       "upkeep": 288.4,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Valencia",
       "nation": "Spanish_Empire",
-      "bank": 819.09,
+      "bank": 655.37,
       "upkeep": 458,
       "days_rounded": 2
     },
     {
       "town": "Al_Khayr",
       "nation": "Vanaco",
-      "bank": 7020.97,
+      "bank": 6796.27,
       "upkeep": 224,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "Tihany",
       "nation": "Alchak_Federation",
-      "bank": 13371.91,
+      "bank": 12998.91,
       "upkeep": 373,
-      "days_rounded": 36
+      "days_rounded": 35
     },
     {
       "town": "New_Moscow",
       "nation": "Russo_Japanese_Empire",
-      "bank": 411.11,
+      "bank": 188.63,
       "upkeep": 222.48,
-      "days_rounded": 2
+      "days_rounded": 1
     },
     {
       "town": "Anubis",
       "nation": "Spanish_Empire",
-      "bank": 1957.99,
+      "bank": 1656.99,
       "upkeep": 301,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Fort_Era",
       "nation": "Imperial_North",
-      "bank": 546.82,
+      "bank": 455.62,
       "upkeep": 91.2,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "DanVille",
       "nation": "Gran_Colombia",
-      "bank": 9218.89,
+      "bank": 8941.14,
       "upkeep": 277.75,
-      "days_rounded": 34
+      "days_rounded": 33
     },
     {
       "town": "Lima",
@@ -614,352 +614,352 @@
     {
       "town": "Kamino",
       "nation": "Imperia_Victoria",
-      "bank": 19841.49,
+      "bank": 19755.49,
       "upkeep": 86,
-      "days_rounded": 231
+      "days_rounded": 230
     },
     {
       "town": "Bamako",
       "nation": "Thracian_Dominion",
-      "bank": 32973.79,
+      "bank": 32728.26,
       "upkeep": 245.43,
-      "days_rounded": 135
+      "days_rounded": 134
     },
     {
       "town": "Fort_Aleta",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 2912.09,
+      "bank": 7683.09,
       "upkeep": 229,
+      "days_rounded": 34
+    },
+    {
+      "town": "Crimea",
+      "nation": "Thracian_Dominion",
+      "bank": 4256.7,
+      "upkeep": 328.25,
       "days_rounded": 13
     },
     {
       "town": "Holy_Factory",
       "nation": "Vanaco",
-      "bank": 15538.37,
+      "bank": 15366.56,
       "upkeep": 264,
       "days_rounded": 59
     },
     {
-      "town": "Crimea",
-      "nation": "Thracian_Dominion",
-      "bank": 4585.05,
-      "upkeep": 328.25,
-      "days_rounded": 14
-    },
-    {
       "town": "Brussels",
       "nation": "Imperium_Romanum",
-      "bank": 230611.53,
+      "bank": 230126.4,
       "upkeep": 485.13,
-      "days_rounded": 476
+      "days_rounded": 475
     },
     {
       "town": "Nihon_Okoku",
       "nation": "Russo_Japanese_Empire",
-      "bank": 812.78,
+      "bank": 514.08,
       "upkeep": 298.7,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Cairo",
       "nation": "Alexandrine_Dominion",
-      "bank": 4284.7,
+      "bank": 4000.45,
       "upkeep": 284.82,
-      "days_rounded": 16
-    },
-    {
-      "town": "Qin_Juicy_Fruity",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 3924.58,
-      "upkeep": 177.16,
-      "days_rounded": 23
+      "days_rounded": 15
     },
     {
       "town": "Charlotte",
       "nation": "Imperial_North",
-      "bank": 2237,
+      "bank": 2007.23,
       "upkeep": 229.77,
-      "days_rounded": 10
+      "days_rounded": 9
+    },
+    {
+      "town": "Qin_Juicy_Fruity",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 3747.42,
+      "upkeep": 177.16,
+      "days_rounded": 22
     },
     {
       "town": "Port_SnowBeam",
       "nation": "West_Coast_Republic",
-      "bank": 4552.92,
+      "bank": 4422.23,
       "upkeep": 170.69,
-      "days_rounded": 27
+      "days_rounded": 26
     },
     {
       "town": "Nova",
       "nation": "Oceanic_Empire",
-      "bank": 58019.35,
+      "bank": 57248.72,
       "upkeep": 770.63,
-      "days_rounded": 76
+      "days_rounded": 75
     },
     {
       "town": "PexogonCity",
       "nation": null,
-      "bank": 1981.73,
+      "bank": 1872.73,
       "upkeep": 109,
-      "days_rounded": 19
-    },
-    {
-      "town": "Venezuela",
-      "nation": "Gran_Colombia",
-      "bank": 94398.87,
-      "upkeep": 645.39,
-      "days_rounded": 147
+      "days_rounded": 18
     },
     {
       "town": "Imperius",
       "nation": "Imperial_North",
-      "bank": 9576.74,
+      "bank": 9460.09,
       "upkeep": 116.65,
-      "days_rounded": 83
+      "days_rounded": 82
     },
     {
-      "town": "Foxford",
-      "nation": "Imperial_North",
-      "bank": 2364.16,
-      "upkeep": 28.28,
-      "days_rounded": 84
+      "town": "Venezuela",
+      "nation": "Gran_Colombia",
+      "bank": 93753.48,
+      "upkeep": 645.39,
+      "days_rounded": 146
     },
     {
       "town": "Angel_City",
       "nation": "Republic_Of_Sakha",
-      "bank": 2065.73,
+      "bank": 1730.36,
       "upkeep": 347,
-      "days_rounded": 6
+      "days_rounded": 5
+    },
+    {
+      "town": "Foxford",
+      "nation": "Imperial_North",
+      "bank": 2335.88,
+      "upkeep": 28.28,
+      "days_rounded": 83
     },
     {
       "town": "Sentinel",
       "nation": "Eastern_Syndicate",
-      "bank": 3123.49,
+      "bank": 2813.46,
       "upkeep": 310.03,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Recife",
       "nation": null,
-      "bank": 22311.33,
+      "bank": 22148.33,
       "upkeep": 163,
-      "days_rounded": 137
+      "days_rounded": 136
     },
     {
       "town": "Sacred_Flame",
       "nation": "Russo_Japanese_Empire",
-      "bank": 317.17,
+      "bank": 74.09,
       "upkeep": 243.08,
-      "days_rounded": 2
+      "days_rounded": 0
     },
     {
       "town": "Chiggleton",
       "nation": "West_Coast_Republic",
-      "bank": 9076.47,
+      "bank": 8766.89,
       "upkeep": 311.08,
-      "days_rounded": 30
+      "days_rounded": 29
     },
     {
       "town": "Tumen",
       "nation": "Eastern_Syndicate",
-      "bank": 61676.66,
+      "bank": 61326.46,
       "upkeep": 350.2,
-      "days_rounded": 177
+      "days_rounded": 176
     },
     {
       "town": "Malvinas_Este",
       "nation": "Landinian_Federation",
-      "bank": 45317.29,
+      "bank": 45043.29,
       "upkeep": 274,
-      "days_rounded": 166
+      "days_rounded": 165
     },
     {
       "town": "Qin_Dynasty",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2087.12,
+      "bank": 1695.72,
       "upkeep": 391.4,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Doomstadt",
       "nation": "Eastern_Syndicate",
-      "bank": 3953.25,
+      "bank": 3824.5,
       "upkeep": 128.75,
-      "days_rounded": 31
+      "days_rounded": 30
     },
     {
       "town": "New_Breda",
       "nation": "Oceanic_Empire",
-      "bank": 8286.2,
+      "bank": 8100.26,
       "upkeep": 185.94,
-      "days_rounded": 45
+      "days_rounded": 44
     },
     {
       "town": "Jazeera",
       "nation": null,
-      "bank": 21207.88,
+      "bank": 20635.7,
       "upkeep": 580,
-      "days_rounded": 37
+      "days_rounded": 36
     },
     {
       "town": "Dragor",
       "nation": "British_Empire",
-      "bank": 22137.26,
+      "bank": 21076.09,
       "upkeep": 1068.58,
-      "days_rounded": 21
+      "days_rounded": 20
     },
     {
       "town": "Zuldun",
       "nation": "Landinian_Federation",
-      "bank": 1079.12,
+      "bank": 723.12,
       "upkeep": 356,
-      "days_rounded": 4
-    },
-    {
-      "town": "Middleton",
-      "nation": "Oceanic_Empire",
-      "bank": 15454.14,
-      "upkeep": 203.61,
-      "days_rounded": 76
+      "days_rounded": 3
     },
     {
       "town": "Port_Karin",
       "nation": "Persian_Empire",
-      "bank": 488.1,
-      "upkeep": 186.73,
-      "days_rounded": 3
+      "bank": 304.99,
+      "upkeep": 183.11,
+      "days_rounded": 2
+    },
+    {
+      "town": "Middleton",
+      "nation": "Oceanic_Empire",
+      "bank": 15250.53,
+      "upkeep": 203.61,
+      "days_rounded": 75
     },
     {
       "town": "Maine",
       "nation": "Imperial_North",
-      "bank": 497.14,
+      "bank": 449.07,
       "upkeep": 48.07,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Faith",
       "nation": "Eastern_Syndicate",
-      "bank": 1125.66,
+      "bank": 1021.63,
       "upkeep": 104.03,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Port_Misrata",
       "nation": "Imperium_Romanum",
-      "bank": 18073.08,
+      "bank": 17462.29,
       "upkeep": 610.79,
-      "days_rounded": 30
+      "days_rounded": 29
     },
     {
       "town": "Island_Of_Sumba",
       "nation": "Oceanic_Empire",
-      "bank": 1098.45,
+      "bank": 1021.39,
       "upkeep": 77.06,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Vik",
       "nation": "Imperial_North",
-      "bank": 5165.08,
+      "bank": 5049.14,
       "upkeep": 115.94,
-      "days_rounded": 45
+      "days_rounded": 44
     },
     {
       "town": "WCL",
       "nation": "West_Coast_Republic",
-      "bank": 1248.8,
+      "bank": 968.02,
       "upkeep": 280.78,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Sistan",
       "nation": "Persian_Empire",
-      "bank": 942.31,
-      "upkeep": 346.8,
-      "days_rounded": 3
+      "bank": 602.24,
+      "upkeep": 340.06,
+      "days_rounded": 2
     },
     {
       "town": "Japon",
       "nation": "Russo_Japanese_Empire",
-      "bank": 13128.69,
+      "bank": 13087.49,
       "upkeep": 41.2,
-      "days_rounded": 319
+      "days_rounded": 318
     },
     {
       "town": "Progresso",
       "nation": "Alexandrine_Dominion",
-      "bank": 19692.8,
+      "bank": 14461.51,
       "upkeep": 231.29,
-      "days_rounded": 86
+      "days_rounded": 63
     },
     {
       "town": "Brotherhood_Of_Steel",
       "nation": "Imperial_North",
-      "bank": 1080.22,
-      "upkeep": 94.03,
+      "bank": 1103.19,
+      "upkeep": 95.44,
       "days_rounded": 12
     },
     {
       "town": "Asagiri",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2115.2,
+      "bank": 1842.25,
       "upkeep": 272.95,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Mangrove_Hills",
       "nation": "Potarian_Seaguards",
-      "bank": 777.3,
+      "bank": 1720.3,
       "upkeep": 57,
-      "days_rounded": 14
-    },
-    {
-      "town": "Dunlace_Castle",
-      "nation": "British_Empire",
-      "bank": 6447.58,
-      "upkeep": 278.76,
-      "days_rounded": 24
-    },
-    {
-      "town": "OilBird_Defense",
-      "nation": "Potarian_Seaguards",
-      "bank": 1650,
-      "upkeep": 46,
-      "days_rounded": 36
+      "days_rounded": 31
     },
     {
       "town": "Collesano",
       "nation": "Eastern_Syndicate",
-      "bank": 3842.47,
+      "bank": 3784.79,
       "upkeep": 57.68,
-      "days_rounded": 67
+      "days_rounded": 66
+    },
+    {
+      "town": "Dunlace_Castle",
+      "nation": "British_Empire",
+      "bank": 6168.82,
+      "upkeep": 278.76,
+      "days_rounded": 23
+    },
+    {
+      "town": "OilBird_Defense",
+      "nation": "Potarian_Seaguards",
+      "bank": 1604,
+      "upkeep": 46,
+      "days_rounded": 35
     },
     {
       "town": "Ventora",
       "nation": "Imperium_Romanum",
-      "bank": 147341.13,
+      "bank": 145426.4,
       "upkeep": 885.8,
-      "days_rounded": 167
+      "days_rounded": 165
     },
     {
       "town": "HzXBoblandia",
       "nation": "Eastern_Syndicate",
-      "bank": 74947.22,
+      "bank": 74468.27,
       "upkeep": 478.95,
-      "days_rounded": 157
+      "days_rounded": 156
     },
     {
       "town": "Halcyonistan",
       "nation": "Imperium_Romanum",
-      "bank": 4753.42,
+      "bank": 4289.92,
       "upkeep": 463.5,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Orvalho",
       "nation": null,
-      "bank": 59.93,
-      "upkeep": 178,
-      "days_rounded": 0
+      "bank": 80,
+      "upkeep": 20,
+      "days_rounded": 4
     },
     {
       "town": "Permafrost_Port",
@@ -971,737 +971,737 @@
     {
       "town": "Boloni",
       "nation": "East_African_Federation",
-      "bank": 1025,
+      "bank": 782,
       "upkeep": 243,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Camp_Rose",
       "nation": "Eastern_Syndicate",
-      "bank": 2906.98,
+      "bank": 2567.08,
       "upkeep": 339.9,
-      "days_rounded": 9
-    },
-    {
-      "town": "Tokyo",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 1652349.25,
-      "upkeep": 440.84,
-      "days_rounded": 3749
+      "days_rounded": 8
     },
     {
       "town": "Vonatkerék",
       "nation": "Quintessence_Syndicate",
-      "bank": 1708.71,
+      "bank": 1509.92,
       "upkeep": 198.79,
-      "days_rounded": 9
+      "days_rounded": 8
+    },
+    {
+      "town": "Tokyo",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 1714444.41,
+      "upkeep": 440.84,
+      "days_rounded": 3890
     },
     {
       "town": "Forte_Guadalupe",
       "nation": null,
-      "bank": 1544.1,
+      "bank": 1484.1,
       "upkeep": 60,
-      "days_rounded": 26
+      "days_rounded": 25
     },
     {
       "town": "Chukotsk",
       "nation": "West_Coast_Republic",
-      "bank": 6111.58,
+      "bank": 5929.78,
       "upkeep": 181.8,
-      "days_rounded": 34
+      "days_rounded": 33
     },
     {
       "town": "Liverpool",
       "nation": "British_Empire",
-      "bank": 9661.03,
+      "bank": 9271.17,
       "upkeep": 389.86,
-      "days_rounded": 25
+      "days_rounded": 24
     },
     {
       "town": "Chennai",
       "nation": "Russo_Japanese_Empire",
-      "bank": 852.61,
+      "bank": 5404.68,
       "upkeep": 649.93,
-      "days_rounded": 2
-    },
-    {
-      "town": "Vanguardia",
-      "nation": "Imperial_North",
-      "bank": 4650.24,
-      "upkeep": 202.2,
-      "days_rounded": 23
+      "days_rounded": 9
     },
     {
       "town": "Airstrip_One",
       "nation": "Oceanic_Empire",
-      "bank": 1010.91,
+      "bank": 824.97,
       "upkeep": 185.94,
-      "days_rounded": 6
+      "days_rounded": 5
+    },
+    {
+      "town": "Vanguardia",
+      "nation": "Imperial_North",
+      "bank": 4448.04,
+      "upkeep": 202.2,
+      "days_rounded": 22
     },
     {
       "town": "Port_Deasert_Pengu",
       "nation": "Russo_Japanese_Empire",
-      "bank": 9687.78,
+      "bank": 9337.59,
       "upkeep": 350.2,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Pluto",
       "nation": "Vanaco",
-      "bank": 1015.02,
+      "bank": 684.92,
       "upkeep": 330,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Ephesus",
       "nation": "Imperium_Romanum",
-      "bank": 1783.98,
+      "bank": 1629.48,
       "upkeep": 154.5,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "Alhambra_Defence",
       "nation": "Spanish_Empire",
-      "bank": 1625.58,
+      "bank": 1445.07,
       "upkeep": 148,
-      "days_rounded": 11
-    },
-    {
-      "town": "Lions_Den",
-      "nation": "Imperial_North",
-      "bank": 4847.54,
-      "upkeep": 87.66,
-      "days_rounded": 56
+      "days_rounded": 10
     },
     {
       "town": "Szur_Bakeneko",
       "nation": "Eastern_Columbia",
-      "bank": 46389.1,
+      "bank": 46255.1,
       "upkeep": 134,
-      "days_rounded": 347
+      "days_rounded": 346
+    },
+    {
+      "town": "Lions_Den",
+      "nation": "Imperial_North",
+      "bank": 4759.87,
+      "upkeep": 87.66,
+      "days_rounded": 55
     },
     {
       "town": "Korhal",
       "nation": "Thracian_Dominion",
-      "bank": 5733.44,
+      "bank": 5551.54,
       "upkeep": 181.8,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "Port_Mournful",
       "nation": "Landinian_Federation",
-      "bank": 61592.21,
+      "bank": 61392.21,
       "upkeep": 200,
-      "days_rounded": 308
+      "days_rounded": 307
     },
     {
       "town": "Valishtine",
       "nation": "Persian_Empire",
-      "bank": 18.1,
-      "upkeep": 84.35,
-      "days_rounded": 0
+      "bank": 403.38,
+      "upkeep": 82.71,
+      "days_rounded": 5
     },
     {
       "town": "Bilad_Al_Sham",
       "nation": "Ottoman_State",
-      "bank": 4906.77,
+      "bank": 4356.77,
       "upkeep": 550,
-      "days_rounded": 9
-    },
-    {
-      "town": "Darklands",
-      "nation": "Oceanic_Empire",
-      "bank": 2322.53,
-      "upkeep": 210.68,
-      "days_rounded": 12
+      "days_rounded": 8
     },
     {
       "town": "The_State_Of_Oldale",
       "nation": "Imperial_Federation",
-      "bank": 5047.58,
-      "upkeep": 253,
-      "days_rounded": 20
+      "bank": 8688.58,
+      "upkeep": 265,
+      "days_rounded": 33
+    },
+    {
+      "town": "Darklands",
+      "nation": "Oceanic_Empire",
+      "bank": 2111.84,
+      "upkeep": 210.68,
+      "days_rounded": 11
     },
     {
       "town": "Aetherion",
       "nation": "Quintessence_Syndicate",
-      "bank": 704407.57,
+      "bank": 704105.78,
       "upkeep": 301.79,
-      "days_rounded": 2335
+      "days_rounded": 2334
     },
     {
       "town": "Zadupie",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1952.78,
+      "bank": 1832.27,
       "upkeep": 120.51,
-      "days_rounded": 17
+      "days_rounded": 16
     },
     {
       "town": "Sakhalin",
       "nation": "Russo_Japanese_Empire",
-      "bank": 441.76,
+      "bank": 11.22,
       "upkeep": 430.54,
-      "days_rounded": 2
-    },
-    {
-      "town": "Greater_Odisha",
-      "nation": "Persian_Empire",
-      "bank": 562.44,
-      "upkeep": 346.08,
-      "days_rounded": 2
+      "days_rounded": 0
     },
     {
       "town": "Akatsuki",
       "nation": "Thracian_Dominion",
-      "bank": 18258.46,
+      "bank": 17884.66,
       "upkeep": 373.7,
-      "days_rounded": 49
+      "days_rounded": 48
     },
     {
-      "town": "Nantes",
-      "nation": "Imperium_Romanum",
-      "bank": 3543.58,
-      "upkeep": 335.78,
-      "days_rounded": 11
+      "town": "Greater_Odisha",
+      "nation": "Persian_Empire",
+      "bank": 1723.08,
+      "upkeep": 339.36,
+      "days_rounded": 6
     },
     {
       "town": "Coast_Of_Aleutia",
       "nation": "West_Coast_Republic",
-      "bank": 1566.94,
+      "bank": 1531.6,
       "upkeep": 35.35,
-      "days_rounded": 45
+      "days_rounded": 44
+    },
+    {
+      "town": "Nantes",
+      "nation": "Imperium_Romanum",
+      "bank": 3207.8,
+      "upkeep": 335.78,
+      "days_rounded": 10
     },
     {
       "town": "Fishgrad",
       "nation": "Russo_Japanese_Empire",
-      "bank": 6972.59,
+      "bank": 6840.75,
       "upkeep": 131.84,
-      "days_rounded": 53
+      "days_rounded": 52
     },
     {
       "town": "Orilla_Del_Cerúleo",
       "nation": "Eastern_Columbia",
-      "bank": 14643.3,
+      "bank": 14586.3,
       "upkeep": 57,
-      "days_rounded": 257
+      "days_rounded": 256
     },
     {
       "town": "Wolf_Port",
       "nation": "Imperial_North",
-      "bank": 5037.63,
+      "bank": 4516.67,
       "upkeep": 530.95,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Serenite",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 23569.99,
-      "upkeep": 578.86,
+      "nation": "Imperia_Lysia",
+      "bank": 22991.82,
+      "upkeep": 562,
       "days_rounded": 41
     },
     {
       "town": "Ardious_Raj",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1052739.92,
+      "bank": 1052563.79,
       "upkeep": 176.13,
-      "days_rounded": 5978
+      "days_rounded": 5977
     },
     {
       "town": "Chakistania",
       "nation": "Alchak_Federation",
-      "bank": 679,
+      "bank": 495,
       "upkeep": 184,
-      "days_rounded": 4
-    },
-    {
-      "town": "Livland",
-      "nation": "Gran_Colombia",
-      "bank": 2784.35,
-      "upkeep": 31.31,
-      "days_rounded": 89
-    },
-    {
-      "town": "Jerusalem",
-      "nation": "Alchak_Federation",
-      "bank": 2687.6,
-      "upkeep": 55,
-      "days_rounded": 49
+      "days_rounded": 3
     },
     {
       "town": "Fort_Borneo",
       "nation": "Oceanic_Empire",
-      "bank": 100550.47,
+      "bank": 100456.44,
       "upkeep": 94.03,
-      "days_rounded": 1070
+      "days_rounded": 1069
+    },
+    {
+      "town": "Jerusalem",
+      "nation": "Alchak_Federation",
+      "bank": 2632.6,
+      "upkeep": 55,
+      "days_rounded": 48
+    },
+    {
+      "town": "Livland",
+      "nation": "Gran_Colombia",
+      "bank": 2753.04,
+      "upkeep": 31.31,
+      "days_rounded": 88
     },
     {
       "town": "Minaminonishi",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2667.77,
+      "bank": 2308.3,
       "upkeep": 359.47,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Bozeman",
       "nation": "West_Coast_Republic",
-      "bank": 57550.5,
+      "bank": 57481.82,
       "upkeep": 68.68,
-      "days_rounded": 838
+      "days_rounded": 837
     },
     {
       "town": "Lovi",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1856.61,
+      "bank": 1789.66,
       "upkeep": 66.95,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Nova_Scotia",
       "nation": "Imperial_North",
-      "bank": 23006.87,
+      "bank": 22462.48,
       "upkeep": 544.39,
-      "days_rounded": 43
+      "days_rounded": 42
     },
     {
       "town": "Caribe_Fortaleza",
       "nation": "Gran_Colombia",
-      "bank": 44300.41,
+      "bank": 44004.48,
       "upkeep": 295.93,
-      "days_rounded": 150
+      "days_rounded": 149
     },
     {
       "town": "Smaragdus",
       "nation": "British_Empire",
-      "bank": 139405.63,
+      "bank": 139238.98,
       "upkeep": 166.65,
-      "days_rounded": 837
+      "days_rounded": 836
     },
     {
       "town": "Europa",
       "nation": "Vanaco",
-      "bank": 6283.95,
+      "bank": 5925.32,
       "upkeep": 358,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Irkutsk",
       "nation": "Russo_Japanese_Empire",
-      "bank": 591.43,
+      "bank": 339.08,
       "upkeep": 252.35,
-      "days_rounded": 3
-    },
-    {
-      "town": "El_Scorcho",
-      "nation": "Thracian_Dominion",
-      "bank": 15916.94,
-      "upkeep": 126.25,
-      "days_rounded": 127
+      "days_rounded": 2
     },
     {
       "town": "Gondar",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 1622,
+      "bank": 1516,
       "upkeep": 106,
-      "days_rounded": 16
+      "days_rounded": 15
+    },
+    {
+      "town": "El_Scorcho",
+      "nation": "Thracian_Dominion",
+      "bank": 15790.59,
+      "upkeep": 126.25,
+      "days_rounded": 126
     },
     {
       "town": "Stêm",
       "nation": "British_Empire",
-      "bank": 5365.7,
+      "bank": 5194,
       "upkeep": 171.7,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "Awei",
       "nation": "East_African_Federation",
-      "bank": 5496,
+      "bank": 5218,
       "upkeep": 278,
-      "days_rounded": 20
+      "days_rounded": 19
     },
     {
       "town": "East_Ordelle",
       "nation": "Oceanic_Empire",
-      "bank": 1904.81,
+      "bank": 1699.78,
       "upkeep": 205.03,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Silverhaiti",
       "nation": "Gran_Colombia",
-      "bank": 17457.32,
+      "bank": 16687.7,
       "upkeep": 769.62,
-      "days_rounded": 23
+      "days_rounded": 22
     },
     {
       "town": "Holy_Capital",
       "nation": "Vanaco",
-      "bank": 186396.42,
+      "bank": 185153.25,
       "upkeep": 1320,
-      "days_rounded": 142
-    },
-    {
-      "town": "Northwest_Territories",
-      "nation": "Canada",
-      "bank": 871.58,
-      "upkeep": 572,
-      "days_rounded": 2
+      "days_rounded": 141
     },
     {
       "town": "Karsian_Nudiflorum",
       "nation": null,
-      "bank": 4714.16,
+      "bank": 4407.16,
       "upkeep": 307,
-      "days_rounded": 16
+      "days_rounded": 15
+    },
+    {
+      "town": "Northwest_Territories",
+      "nation": "Canada",
+      "bank": 799.58,
+      "upkeep": 572,
+      "days_rounded": 2
     },
     {
       "town": "Kushiro",
       "nation": "Russo_Japanese_Empire",
-      "bank": 4160.52,
+      "bank": 3766.03,
       "upkeep": 394.49,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Endymion_Requiem",
       "nation": "Persian_Empire",
-      "bank": 734.85,
-      "upkeep": 193.22,
-      "days_rounded": 4
+      "bank": 545.38,
+      "upkeep": 189.47,
+      "days_rounded": 3
     },
     {
       "town": "Aslund",
-      "nation": "British_Empire",
-      "bank": 19.95,
-      "upkeep": 84.84,
-      "days_rounded": 0
+      "nation": null,
+      "bank": 80,
+      "upkeep": 20,
+      "days_rounded": 4
     },
     {
       "town": "Hamster_Island",
       "nation": "Thracian_Dominion",
-      "bank": 1988.95,
+      "bank": 1880.78,
       "upkeep": 108.07,
-      "days_rounded": 19
+      "days_rounded": 18
     },
     {
       "town": "Bearsea_Harbour",
       "nation": "British_Empire",
-      "bank": 1612.8,
+      "bank": 1462.31,
       "upkeep": 150.49,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Townsville",
       "nation": "Oceanic_Empire",
-      "bank": 4890.85,
+      "bank": 4707.73,
       "upkeep": 183.11,
-      "days_rounded": 27
-    },
-    {
-      "town": "Mangalore",
-      "nation": "Persian_Empire",
-      "bank": 618.81,
-      "upkeep": 186.01,
-      "days_rounded": 4
-    },
-    {
-      "town": "Bela_Vista",
-      "nation": null,
-      "bank": 782,
-      "upkeep": 45,
-      "days_rounded": 18
+      "days_rounded": 26
     },
     {
       "town": "Tazrouk",
       "nation": "Imperium_Romanum",
-      "bank": 4955.1,
+      "bank": 4542.07,
       "upkeep": 413.03,
-      "days_rounded": 12
+      "days_rounded": 11
+    },
+    {
+      "town": "Bela_Vista",
+      "nation": null,
+      "bank": 737,
+      "upkeep": 45,
+      "days_rounded": 17
+    },
+    {
+      "town": "Mangalore",
+      "nation": "Persian_Empire",
+      "bank": 436.41,
+      "upkeep": 182.4,
+      "days_rounded": 3
     },
     {
       "town": "Newashen",
       "nation": "Oceanic_Empire",
-      "bank": 504.77,
+      "bank": 419.22,
       "upkeep": 85.54,
-      "days_rounded": 6
-    },
-    {
-      "town": "Tetuán",
-      "nation": "Eastern_Columbia",
-      "bank": 14160.22,
-      "upkeep": 191,
-      "days_rounded": 75
+      "days_rounded": 5
     },
     {
       "town": "Malatya",
       "nation": "Oceanic_Empire",
-      "bank": 1613.33,
+      "bank": 1334.06,
       "upkeep": 279.26,
-      "days_rounded": 6
+      "days_rounded": 5
+    },
+    {
+      "town": "Tetuán",
+      "nation": "Eastern_Columbia",
+      "bank": 13969.22,
+      "upkeep": 191,
+      "days_rounded": 74
     },
     {
       "town": "Port_Denpa",
       "nation": "British_Empire",
-      "bank": 135442.04,
+      "bank": 135203.68,
       "upkeep": 238.36,
-      "days_rounded": 569
+      "days_rounded": 568
     },
     {
       "town": "Koveria",
       "nation": "Eastern_Syndicate",
-      "bank": 419.41,
+      "bank": 213.42,
       "upkeep": 206,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Olympus",
       "nation": "Oceanic_Empire",
-      "bank": 130120.46,
+      "bank": 129885.74,
       "upkeep": 234.72,
-      "days_rounded": 555
+      "days_rounded": 554
     },
     {
       "town": "RepublicOTGreatHedgehog",
       "nation": "Oceanic_Empire",
-      "bank": 7986.82,
+      "bank": 7833.44,
       "upkeep": 153.41,
-      "days_rounded": 53
+      "days_rounded": 52
     },
     {
       "town": "Skinwalker_City",
       "nation": "Gran_Colombia",
-      "bank": 1001661.55,
+      "bank": 1001368.65,
       "upkeep": 292.9,
-      "days_rounded": 3420
+      "days_rounded": 3419
     },
     {
       "town": "Dikson_Island",
       "nation": "Polish_Empire",
-      "bank": 262.42,
+      "bank": 17.18,
       "upkeep": 240,
-      "days_rounded": 2
+      "days_rounded": 0
     },
     {
       "town": "New_Hanoi",
       "nation": "State_Of_Tang",
-      "bank": 544179.05,
+      "bank": 543749.05,
       "upkeep": 430,
-      "days_rounded": 1266
+      "days_rounded": 1265
     },
     {
       "town": "Kars",
       "nation": "Oceanic_Empire",
-      "bank": 455.18,
+      "bank": 789.65,
       "upkeep": 766.38,
-      "days_rounded": 1
+      "days_rounded": 2
     },
     {
       "town": "Viltrum",
       "nation": "Thracian_Dominion",
-      "bank": 7607.2,
+      "bank": 7336.42,
       "upkeep": 270.68,
-      "days_rounded": 29
+      "days_rounded": 28
     },
     {
       "town": "New_Latvia",
       "nation": "Spanish_Empire",
-      "bank": 3028.06,
+      "bank": 2676.5,
       "upkeep": 291,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Lycia",
       "nation": "West_Coast_Republic",
-      "bank": 397404.14,
+      "bank": 396936.51,
       "upkeep": 467.63,
-      "days_rounded": 850
+      "days_rounded": 849
     },
     {
       "town": "Fort_Nadym",
       "nation": "Severia",
-      "bank": 1203.36,
+      "bank": 870.36,
       "upkeep": 333,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Northern_Isles",
       "nation": null,
-      "bank": 2189,
+      "bank": 2159,
       "upkeep": 30,
-      "days_rounded": 73
+      "days_rounded": 72
     },
     {
       "town": "Terra",
       "nation": "Vanaco",
-      "bank": 812.97,
+      "bank": 2529.69,
       "upkeep": 283,
-      "days_rounded": 3
+      "days_rounded": 9
     },
     {
       "town": "Trillium",
       "nation": "Imperial_North",
-      "bank": 17196.63,
+      "bank": 17060.18,
       "upkeep": 136.45,
-      "days_rounded": 127
+      "days_rounded": 126
     },
     {
       "town": "Tarsus",
       "nation": "Oceanic_Empire",
-      "bank": 406.43,
+      "bank": 325.13,
       "upkeep": 81.3,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Camelot",
       "nation": null,
-      "bank": 1499.69,
+      "bank": 1299.69,
       "upkeep": 200,
-      "days_rounded": 8
-    },
-    {
-      "town": "Dio_Fort",
-      "nation": "Quintessence_Syndicate",
-      "bank": 3769.77,
-      "upkeep": 209.09,
-      "days_rounded": 19
+      "days_rounded": 7
     },
     {
       "town": "Peslandia",
       "nation": "East_African_Federation",
-      "bank": 3072.25,
+      "bank": 3023.25,
       "upkeep": 49,
-      "days_rounded": 63
+      "days_rounded": 62
+    },
+    {
+      "town": "Dio_Fort",
+      "nation": "Quintessence_Syndicate",
+      "bank": 3560.68,
+      "upkeep": 209.09,
+      "days_rounded": 18
     },
     {
       "town": "Iwami",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1646.53,
+      "bank": 1039.86,
       "upkeep": 606.67,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Frostbane",
       "nation": "Polaris",
-      "bank": 4198.4,
+      "bank": 4114.4,
       "upkeep": 84,
-      "days_rounded": 50
-    },
-    {
-      "town": "Koalitionsmarinehafen",
-      "nation": "Thracian_Dominion",
-      "bank": 64986.74,
-      "upkeep": 468.64,
-      "days_rounded": 139
+      "days_rounded": 49
     },
     {
       "town": "New_Kingsland",
       "nation": "Oceanic_Empire",
-      "bank": 1870.68,
+      "bank": 9609.09,
       "upkeep": 261.59,
-      "days_rounded": 8
+      "days_rounded": 37
+    },
+    {
+      "town": "Koalitionsmarinehafen",
+      "nation": "Thracian_Dominion",
+      "bank": 64518,
+      "upkeep": 468.64,
+      "days_rounded": 138
     },
     {
       "town": "San_Cristóbal",
       "nation": null,
-      "bank": 46597.31,
+      "bank": 46545.31,
       "upkeep": 52,
-      "days_rounded": 897
-    },
-    {
-      "town": "New_Cairo",
-      "nation": "Alexandrine_Dominion",
-      "bank": 83153.78,
-      "upkeep": 156.55,
-      "days_rounded": 532
+      "days_rounded": 896
     },
     {
       "town": "Ancapistan",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 717.69,
+      "bank": 648.69,
       "upkeep": 69,
-      "days_rounded": 11
+      "days_rounded": 10
+    },
+    {
+      "town": "New_Cairo",
+      "nation": "Alexandrine_Dominion",
+      "bank": 82997.23,
+      "upkeep": 156.55,
+      "days_rounded": 531
     },
     {
       "town": "California_Dreamin",
       "nation": "Alexandrine_Dominion",
-      "bank": 622.98,
+      "bank": 439.16,
       "upkeep": 183.82,
-      "days_rounded": 4
-    },
-    {
-      "town": "Naboo",
-      "nation": "Alexandrine_Dominion",
-      "bank": 113,
-      "upkeep": 212.1,
-      "days_rounded": 1
+      "days_rounded": 3
     },
     {
       "town": "Dominus",
       "nation": "Persian_Empire",
-      "bank": 516.58,
-      "upkeep": 178.08,
+      "bank": 341.96,
+      "upkeep": 174.62,
+      "days_rounded": 2
+    },
+    {
+      "town": "Naboo",
+      "nation": "Alexandrine_Dominion",
+      "bank": 481.9,
+      "upkeep": 212.1,
       "days_rounded": 3
     },
     {
       "town": "Cultist",
       "nation": "Gran_Colombia",
-      "bank": 12065.3,
+      "bank": 11156.89,
       "upkeep": 909,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Port_Adelaide",
       "nation": "Eastern_Syndicate",
-      "bank": 83096.51,
+      "bank": 82816.35,
       "upkeep": 280.16,
-      "days_rounded": 297
+      "days_rounded": 296
     },
     {
       "town": "Myrtle_State",
       "nation": "Imperial_North",
-      "bank": 3109.7,
+      "bank": 2375.83,
       "upkeep": 733.86,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Hamster_Hideout",
       "nation": "Thracian_Dominion",
-      "bank": 1755.7,
+      "bank": 1559.66,
       "upkeep": 195.94,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Kuching",
       "nation": "Russo_Japanese_Empire",
-      "bank": 10005.25,
+      "bank": 17985.82,
       "upkeep": 255.44,
-      "days_rounded": 40
+      "days_rounded": 71
     },
     {
       "town": "Yorkshire",
       "nation": "British_Empire",
-      "bank": 2512.29,
+      "bank": 1988.1,
       "upkeep": 524.19,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Lhasa",
       "nation": "Eastern_Syndicate",
-      "bank": 12411.04,
+      "bank": 12674.12,
       "upkeep": 168.92,
-      "days_rounded": 74
+      "days_rounded": 76
     },
     {
       "town": "Kamchatka",
       "nation": null,
-      "bank": 14362.09,
+      "bank": 14262.09,
       "upkeep": 100,
-      "days_rounded": 144
+      "days_rounded": 143
     },
     {
       "town": "Xyz",
       "nation": "Quintessence_Syndicate",
-      "bank": 17984.79,
+      "bank": 17459.49,
       "upkeep": 525.3,
-      "days_rounded": 35
+      "days_rounded": 34
     },
     {
       "town": "Norman_Wells",
@@ -1713,23 +1713,23 @@
     {
       "town": "Dio",
       "nation": "Imperium_Romanum",
-      "bank": 2535.21,
+      "bank": 2414.7,
       "upkeep": 120.51,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "Venus",
       "nation": "Vanaco",
-      "bank": 3652.01,
+      "bank": 3311.64,
       "upkeep": 340,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Western_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 73471.85,
+      "bank": 73171.09,
       "upkeep": 300.76,
-      "days_rounded": 245
+      "days_rounded": 244
     },
     {
       "town": "Suez_Canal",
@@ -1739,214 +1739,228 @@
       "days_rounded": 450
     },
     {
-      "town": "Shimazu",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 770.69,
-      "upkeep": 104.03,
-      "days_rounded": 8
-    },
-    {
       "town": "Saint_Lambert",
       "nation": "Imperial_North",
-      "bank": 354586.06,
+      "bank": 354109.55,
       "upkeep": 476.51,
-      "days_rounded": 745
+      "days_rounded": 744
+    },
+    {
+      "town": "Shimazu",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 666.66,
+      "upkeep": 104.03,
+      "days_rounded": 7
     },
     {
       "town": "Potatoland",
       "nation": "Oceanic_Empire",
-      "bank": 605.32,
+      "bank": 563.61,
       "upkeep": 41.71,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Washington_DC",
       "nation": "Imperial_North",
-      "bank": 270.15,
+      "bank": 3098.19,
       "upkeep": 571.96,
-      "days_rounded": 0
+      "days_rounded": 6
     },
     {
       "town": "Azura_Nox",
       "nation": null,
-      "bank": 24288.45,
+      "bank": 24030.45,
       "upkeep": 258,
-      "days_rounded": 95
+      "days_rounded": 94
     },
     {
       "town": "Augustgrad",
       "nation": "Thracian_Dominion",
-      "bank": 14376.58,
+      "bank": 14011.87,
       "upkeep": 364.61,
-      "days_rounded": 40
+      "days_rounded": 39
     },
     {
       "town": "Dublin",
       "nation": "British_Empire",
-      "bank": 682.6,
+      "bank": 596.75,
       "upkeep": 85.85,
-      "days_rounded": 8
-    },
-    {
-      "town": "Hyperborea",
-      "nation": "Imperium_Romanum",
-      "bank": 47785.02,
-      "upkeep": 370.8,
-      "days_rounded": 129
-    },
-    {
-      "town": "Rivière_Du_Lac",
-      "nation": "Imperial_North",
-      "bank": 56370.56,
-      "upkeep": 208.56,
-      "days_rounded": 271
+      "days_rounded": 7
     },
     {
       "town": "Tang_Stronghold",
       "nation": "State_Of_Tang",
-      "bank": 20221.55,
+      "bank": 19992.55,
       "upkeep": 229,
-      "days_rounded": 89
+      "days_rounded": 88
+    },
+    {
+      "town": "Rivière_Du_Lac",
+      "nation": "Imperial_North",
+      "bank": 56162,
+      "upkeep": 208.56,
+      "days_rounded": 270
+    },
+    {
+      "town": "Hyperborea",
+      "nation": "Imperium_Romanum",
+      "bank": 47414.22,
+      "upkeep": 370.8,
+      "days_rounded": 128
     },
     {
       "town": "Oasis",
       "nation": "Thracian_Dominion",
-      "bank": 150451.46,
+      "bank": 149828.19,
       "upkeep": 623.17,
-      "days_rounded": 242
+      "days_rounded": 241
     },
     {
       "town": "Port_Eclaire",
       "nation": "Eastern_Syndicate",
-      "bank": 43367.14,
+      "bank": 42917.03,
       "upkeep": 450.11,
-      "days_rounded": 97
+      "days_rounded": 96
     },
     {
       "town": "Vanderia",
       "nation": "Eastern_Syndicate",
-      "bank": 582.4,
+      "bank": 34.44,
       "upkeep": 547.96,
-      "days_rounded": 2
+      "days_rounded": 0
     },
     {
       "town": "Jewel_Of_Ireland",
       "nation": "Persian_Empire",
-      "bank": 7823.47,
-      "upkeep": 136.26,
+      "bank": 7689.85,
+      "upkeep": 133.62,
       "days_rounded": 58
     },
     {
       "town": "Kunming",
       "nation": "State_Of_Tang",
-      "bank": 143,
+      "bank": 122,
       "upkeep": 21,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Narin_Defense",
       "nation": "Persian_Empire",
-      "bank": 680.33,
-      "upkeep": 101.66,
-      "days_rounded": 7
+      "bank": 580.64,
+      "upkeep": 99.68,
+      "days_rounded": 6
     },
     {
       "town": "Port_Valtria",
       "nation": "Imperium_Romanum",
-      "bank": 7213.18,
+      "bank": 6735.26,
       "upkeep": 477.92,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "New_Taiwan",
       "nation": "Eastern_Syndicate",
-      "bank": 2898.45,
+      "bank": 2541.04,
       "upkeep": 357.41,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Saurashtra",
       "nation": "Russo_Japanese_Empire",
-      "bank": 442.55,
+      "bank": 237.58,
       "upkeep": 204.97,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Orebro",
       "nation": "Imperium_Romanum",
-      "bank": 1107.51,
+      "bank": 1036.44,
       "upkeep": 71.07,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "Baekdu_Mountain_Village",
       "nation": "Russo_Japanese_Empire",
-      "bank": 372.9,
+      "bank": 337.88,
       "upkeep": 35.02,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Kang",
       "nation": "Quintessence_Syndicate",
-      "bank": 2271.32,
+      "bank": 2140.51,
       "upkeep": 130.81,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Potoo_Slums",
       "nation": "Potarian_Seaguards",
-      "bank": 5007.9,
-      "upkeep": 163,
-      "days_rounded": 31
+      "bank": 4712.9,
+      "upkeep": 165,
+      "days_rounded": 29
+    },
+    {
+      "town": "Jamaica",
+      "nation": "Gran_Colombia",
+      "bank": 2486.54,
+      "upkeep": 171.7,
+      "days_rounded": 15
     },
     {
       "town": "Horizon",
       "nation": "Polaris",
-      "bank": 93654.56,
+      "bank": 93361.86,
       "upkeep": 294,
-      "days_rounded": 319
+      "days_rounded": 318
     },
     {
       "town": "Kiyomi_Vanguard",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2296.41,
+      "bank": 2015.22,
       "upkeep": 281.19,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Thexan",
       "nation": "Imperium_Romanum",
-      "bank": 2369.62,
+      "bank": 2133.75,
       "upkeep": 235.87,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Glacies",
       "nation": "Elite_Penguin_Force",
-      "bank": 4230.59,
+      "bank": 3995.6,
       "upkeep": 235,
-      "days_rounded": 19
-    },
-    {
-      "town": "Manu",
-      "nation": "Oceanic_Empire",
-      "bank": 412.24,
-      "upkeep": 38.17,
-      "days_rounded": 11
+      "days_rounded": 18
     },
     {
       "town": "Callisto",
       "nation": "Vanaco",
-      "bank": 11141.52,
+      "bank": 10850.41,
       "upkeep": 290,
-      "days_rounded": 39
+      "days_rounded": 38
     },
     {
       "town": "Southern_Boschia",
       "nation": "Eastern_Syndicate",
-      "bank": 6586.55,
+      "bank": 6484.39,
       "upkeep": 280.16,
       "days_rounded": 24
+    },
+    {
+      "town": "Manu",
+      "nation": "Oceanic_Empire",
+      "bank": 374.06,
+      "upkeep": 38.17,
+      "days_rounded": 10
+    },
+    {
+      "town": "Newer_Norston",
+      "nation": "Elite_Penguin_Force",
+      "bank": 986.9,
+      "upkeep": 93,
+      "days_rounded": 11
     },
     {
       "town": "Carthage",
@@ -1956,256 +1970,263 @@
       "days_rounded": 4
     },
     {
-      "town": "Newer_Norston",
-      "nation": "Elite_Penguin_Force",
-      "bank": 1079.89,
-      "upkeep": 93,
-      "days_rounded": 12
-    },
-    {
-      "town": "Eritrea",
-      "nation": "Persian_Empire",
-      "bank": 7111.96,
-      "upkeep": 137.71,
-      "days_rounded": 52
+      "town": "Progressan",
+      "nation": "Alexandrine_Dominion",
+      "bank": 3761.06,
+      "upkeep": 195.94,
+      "days_rounded": 20
     },
     {
       "town": "New_Karachi",
       "nation": "Persian_Empire",
-      "bank": 644.05,
-      "upkeep": 164.38,
-      "days_rounded": 4
+      "bank": 482.86,
+      "upkeep": 161.19,
+      "days_rounded": 3
+    },
+    {
+      "town": "Eritrea",
+      "nation": "Persian_Empire",
+      "bank": 4464.93,
+      "upkeep": 135.03,
+      "days_rounded": 34
     },
     {
       "town": "New_Sopot",
       "nation": "Polish_Empire",
-      "bank": 1507.36,
+      "bank": 1197.21,
       "upkeep": 280,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "The_End",
       "nation": "Vanaco",
-      "bank": 156.64,
+      "bank": 23.62,
       "upkeep": 133,
-      "days_rounded": 2
+      "days_rounded": 0
     },
     {
       "town": "Fort_Mirage",
       "nation": "Eastern_Syndicate",
-      "bank": 1564.48,
+      "bank": 1472.81,
       "upkeep": 91.67,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Grande_Palestine",
       "nation": "Russo_Japanese_Empire",
-      "bank": 7627.93,
+      "bank": 7391.28,
       "upkeep": 238.96,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "South_Potzland",
       "nation": "Gran_Colombia",
-      "bank": 2757.39,
+      "bank": 2478.63,
       "upkeep": 278.76,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Navy_Striker",
       "nation": "Oceanic_Empire",
-      "bank": 80.64,
+      "bank": 61.55,
       "upkeep": 19.08,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Syndicate_Storm",
       "nation": "Eastern_Syndicate",
-      "bank": 10992.42,
+      "bank": 10791.58,
       "upkeep": 200.85,
-      "days_rounded": 55
+      "days_rounded": 54
     },
     {
       "town": "Wrath",
       "nation": "Spanish_Empire",
-      "bank": 950.2,
+      "bank": 845.2,
       "upkeep": 86,
-      "days_rounded": 12
+      "days_rounded": 10
     },
     {
       "town": "Portage_Bay",
       "nation": "Oceanic_Empire",
-      "bank": 609.19,
+      "bank": 469.2,
       "upkeep": 139.98,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Oblask",
       "nation": "Eastern_Syndicate",
-      "bank": 1140.64,
+      "bank": 1069.57,
       "upkeep": 71.07,
-      "days_rounded": 17
-    },
-    {
-      "town": "Addis_Ababa",
-      "nation": null,
-      "bank": 74987.37,
-      "upkeep": 330,
-      "days_rounded": 228
+      "days_rounded": 16
     },
     {
       "town": "Port_Boschia",
       "nation": "Eastern_Syndicate",
-      "bank": 294172.77,
+      "bank": 293651.59,
       "upkeep": 521.18,
-      "days_rounded": 565
+      "days_rounded": 564
+    },
+    {
+      "town": "Addis_Ababa",
+      "nation": null,
+      "bank": 74657.37,
+      "upkeep": 330,
+      "days_rounded": 227
     },
     {
       "town": "Bear_Lake",
       "nation": "Canada",
-      "bank": 2,
+      "bank": 51,
       "upkeep": 49,
-      "days_rounded": 0
+      "days_rounded": 2
     },
     {
       "town": "Dragor_Castle",
       "nation": "British_Empire",
-      "bank": 11117.07,
+      "bank": 10912.04,
       "upkeep": 205.03,
-      "days_rounded": 55
+      "days_rounded": 54
     },
     {
       "town": "Seenee",
       "nation": null,
-      "bank": 44606.04,
+      "bank": 44464.04,
       "upkeep": 142,
-      "days_rounded": 315
-    },
-    {
-      "town": "Kilabirstan",
-      "nation": "Persian_Empire",
-      "bank": 322.95,
-      "upkeep": 54.79,
-      "days_rounded": 6
+      "days_rounded": 314
     },
     {
       "town": "Tsarka_Bastion",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3182.14,
+      "bank": 2880.35,
       "upkeep": 301.79,
-      "days_rounded": 11
+      "days_rounded": 10
+    },
+    {
+      "town": "Kilabirstan",
+      "nation": "Persian_Empire",
+      "bank": 269.22,
+      "upkeep": 53.73,
+      "days_rounded": 6
     },
     {
       "town": "Sandakan",
       "nation": "Oceanic_Empire",
-      "bank": 14887.67,
+      "bank": 14836.06,
       "upkeep": 51.61,
-      "days_rounded": 289
+      "days_rounded": 288
     },
     {
       "town": "Drakenfarm",
       "nation": "Vanaco",
-      "bank": 4705.7,
+      "bank": 4350.23,
       "upkeep": 355,
-      "days_rounded": 14
-    },
-    {
-      "town": "Puerto_Cohete",
-      "nation": "Landinian_Federation",
-      "bank": 126475.08,
-      "upkeep": 293,
-      "days_rounded": 432
+      "days_rounded": 13
     },
     {
       "town": "Chak_Grad",
       "nation": "Alchak_Federation",
-      "bank": 1841.1,
+      "bank": 1683.1,
       "upkeep": 158,
-      "days_rounded": 12
+      "days_rounded": 11
+    },
+    {
+      "town": "Puerto_Cohete",
+      "nation": "Landinian_Federation",
+      "bank": 126182.08,
+      "upkeep": 293,
+      "days_rounded": 431
     },
     {
       "town": "Bucuresti",
       "nation": "Oceanic_Empire",
-      "bank": 6711.23,
+      "bank": 6656.08,
       "upkeep": 55.14,
-      "days_rounded": 122
+      "days_rounded": 121
     },
     {
       "town": "Astrix",
       "nation": "Eastern_Syndicate",
-      "bank": 227.86,
+      "bank": 123.83,
       "upkeep": 104.03,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Karsian_Vengeance",
       "nation": "Alexandrine_Dominion",
-      "bank": 1531,
+      "bank": 1238.1,
       "upkeep": 292.9,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Valiant",
       "nation": "Eastern_Syndicate",
-      "bank": 4573.13,
+      "bank": 4261.04,
       "upkeep": 312.09,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Noctavia",
-      "nation": null,
-      "bank": 92168.88,
-      "upkeep": 259,
-      "days_rounded": 356
+      "nation": "British_Empire",
+      "bank": 91907.29,
+      "upkeep": 261.59,
+      "days_rounded": 352
     },
     {
       "town": "Pescara",
       "nation": "Alchak_Federation",
-      "bank": 141.09,
+      "bank": 251.09,
       "upkeep": 190,
-      "days_rounded": 1
+      "days_rounded": 2
     },
     {
       "town": "New_Rotterdam",
       "nation": "Oceanic_Empire",
-      "bank": 2072.38,
+      "bank": 1617.07,
       "upkeep": 455.3,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Port_Kuressaare",
       "nation": "Imperium_Romanum",
-      "bank": 48255.92,
+      "bank": 48136.44,
       "upkeep": 119.48,
-      "days_rounded": 404
+      "days_rounded": 403
     },
     {
       "town": "Oxford",
       "nation": "British_Empire",
-      "bank": 1993.15,
+      "bank": 1618.44,
       "upkeep": 374.71,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Fihland",
-      "nation": null,
-      "bank": 894,
-      "upkeep": 30,
-      "days_rounded": 30
+      "nation": "Eastern_Syndicate",
+      "bank": 1364,
+      "upkeep": 41.2,
+      "days_rounded": 34
     },
     {
       "town": "Riverbend_Estate",
       "nation": "Gran_Colombia",
-      "bank": 767110.31,
+      "bank": 766816.4,
       "upkeep": 293.91,
-      "days_rounded": 2611
+      "days_rounded": 2610
     },
     {
       "town": "Voltaria",
       "nation": "Vanaco",
-      "bank": 31068.01,
+      "bank": 30891.91,
       "upkeep": 173,
-      "days_rounded": 180
+      "days_rounded": 179
+    },
+    {
+      "town": "Romanovgrad",
+      "nation": "Polish_Empire",
+      "bank": 2200.2,
+      "upkeep": 660,
+      "days_rounded": 4
     },
     {
       "town": "Catabe_The_Third",
@@ -2215,605 +2236,612 @@
       "days_rounded": 4691
     },
     {
-      "town": "Romanovgrad",
-      "nation": "Polish_Empire",
-      "bank": 118.57,
-      "upkeep": 660,
-      "days_rounded": 0
-    },
-    {
       "town": "Doukistan",
       "nation": "Vanaco",
-      "bank": 8526,
+      "bank": 8463.14,
       "upkeep": 62,
-      "days_rounded": 138
-    },
-    {
-      "town": "Steelport",
-      "nation": "West_Coast_Republic",
-      "bank": 46127.41,
-      "upkeep": 363.6,
-      "days_rounded": 127
+      "days_rounded": 137
     },
     {
       "town": "Murmansk",
       "nation": "Imperium_Romanum",
-      "bank": 25697.73,
+      "bank": 25580.31,
       "upkeep": 117.42,
-      "days_rounded": 219
+      "days_rounded": 218
+    },
+    {
+      "town": "Steelport",
+      "nation": "West_Coast_Republic",
+      "bank": 45763.81,
+      "upkeep": 363.6,
+      "days_rounded": 126
     },
     {
       "town": "Tatooine",
       "nation": "Imperium_Romanum",
-      "bank": 142.4,
+      "bank": 5040.43,
       "upkeep": 101.97,
-      "days_rounded": 2
+      "days_rounded": 50
     },
     {
       "town": "El_Dakhla",
       "nation": "Quintessence_Syndicate",
-      "bank": 17981.16,
+      "bank": 17245.74,
       "upkeep": 735.42,
-      "days_rounded": 25
+      "days_rounded": 24
     },
     {
       "town": "New_Pemba",
       "nation": "Vanaco",
-      "bank": 1905.83,
+      "bank": 1716.64,
       "upkeep": 189,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Port_Fishing_Village",
       "nation": "Eastern_Syndicate",
-      "bank": 747.31,
+      "bank": 450.67,
       "upkeep": 296.64,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Avalon",
       "nation": "Imperial_North",
-      "bank": 20581.84,
+      "bank": 19954.74,
       "upkeep": 627.1,
-      "days_rounded": 33
+      "days_rounded": 32
     },
     {
       "town": "Gftandgzund",
       "nation": null,
-      "bank": 111.46,
+      "bank": 72.46,
       "upkeep": 39,
-      "days_rounded": 3
-    },
-    {
-      "town": "Jade_City",
-      "nation": "Vanaco",
-      "bank": 23452.05,
-      "upkeep": 340,
-      "days_rounded": 69
+      "days_rounded": 2
     },
     {
       "town": "Natal",
       "nation": null,
-      "bank": 2337745.4,
+      "bank": 2337104.4,
       "upkeep": 641,
-      "days_rounded": 3648
+      "days_rounded": 3647
+    },
+    {
+      "town": "Jade_City",
+      "nation": "Vanaco",
+      "bank": 23109.71,
+      "upkeep": 340,
+      "days_rounded": 68
     },
     {
       "town": "Vancouver",
       "nation": "West_Coast_Republic",
-      "bank": 15692.02,
+      "bank": 15381.96,
       "upkeep": 310.07,
-      "days_rounded": 51
+      "days_rounded": 50
     },
     {
       "town": "Dayglow",
       "nation": "Gran_Colombia",
-      "bank": 2220.63,
+      "bank": 1782.29,
       "upkeep": 438.34,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "San_Hierro",
       "nation": "Oceanic_Empire",
-      "bank": 86308.13,
+      "bank": 86266.41,
       "upkeep": 41.71,
-      "days_rounded": 2070
-    },
-    {
-      "town": "Haerbin",
-      "nation": "Eastern_Syndicate",
-      "bank": 1411.21,
-      "upkeep": 348.14,
-      "days_rounded": 5
+      "days_rounded": 2069
     },
     {
       "town": "Senegal",
       "nation": "Quintessence_Syndicate",
-      "bank": 16534.03,
+      "bank": 16275.5,
       "upkeep": 258.53,
-      "days_rounded": 64
+      "days_rounded": 63
+    },
+    {
+      "town": "Haerbin",
+      "nation": "Eastern_Syndicate",
+      "bank": 1063.07,
+      "upkeep": 348.14,
+      "days_rounded": 4
     },
     {
       "town": "Aetherion_Defence",
       "nation": "Quintessence_Syndicate",
-      "bank": 12119.98,
+      "bank": 11828.49,
       "upkeep": 291.49,
-      "days_rounded": 42
+      "days_rounded": 41
     },
     {
       "town": "Seaside",
       "nation": null,
-      "bank": 4134,
+      "bank": 4047,
       "upkeep": 87,
-      "days_rounded": 48
+      "days_rounded": 47
     },
     {
       "town": "Kazachye",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1025.44,
+      "bank": 798.84,
       "upkeep": 226.6,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Fort_Canada",
       "nation": "Canada",
-      "bank": 1355,
+      "bank": 1254,
       "upkeep": 101,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Hyperion",
       "nation": "Russo_Japanese_Empire",
-      "bank": 146.85,
+      "bank": 1799.74,
       "upkeep": 347.11,
-      "days_rounded": 0
-    },
-    {
-      "town": "Qatar",
-      "nation": "Persian_Empire",
-      "bank": 525.18,
-      "upkeep": 175.92,
-      "days_rounded": 3
+      "days_rounded": 6
     },
     {
       "town": "Smaug_Defence",
       "nation": "Quintessence_Syndicate",
-      "bank": 8107.95,
+      "bank": 7809.25,
       "upkeep": 298.7,
-      "days_rounded": 28
+      "days_rounded": 27
+    },
+    {
+      "town": "Qatar",
+      "nation": "Persian_Empire",
+      "bank": 352.67,
+      "upkeep": 172.5,
+      "days_rounded": 3
     },
     {
       "town": "Karsian_Sandstorm",
       "nation": "Persian_Empire",
-      "bank": 494.44,
-      "upkeep": 252.34,
-      "days_rounded": 2
+      "bank": 246.99,
+      "upkeep": 247.44,
+      "days_rounded": 1
     },
     {
       "town": "Vanghun",
       "nation": "Eastern_Syndicate",
-      "bank": 831.75,
+      "bank": 574.25,
       "upkeep": 257.5,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "First_Order",
       "nation": "Russo_Japanese_Empire",
-      "bank": 566890.37,
+      "bank": 566546.35,
       "upkeep": 344.02,
-      "days_rounded": 1648
+      "days_rounded": 1647
     },
     {
       "town": "Narin",
       "nation": "Persian_Empire",
-      "bank": 8504.13,
-      "upkeep": 129.78,
+      "bank": 8376.87,
+      "upkeep": 127.25,
       "days_rounded": 66
     },
     {
       "town": "Amrith",
       "nation": "Persian_Empire",
-      "bank": 718.94,
-      "upkeep": 116.08,
-      "days_rounded": 7
+      "bank": 605.11,
+      "upkeep": 113.82,
+      "days_rounded": 6
     },
     {
       "town": "Fenrir_Port",
       "nation": "Russo_Japanese_Empire",
-      "bank": 5261.02,
+      "bank": 5065.32,
       "upkeep": 195.7,
-      "days_rounded": 27
+      "days_rounded": 26
     },
     {
       "town": "Ferrumslav",
       "nation": "Thracian_Dominion",
-      "bank": 8291.28,
+      "bank": 7755.88,
       "upkeep": 535.3,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "Canaway",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1247.1,
-      "upkeep": 535.6,
-      "days_rounded": 3
+      "bank": 614.41,
+      "upkeep": 538.69,
+      "days_rounded": 2
     },
     {
       "town": "Iceberg",
       "nation": null,
-      "bank": 192,
+      "bank": 163,
       "upkeep": 29,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Retaguardia",
       "nation": "Imperial_North",
-      "bank": 4721.09,
+      "bank": 4523.13,
       "upkeep": 197.96,
-      "days_rounded": 24
-    },
-    {
-      "town": "Tree_Land",
-      "nation": null,
-      "bank": 32278,
-      "upkeep": 27,
-      "days_rounded": 1196
-    },
-    {
-      "town": "Elandor",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 1572.02,
-      "upkeep": 241.02,
-      "days_rounded": 7
+      "days_rounded": 23
     },
     {
       "town": "Port_Florence",
       "nation": "Imperium_Romanum",
-      "bank": 4327.98,
+      "bank": 4077.69,
       "upkeep": 250.29,
-      "days_rounded": 18
+      "days_rounded": 17
+    },
+    {
+      "town": "Tree_Land",
+      "nation": null,
+      "bank": 32251,
+      "upkeep": 27,
+      "days_rounded": 1195
+    },
+    {
+      "town": "Elandor",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 1331,
+      "upkeep": 241.02,
+      "days_rounded": 6
     },
     {
       "town": "Syndicatum",
       "nation": "Eastern_Syndicate",
-      "bank": 2026.1,
+      "bank": 1708.86,
       "upkeep": 317.24,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Olympus_Dio",
       "nation": "Gran_Colombia",
-      "bank": 13279.96,
+      "bank": 12704.26,
       "upkeep": 575.7,
-      "days_rounded": 24
+      "days_rounded": 23
     },
     {
       "town": "Cayman",
       "nation": "Imperial_North",
-      "bank": 1485.07,
+      "bank": 1415.08,
       "upkeep": 69.99,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "New_Samarinda",
       "nation": "Oceanic_Empire",
-      "bank": 1981.02,
+      "bank": 1669.94,
       "upkeep": 311.08,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Arcanor",
       "nation": "Persian_Empire",
-      "bank": 1143.59,
-      "upkeep": 135.54,
-      "days_rounded": 9
+      "bank": 1010.68,
+      "upkeep": 132.91,
+      "days_rounded": 8
     },
     {
       "town": "Koiki",
       "nation": "Imperial_North",
-      "bank": 1169.48,
+      "bank": 1141.2,
       "upkeep": 28.28,
-      "days_rounded": 42
+      "days_rounded": 41
     },
     {
       "town": "Eventide_Ruins",
       "nation": "Imperium_Romanum",
-      "bank": 4006.16,
+      "bank": 3645.66,
       "upkeep": 360.5,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "New_Middelburg",
       "nation": "Oceanic_Empire",
-      "bank": 13953.72,
+      "bank": 13729.6,
       "upkeep": 224.11,
-      "days_rounded": 63
+      "days_rounded": 62
     },
     {
       "town": "Anguli_Maris",
       "nation": "Vanaco",
-      "bank": 6450.04,
+      "bank": 6365.4,
       "upkeep": 84,
-      "days_rounded": 77
+      "days_rounded": 76
     },
     {
       "town": "Mirage_City",
       "nation": "Persian_Empire",
-      "bank": 3325.69,
-      "upkeep": 532.09,
-      "days_rounded": 7
+      "bank": 2803.92,
+      "upkeep": 521.76,
+      "days_rounded": 6
     },
     {
       "town": "Utrecht_Vengeance",
       "nation": "Oceanic_Empire",
-      "bank": 126.11,
+      "bank": 1935.22,
       "upkeep": 190.89,
-      "days_rounded": 1
+      "days_rounded": 11
     },
     {
       "town": "Chicago",
       "nation": "Vinovia",
-      "bank": 326360.71,
+      "bank": 326100.71,
       "upkeep": 260,
-      "days_rounded": 1256
+      "days_rounded": 1255
     },
     {
       "town": "Veritas",
       "nation": "Persian_Empire",
-      "bank": 594.3,
-      "upkeep": 235.04,
-      "days_rounded": 3
+      "bank": 363.81,
+      "upkeep": 230.48,
+      "days_rounded": 2
     },
     {
       "town": "Alabama",
       "nation": "Gran_Colombia",
-      "bank": 21731.51,
+      "bank": 21438.62,
       "upkeep": 292.9,
-      "days_rounded": 75
+      "days_rounded": 74
     },
     {
       "town": "Tenkōkyō",
       "nation": "Eastern_Syndicate",
-      "bank": 163990.97,
+      "bank": 163648.27,
       "upkeep": 351.23,
-      "days_rounded": 467
+      "days_rounded": 466
     },
     {
       "town": "Mainart",
       "nation": "British_Empire",
-      "bank": 2286.92,
+      "bank": 1987.96,
       "upkeep": 298.96,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Silesio",
       "nation": "Polish_Empire",
-      "bank": 2554.09,
+      "bank": 2195.01,
       "upkeep": 308,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Ironvale",
       "nation": "Imperial_North",
-      "bank": 15687.4,
+      "bank": 15489.43,
       "upkeep": 197.96,
-      "days_rounded": 80
+      "days_rounded": 79
     },
     {
       "town": "Seoul",
       "nation": "Eastern_Syndicate",
-      "bank": 1663.91,
+      "bank": 1609.33,
       "upkeep": 54.59,
-      "days_rounded": 31
+      "days_rounded": 30
     },
     {
       "town": "Poti",
       "nation": "Eastern_Syndicate",
-      "bank": 32369.17,
+      "bank": 31969.53,
       "upkeep": 399.64,
-      "days_rounded": 81
+      "days_rounded": 80
     },
     {
       "town": "Agartha",
       "nation": "Alexandrine_Dominion",
-      "bank": 19832.51,
+      "bank": 19653.74,
       "upkeep": 178.77,
-      "days_rounded": 111
+      "days_rounded": 110
+    },
+    {
+      "town": "Aurelion",
+      "nation": "Polish_Empire",
+      "bank": 2699,
+      "upkeep": 280,
+      "days_rounded": 10
     },
     {
       "town": "Dakar",
       "nation": "Quintessence_Syndicate",
-      "bank": 55230.97,
+      "bank": 54416.24,
       "upkeep": 814.73,
-      "days_rounded": 68
+      "days_rounded": 67
     },
     {
       "town": "Valhalla",
       "nation": "Imperium_Romanum",
-      "bank": 91962.21,
+      "bank": 91612.01,
       "upkeep": 350.2,
-      "days_rounded": 263
+      "days_rounded": 262
     },
     {
       "town": "Caladan",
       "nation": "Vanaco",
-      "bank": 2201.85,
+      "bank": 1985.63,
       "upkeep": 216,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Octopia",
       "nation": "OCTACORP",
-      "bank": 25689.98,
+      "bank": 25528.98,
       "upkeep": 161,
-      "days_rounded": 160
+      "days_rounded": 159
     },
     {
       "town": "Tidefaire_Harbor",
       "nation": "Eastern_Syndicate",
-      "bank": 1710.24,
+      "bank": 1625.78,
       "upkeep": 84.46,
-      "days_rounded": 21
+      "days_rounded": 20
     },
     {
       "town": "Polonia_Harbour",
       "nation": "Thracian_Dominion",
-      "bank": 751.77,
+      "bank": 482,
       "upkeep": 269.67,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Nova_Valyria",
       "nation": "Imperial_North",
-      "bank": 10290.08,
+      "bank": 19262.81,
       "upkeep": 1027.27,
-      "days_rounded": 11
+      "days_rounded": 19
     },
     {
       "town": "Nova_Prospekt",
       "nation": "Imperial_North",
-      "bank": 4877.23,
+      "bank": 4792.39,
       "upkeep": 84.84,
-      "days_rounded": 58
+      "days_rounded": 57
     },
     {
       "town": "Tatsumi_Port",
       "nation": "Vanaco",
-      "bank": 51.01,
+      "bank": 2609.69,
       "upkeep": 339,
-      "days_rounded": 0
+      "days_rounded": 8
     },
     {
       "town": "Elektrozadovsk",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3407.27,
+      "bank": 3192,
       "upkeep": 215.27,
-      "days_rounded": 16
-    },
-    {
-      "town": "Vayrin",
-      "nation": "Vanaco",
-      "bank": 7196.25,
-      "upkeep": 330,
-      "days_rounded": 22
+      "days_rounded": 15
     },
     {
       "town": "Otago",
       "nation": "Oceanic_Empire",
-      "bank": 79697.55,
+      "bank": 79539.18,
       "upkeep": 158.36,
-      "days_rounded": 504
+      "days_rounded": 503
+    },
+    {
+      "town": "Vayrin",
+      "nation": "Vanaco",
+      "bank": 6865.53,
+      "upkeep": 330,
+      "days_rounded": 21
     },
     {
       "town": "Pontus",
       "nation": null,
-      "bank": 311,
+      "bank": 267,
       "upkeep": 44,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Tasmania",
       "nation": "Eastern_Syndicate",
-      "bank": 1016166.32,
+      "bank": 1015722.39,
       "upkeep": 443.93,
-      "days_rounded": 2290
+      "days_rounded": 2289
     },
     {
       "town": "Kekik",
       "nation": "Ottoman_State",
-      "bank": 3986.19,
+      "bank": 3852.19,
       "upkeep": 134,
-      "days_rounded": 30
+      "days_rounded": 29
     },
     {
       "town": "Seashore_Bay",
       "nation": "British_Empire",
-      "bank": 2282.75,
+      "bank": 2069.64,
       "upkeep": 213.11,
-      "days_rounded": 11
-    },
-    {
-      "town": "Port_Potoo",
-      "nation": "Potarian_Seaguards",
-      "bank": 137721.2,
-      "upkeep": 874,
-      "days_rounded": 158
+      "days_rounded": 10
     },
     {
       "town": "Berryland",
       "nation": "Imperial_North",
-      "bank": 5037.62,
+      "bank": 4802.19,
       "upkeep": 235.43,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
-      "town": "Scotland",
-      "nation": "Imperium_Romanum",
-      "bank": 370425.86,
-      "upkeep": 452.17,
-      "days_rounded": 820
+      "town": "Port_Potoo",
+      "nation": "Potarian_Seaguards",
+      "bank": 136847.2,
+      "upkeep": 874,
+      "days_rounded": 157
     },
     {
       "town": "Andreapol",
       "nation": "Imperium_Romanum",
-      "bank": 2788.52,
+      "bank": 2660.8,
       "upkeep": 127.72,
-      "days_rounded": 22
+      "days_rounded": 21
+    },
+    {
+      "town": "Scotland",
+      "nation": "Imperium_Romanum",
+      "bank": 369973.69,
+      "upkeep": 452.17,
+      "days_rounded": 819
     },
     {
       "town": "North_Moscow",
       "nation": "Imperium_Romanum",
-      "bank": 61824.6,
+      "bank": 61748.38,
       "upkeep": 76.22,
-      "days_rounded": 812
+      "days_rounded": 811
     },
     {
       "town": "Ottawa",
       "nation": "Imperial_North",
-      "bank": 4402.66,
+      "bank": 3927.55,
       "upkeep": 475.1,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Port_Aphrodite",
       "nation": "East_African_Federation",
-      "bank": 2880.25,
+      "bank": 2520.25,
       "upkeep": 360,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Pueblo_Paleta",
       "nation": null,
-      "bank": 3885,
+      "bank": 3861,
       "upkeep": 24,
-      "days_rounded": 162
+      "days_rounded": 161
     },
     {
       "town": "Africanus",
       "nation": "Imperium_Romanum",
-      "bank": 5199.1,
+      "bank": 4998.25,
       "upkeep": 200.85,
-      "days_rounded": 26
-    },
-    {
-      "town": "Vilarinho_City",
-      "nation": null,
-      "bank": 678.17,
-      "upkeep": 20,
-      "days_rounded": 34
+      "days_rounded": 25
     },
     {
       "town": "New_Merida",
       "nation": "Gran_Colombia",
-      "bank": 1861.35,
+      "bank": 1275.55,
       "upkeep": 585.8,
+      "days_rounded": 3
+    },
+    {
+      "town": "DuckLand",
+      "nation": null,
+      "bank": 79,
+      "upkeep": 20,
       "days_rounded": 4
     },
     {
       "town": "Duck_City",
       "nation": "Imperial_North",
-      "bank": 2805.21,
+      "bank": 2480.7,
       "upkeep": 324.51,
+      "days_rounded": 8
+    },
+    {
+      "town": "Beograd",
+      "nation": "Alchak_Federation",
+      "bank": 1552.1,
+      "upkeep": 181,
       "days_rounded": 9
     },
     {
@@ -2824,32 +2852,25 @@
       "days_rounded": 4
     },
     {
-      "town": "Beograd",
-      "nation": "Alchak_Federation",
-      "bank": 1733.1,
-      "upkeep": 181,
-      "days_rounded": 10
-    },
-    {
       "town": "Pemba",
       "nation": "East_African_Federation",
-      "bank": 32316.83,
+      "bank": 31258.05,
       "upkeep": 1070,
-      "days_rounded": 31
-    },
-    {
-      "town": "Revachol",
-      "nation": null,
-      "bank": 2419.58,
-      "upkeep": 32,
-      "days_rounded": 76
+      "days_rounded": 30
     },
     {
       "town": "Victoria",
       "nation": "Imperia_Victoria",
-      "bank": 2783729.31,
+      "bank": 2783105.57,
       "upkeep": 735,
-      "days_rounded": 3788
+      "days_rounded": 3787
+    },
+    {
+      "town": "Revachol",
+      "nation": null,
+      "bank": 2387.58,
+      "upkeep": 32,
+      "days_rounded": 75
     },
     {
       "town": "Bab_Al_Mandab",
@@ -2861,296 +2882,310 @@
     {
       "town": "New_Zadupie",
       "nation": "Hawaii_Kingdom",
-      "bank": 534.91,
+      "bank": 379.56,
       "upkeep": 150,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Nosymtnc",
       "nation": "Imperium_Romanum",
-      "bank": 764.37,
+      "bank": 662.4,
       "upkeep": 101.97,
-      "days_rounded": 8
-    },
-    {
-      "town": "Alpha",
-      "nation": "Elite_Penguin_Force",
-      "bank": 12786.76,
-      "upkeep": 180,
-      "days_rounded": 72
+      "days_rounded": 7
     },
     {
       "town": "Luna",
       "nation": "Vanaco",
-      "bank": 10028.61,
+      "bank": 9697.61,
       "upkeep": 330,
-      "days_rounded": 31
+      "days_rounded": 30
+    },
+    {
+      "town": "Alpha",
+      "nation": "Elite_Penguin_Force",
+      "bank": 12606.76,
+      "upkeep": 180,
+      "days_rounded": 71
     },
     {
       "town": "Port_Frogmouth",
       "nation": "Potarian_Seaguards",
-      "bank": 8783.95,
+      "bank": 8552.95,
       "upkeep": 231,
-      "days_rounded": 39
+      "days_rounded": 38
     },
     {
       "town": "Rosenschild",
       "nation": "Republic_Of_Sakha",
-      "bank": 2378.6,
+      "bank": 2051.6,
       "upkeep": 327,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Haliburton",
       "nation": "Persian_Empire",
-      "bank": 1864.67,
-      "upkeep": 40.37,
-      "days_rounded": 47
-    },
-    {
-      "town": "Telesto",
-      "nation": "Vanaco",
-      "bank": 3750.92,
-      "upkeep": 340,
-      "days_rounded": 12
+      "bank": 2125.08,
+      "upkeep": 39.59,
+      "days_rounded": 54
     },
     {
       "town": "Halifax",
       "nation": "Imperial_North",
-      "bank": 62191.35,
+      "bank": 60996.73,
       "upkeep": 1218.16,
-      "days_rounded": 52
+      "days_rounded": 51
+    },
+    {
+      "town": "Telesto",
+      "nation": "Vanaco",
+      "bank": 3410.54,
+      "upkeep": 340,
+      "days_rounded": 11
     },
     {
       "town": "Selene",
       "nation": "Gran_Colombia",
-      "bank": 679.97,
+      "bank": 553.72,
       "upkeep": 126.25,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Legio",
       "nation": "Eastern_Syndicate",
-      "bank": 18556.68,
+      "bank": 18357.89,
       "upkeep": 198.79,
-      "days_rounded": 94
+      "days_rounded": 93
     },
     {
       "town": "Nueva_Mendoza",
       "nation": "Quintessence_Syndicate",
-      "bank": 21513.66,
+      "bank": 20925.53,
       "upkeep": 588.13,
-      "days_rounded": 37
+      "days_rounded": 36
     },
     {
       "town": "Neptune",
       "nation": "Vanaco",
-      "bank": 2535.06,
+      "bank": 2194.8,
       "upkeep": 340,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Gloria",
       "nation": "the Telurian Federation! Looking for new members to help and teach! The Best Public Farms in all of CCnet, join and get your free diamond kit",
-      "bank": 996880.91,
+      "bank": 995989.91,
       "upkeep": 891,
-      "days_rounded": 1119
+      "days_rounded": 1118
     },
     {
       "town": "NewMarauder_Bay",
       "nation": "Russo_Japanese_Empire",
-      "bank": 66516.16,
+      "bank": 66387.41,
       "upkeep": 128.75,
-      "days_rounded": 517
+      "days_rounded": 516
     },
     {
-      "town": "Ashla",
-      "nation": "Alchak_Federation",
-      "bank": 714.09,
-      "upkeep": 223,
-      "days_rounded": 4
+      "town": "Happy_Mansion",
+      "nation": "Imperia_Lysia",
+      "bank": 6287,
+      "upkeep": 272,
+      "days_rounded": 24
     },
     {
       "town": "Michigan",
       "nation": "Imperial_North",
-      "bank": 10909.68,
+      "bank": 10533.56,
       "upkeep": 376.12,
-      "days_rounded": 30
+      "days_rounded": 29
+    },
+    {
+      "town": "Ashla",
+      "nation": "Alchak_Federation",
+      "bank": 491.09,
+      "upkeep": 223,
+      "days_rounded": 3
     },
     {
       "town": "Noxarys",
       "nation": null,
-      "bank": 254187.58,
+      "bank": 253887.58,
       "upkeep": 300,
-      "days_rounded": 848
+      "days_rounded": 847
     },
     {
       "town": "Titan",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1551.43,
+      "bank": 1237.3,
       "upkeep": 314.15,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Silverstone",
       "nation": "Russo_Japanese_Empire",
-      "bank": 5417.47,
+      "bank": 4480.75,
       "upkeep": 436.72,
-      "days_rounded": 13
+      "days_rounded": 11
     },
     {
       "town": "NishiNoHoshi",
       "nation": "Russo_Japanese_Empire",
-      "bank": 4973.04,
+      "bank": 4633.14,
       "upkeep": 339.9,
-      "days_rounded": 15
-    },
-    {
-      "town": "Kongopolis",
-      "nation": "East_African_Federation",
-      "bank": 1624.18,
-      "upkeep": 271,
-      "days_rounded": 6
+      "days_rounded": 14
     },
     {
       "town": "Little_China_Town",
       "nation": "Eastern_Syndicate",
-      "bank": 7557.55,
+      "bank": 7285.63,
       "upkeep": 271.92,
-      "days_rounded": 28
+      "days_rounded": 27
+    },
+    {
+      "town": "Kongopolis",
+      "nation": "East_African_Federation",
+      "bank": 1353.18,
+      "upkeep": 271,
+      "days_rounded": 5
     },
     {
       "town": "Lelystad_Vengeance",
       "nation": "Eastern_Syndicate",
-      "bank": 4636.57,
+      "bank": 4332.71,
       "upkeep": 303.85,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "Jingzhao",
       "nation": "State_Of_Tang",
-      "bank": 866,
+      "bank": 2148,
       "upkeep": 218,
-      "days_rounded": 4
+      "days_rounded": 10
     },
     {
       "town": "Kiralia",
       "nation": "Imperium_Romanum",
-      "bank": 380.28,
+      "bank": 5186.64,
       "upkeep": 193.64,
-      "days_rounded": 2
+      "days_rounded": 27
     },
     {
       "town": "Santa_Cruz_Das_Flores",
       "nation": "British_Empire",
-      "bank": 77161.35,
+      "bank": 77127.01,
       "upkeep": 34.34,
-      "days_rounded": 2247
+      "days_rounded": 2246
     },
     {
       "town": "Imperial_Bamboo",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2091.8,
+      "bank": 1800.31,
       "upkeep": 291.49,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Timeos",
       "nation": "Imperium_Romanum",
-      "bank": 30058.76,
+      "bank": 29899.11,
       "upkeep": 159.65,
-      "days_rounded": 189
+      "days_rounded": 188
     },
     {
       "town": "Carregal_Do_Sal",
       "nation": null,
-      "bank": 35239.86,
+      "bank": 34953.86,
       "upkeep": 286,
-      "days_rounded": 124
-    },
-    {
-      "town": "Krieg",
-      "nation": "Landinian_Federation",
-      "bank": 4935.69,
-      "upkeep": 253,
-      "days_rounded": 20
-    },
-    {
-      "town": "St._Potzland",
-      "nation": "Gran_Colombia",
-      "bank": 5027.5,
-      "upkeep": 145.44,
-      "days_rounded": 35
-    },
-    {
-      "town": "Faroes_Castle",
-      "nation": "Barony_Of_The_Faroes",
-      "bank": 349559.31,
-      "upkeep": 125,
-      "days_rounded": 2797
+      "days_rounded": 123
     },
     {
       "town": "New_Rorikstead",
       "nation": "Eastern_Syndicate",
-      "bank": 34609.47,
+      "bank": 33834.18,
       "upkeep": 870.35,
-      "days_rounded": 40
+      "days_rounded": 39
+    },
+    {
+      "town": "Faroes_Castle",
+      "nation": "Barony_Of_The_Faroes",
+      "bank": 349434.31,
+      "upkeep": 125,
+      "days_rounded": 2796
+    },
+    {
+      "town": "St._Potzland",
+      "nation": "Gran_Colombia",
+      "bank": 4882.06,
+      "upkeep": 145.44,
+      "days_rounded": 34
+    },
+    {
+      "town": "Krieg",
+      "nation": "Landinian_Federation",
+      "bank": 4682.69,
+      "upkeep": 253,
+      "days_rounded": 19
     },
     {
       "town": "Alchakgrad",
       "nation": "Alchak_Federation",
-      "bank": 606.09,
+      "bank": 326.09,
       "upkeep": 280,
+      "days_rounded": 2
+    },
+    {
+      "town": "Progressa",
+      "nation": "Alexandrine_Dominion",
+      "bank": 503.07,
+      "upkeep": 194.93,
       "days_rounded": 3
     },
     {
       "town": "Deimos",
       "nation": "Thracian_Dominion",
-      "bank": 4704.09,
+      "bank": 4480.78,
       "upkeep": 223.21,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "Berk",
       "nation": "British_Empire",
-      "bank": 20832.08,
+      "bank": 20740.17,
       "upkeep": 91.91,
-      "days_rounded": 227
+      "days_rounded": 226
     },
     {
       "town": "Soviet_Leningrad",
       "nation": "Polish_Empire",
-      "bank": 7184.07,
+      "bank": 6760.38,
       "upkeep": 280,
-      "days_rounded": 26
+      "days_rounded": 25
     },
     {
       "town": "Purronto",
       "nation": "Quintessence_Syndicate",
-      "bank": 492.8,
+      "bank": 435.12,
       "upkeep": 57.68,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Canmore",
       "nation": "Imperial_North",
-      "bank": 784.66,
+      "bank": 762.03,
       "upkeep": 22.62,
-      "days_rounded": 35
+      "days_rounded": 34
     },
     {
       "town": "Warsaw",
-      "nation": "Polish_Empire",
-      "bank": 3449.04,
-      "upkeep": 370,
-      "days_rounded": 10
+      "nation": "Persian_Empire",
+      "bank": 3079.54,
+      "upkeep": 261.59,
+      "days_rounded": 12
     },
     {
       "town": "Rohan",
       "nation": "State_Of_Tang",
-      "bank": 42395.45,
+      "bank": 42095.45,
       "upkeep": 300,
-      "days_rounded": 142
+      "days_rounded": 141
     },
     {
       "town": "Sylvestris",
@@ -3162,30 +3197,30 @@
     {
       "town": "Adsland",
       "nation": "Imperial_North",
-      "bank": 24731.53,
+      "bank": 24691.94,
       "upkeep": 39.59,
-      "days_rounded": 625
-    },
-    {
-      "town": "New_Venice",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 2709.19,
-      "upkeep": 349.17,
-      "days_rounded": 8
+      "days_rounded": 624
     },
     {
       "town": "Minaminohoshi",
       "nation": "Russo_Japanese_Empire",
-      "bank": 7229.25,
+      "bank": 6852.27,
       "upkeep": 376.98,
-      "days_rounded": 20
+      "days_rounded": 19
+    },
+    {
+      "town": "New_Venice",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 2360.02,
+      "upkeep": 349.17,
+      "days_rounded": 7
     },
     {
       "town": "Santo",
       "nation": "Gold_Hoarders",
-      "bank": 4633,
+      "bank": 4571,
       "upkeep": 62,
-      "days_rounded": 75
+      "days_rounded": 74
     },
     {
       "town": "Snowpeak",
@@ -3197,184 +3232,184 @@
     {
       "town": "Korhal_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 3665.72,
+      "bank": 3493.7,
       "upkeep": 172.01,
-      "days_rounded": 22
+      "days_rounded": 21
     },
     {
       "town": "Wenzhou",
       "nation": "State_Of_Tang",
-      "bank": 282.01,
+      "bank": 250.01,
       "upkeep": 32,
-      "days_rounded": 9
-    },
-    {
-      "town": "Volodar",
-      "nation": "Vanaco",
-      "bank": 3816.6,
-      "upkeep": 372,
-      "days_rounded": 11
+      "days_rounded": 8
     },
     {
       "town": "Port_Karsia",
       "nation": null,
-      "bank": 11555.46,
+      "bank": 11462.46,
       "upkeep": 93,
-      "days_rounded": 125
+      "days_rounded": 124
     },
     {
-      "town": "Bastion",
-      "nation": "Potarian_Seaguards",
-      "bank": 3326.52,
-      "upkeep": 281,
-      "days_rounded": 12
+      "town": "Volodar",
+      "nation": "Vanaco",
+      "bank": 3445.81,
+      "upkeep": 372,
+      "days_rounded": 10
     },
     {
       "town": "Ordinance",
       "nation": "Imperial_North",
-      "bank": 2715.81,
+      "bank": 2519.26,
       "upkeep": 196.54,
-      "days_rounded": 14
+      "days_rounded": 13
+    },
+    {
+      "town": "Bastion",
+      "nation": "Potarian_Seaguards",
+      "bank": 3045.52,
+      "upkeep": 281,
+      "days_rounded": 11
     },
     {
       "town": "Hawaii",
       "nation": "Hawaii_Kingdom",
-      "bank": 1710.1,
+      "bank": 1601.1,
       "upkeep": 109,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "The_Alamo",
       "nation": null,
-      "bank": 27974.1,
+      "bank": 27690.1,
       "upkeep": 284,
-      "days_rounded": 99
+      "days_rounded": 98
     },
     {
       "town": "New_Cadia",
       "nation": "West_Coast_Republic",
-      "bank": 1024.75,
+      "bank": 893.45,
       "upkeep": 131.3,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "New_Eindhoven",
       "nation": "Oceanic_Empire",
-      "bank": 636.36,
+      "bank": 543.03,
       "upkeep": 93.32,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Free_Trading_Corp",
       "nation": "California_Republic",
-      "bank": 1635.25,
+      "bank": 1267.25,
       "upkeep": 368,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Yeti_Yeeters",
       "nation": "Imperial_North",
-      "bank": 408.51,
+      "bank": 318.72,
       "upkeep": 89.78,
-      "days_rounded": 5
-    },
-    {
-      "town": "Shiganshina",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 15819.5,
-      "upkeep": 388.31,
-      "days_rounded": 41
+      "days_rounded": 4
     },
     {
       "town": "Eterna",
       "nation": "Gran_Colombia",
-      "bank": 8360.38,
+      "bank": 7872.55,
       "upkeep": 487.83,
-      "days_rounded": 18
+      "days_rounded": 17
+    },
+    {
+      "town": "Shiganshina",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 15431.19,
+      "upkeep": 388.31,
+      "days_rounded": 40
     },
     {
       "town": "Tosa",
       "nation": "Russo_Japanese_Empire",
-      "bank": 839.2,
+      "bank": 656.89,
       "upkeep": 182.31,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Wales",
       "nation": "Imperium_Romanum",
-      "bank": 15908.32,
+      "bank": 15549.88,
       "upkeep": 358.44,
-      "days_rounded": 45
+      "days_rounded": 44
     },
     {
       "town": "Zindar",
       "nation": "Thracian_Dominion",
-      "bank": 2757.28,
+      "bank": 2551.14,
       "upkeep": 206.04,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Syndicate_Castle",
       "nation": "Eastern_Syndicate",
-      "bank": 2856.31,
+      "bank": 2573.06,
       "upkeep": 283.25,
-      "days_rounded": 11
-    },
-    {
-      "town": "Trang",
-      "nation": "Oceanic_Empire",
-      "bank": 6184.07,
-      "upkeep": 43.83,
-      "days_rounded": 142
+      "days_rounded": 10
     },
     {
       "town": "Plvs_Vltra",
       "nation": "Alchak_Federation",
-      "bank": 47433.43,
+      "bank": 47158.43,
       "upkeep": 275,
-      "days_rounded": 173
+      "days_rounded": 172
+    },
+    {
+      "town": "Trang",
+      "nation": "Oceanic_Empire",
+      "bank": 6140.23,
+      "upkeep": 43.83,
+      "days_rounded": 141
     },
     {
       "town": "Fort_Ironwood",
       "nation": "Gran_Colombia",
-      "bank": 5804.82,
+      "bank": 5590.7,
       "upkeep": 214.12,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Yangon",
       "nation": "Eastern_Syndicate",
-      "bank": 1388,
+      "bank": 1099.6,
       "upkeep": 288.4,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Vayutara_Monastery",
       "nation": "West_Coast_Republic",
-      "bank": 278289.41,
+      "bank": 278172.25,
       "upkeep": 117.16,
-      "days_rounded": 2376
+      "days_rounded": 2375
     },
     {
       "town": "Jeju_Do",
       "nation": "Russo_Japanese_Empire",
-      "bank": 14635.84,
+      "bank": 14437.05,
       "upkeep": 198.79,
-      "days_rounded": 74
+      "days_rounded": 73
     },
     {
       "town": "Chak_Bashak",
       "nation": "Alchak_Federation",
-      "bank": 288417.34,
+      "bank": 288012.34,
       "upkeep": 405,
-      "days_rounded": 713
+      "days_rounded": 712
     },
     {
       "town": "Port_Kyia",
       "nation": "Imperium_Romanum",
-      "bank": 2792.97,
+      "bank": 2505.6,
       "upkeep": 287.37,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Celle",
@@ -3386,240 +3421,233 @@
     {
       "town": "Fort_FTCE",
       "nation": "Vinovia",
-      "bank": 7365.09,
+      "bank": 7193.09,
       "upkeep": 172,
-      "days_rounded": 43
+      "days_rounded": 42
     },
     {
       "town": "Burger_King",
       "nation": "Alexandrine_Dominion",
-      "bank": 8156.01,
+      "bank": 8030.77,
       "upkeep": 125.24,
-      "days_rounded": 66
+      "days_rounded": 65
     },
     {
       "town": "Stormhill",
       "nation": "Russo_Japanese_Empire",
-      "bank": 32530.18,
+      "bank": 31984.28,
       "upkeep": 545.9,
-      "days_rounded": 60
+      "days_rounded": 59
     },
     {
       "town": "Ordelle",
       "nation": "Oceanic_Empire",
-      "bank": 1534.75,
+      "bank": 1209.53,
       "upkeep": 325.22,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Doharestan_City",
       "nation": "Persian_Empire",
-      "bank": 11245.68,
-      "upkeep": 136.99,
-      "days_rounded": 83
-    },
-    {
-      "town": "Northern_Boschia",
-      "nation": "Eastern_Syndicate",
-      "bank": 2977.7,
-      "upkeep": 77.25,
-      "days_rounded": 39
+      "bank": 16118.35,
+      "upkeep": 135.74,
+      "days_rounded": 119
     },
     {
       "town": "Dhaka",
       "nation": "Eastern_Syndicate",
-      "bank": 1358.5,
+      "bank": 965.04,
       "upkeep": 393.46,
-      "days_rounded": 4
+      "days_rounded": 3
+    },
+    {
+      "town": "Northern_Boschia",
+      "nation": "Eastern_Syndicate",
+      "bank": 2900.45,
+      "upkeep": 77.25,
+      "days_rounded": 38
     },
     {
       "town": "Middelburg_Defence",
       "nation": "Oceanic_Empire",
-      "bank": 1206.13,
+      "bank": 1034.33,
       "upkeep": 171.8,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Reshi_Isles",
       "nation": "Roshar",
-      "bank": 229778.09,
+      "bank": 229591.09,
       "upkeep": 187,
-      "days_rounded": 1229
-    },
-    {
-      "town": "North_Karta",
-      "nation": "Imperial_North",
-      "bank": 4168.99,
-      "upkeep": 207.85,
-      "days_rounded": 21
+      "days_rounded": 1228
     },
     {
       "town": "Karsu_Dhabi",
       "nation": "Persian_Empire",
-      "bank": 438.4,
-      "upkeep": 209.09,
-      "days_rounded": 3
+      "bank": 233.36,
+      "upkeep": 205.03,
+      "days_rounded": 2
+    },
+    {
+      "town": "North_Karta",
+      "nation": "Imperial_North",
+      "bank": 3961.13,
+      "upkeep": 207.85,
+      "days_rounded": 20
     },
     {
       "town": "Gaia",
       "nation": "Gran_Colombia",
-      "bank": 14782.05,
+      "bank": 14607.32,
       "upkeep": 174.73,
-      "days_rounded": 85
+      "days_rounded": 84
     },
     {
       "town": "Chelyabinsk",
       "nation": "Russo_Japanese_Empire",
-      "bank": 603.63,
+      "bank": 468.7,
       "upkeep": 134.93,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "New_Darwin",
       "nation": "Oceanic_Empire",
-      "bank": 156185.89,
+      "bank": 253806.47,
       "upkeep": 264.41,
-      "days_rounded": 591
+      "days_rounded": 960
     },
     {
       "town": "Nexus",
       "nation": "Eastern_Syndicate",
-      "bank": 5845.31,
+      "bank": 5712.44,
       "upkeep": 132.87,
-      "days_rounded": 44
+      "days_rounded": 43
     },
     {
       "town": "Chongqing",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1932.73,
+      "bank": 1680.38,
       "upkeep": 252.35,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Roswell",
       "nation": "Canada",
-      "bank": 14,
+      "bank": 79,
       "upkeep": 65,
-      "days_rounded": 0
+      "days_rounded": 2
     },
     {
       "town": "Flowersvillage",
       "nation": "Thracian_Dominion",
-      "bank": 4596.61,
+      "bank": 4303.61,
       "upkeep": 292.9,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "New_Tel_Aviv",
       "nation": "West_Coast_Republic",
-      "bank": 481.35,
+      "bank": 402.58,
       "upkeep": 78.78,
-      "days_rounded": 7
-    },
-    {
-      "town": "Erysea",
-      "nation": null,
-      "bank": 7548,
-      "upkeep": 83,
-      "days_rounded": 91
+      "days_rounded": 6
     },
     {
       "town": "New_Haven",
       "nation": "Landinian_Federation",
-      "bank": 8001.1,
+      "bank": 7430.52,
       "upkeep": 590,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
-      "town": "Quīntus_Castrum",
-      "nation": "Imperial_North",
-      "bank": 9352.86,
-      "upkeep": 116.65,
-      "days_rounded": 81
+      "town": "Erysea",
+      "nation": null,
+      "bank": 17792,
+      "upkeep": 83,
+      "days_rounded": 215
     },
     {
       "town": "Mars",
       "nation": "Thracian_Dominion",
-      "bank": 2094.48,
+      "bank": 1861.07,
       "upkeep": 233.31,
-      "days_rounded": 9
+      "days_rounded": 8
+    },
+    {
+      "town": "Quīntus_Castrum",
+      "nation": "Imperial_North",
+      "bank": 9236.21,
+      "upkeep": 116.65,
+      "days_rounded": 80
     },
     {
       "town": "Strigiformes",
       "nation": "Oceanic_Empire",
-      "bank": 9739.11,
+      "bank": 9651.44,
       "upkeep": 87.66,
-      "days_rounded": 112
+      "days_rounded": 111
     },
     {
       "town": "Southeastern_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 3050.58,
+      "bank": 2932.13,
       "upkeep": 118.45,
-      "days_rounded": 26
+      "days_rounded": 25
     },
     {
       "town": "Norston",
       "nation": "Thracian_Dominion",
-      "bank": 5058.63,
+      "bank": 4891.88,
       "upkeep": 166.65,
-      "days_rounded": 31
+      "days_rounded": 30
     },
     {
       "town": "Mawastan",
       "nation": "East_African_Federation",
-      "bank": 2068,
-      "upkeep": 246,
-      "days_rounded": 9
+      "bank": 1082,
+      "upkeep": 256,
+      "days_rounded": 5
     },
     {
       "town": "The_Imperial_Bastion",
       "nation": "Imperial_Federation",
-      "bank": 1347.27,
+      "bank": 1278.27,
       "upkeep": 69,
-      "days_rounded": 20
+      "days_rounded": 19
     },
     {
       "town": "Port_Legalys",
       "nation": "Oceanic_Empire",
-      "bank": 73660.65,
+      "bank": 73307.15,
       "upkeep": 353.5,
-      "days_rounded": 209
+      "days_rounded": 208
     },
     {
       "town": "Syrian_Arab_Republic",
       "nation": "Persian_Empire",
-      "bank": 310.09,
-      "upkeep": 230.72,
-      "days_rounded": 2
+      "bank": 83.86,
+      "upkeep": 226.24,
+      "days_rounded": 0
     },
     {
       "town": "Port_Sangatta",
       "nation": "Oceanic_Empire",
-      "bank": 5926.62,
+      "bank": 5712.4,
       "upkeep": 214.22,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Jupiter",
       "nation": "Imperial_North",
-      "bank": 271.28,
+      "bank": 199.87,
       "upkeep": 71.4,
-      "days_rounded": 4
-    },
-    {
-      "town": "Al_Hadd",
-      "nation": "Persian_Empire",
-      "bank": 212.22,
-      "upkeep": 198.99,
-      "days_rounded": 2
+      "days_rounded": 3
     },
     {
       "town": "White_Forest",
       "nation": "Imperial_North",
-      "bank": 156.53,
+      "bank": 2911.9,
       "upkeep": 244.62,
-      "days_rounded": 1
+      "days_rounded": 12
     },
     {
       "town": "Gibraltar",
@@ -3629,452 +3657,452 @@
       "days_rounded": 0
     },
     {
+      "town": "Al_Hadd",
+      "nation": "Persian_Empire",
+      "bank": 17.09,
+      "upkeep": 195.13,
+      "days_rounded": 0
+    },
+    {
       "town": "Gsouxistan",
       "nation": "California_Republic",
-      "bank": 2044.33,
+      "bank": 1694.33,
       "upkeep": 350,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "TurtleNadym",
       "nation": "Eastern_Syndicate",
-      "bank": 20326.46,
+      "bank": 19913.43,
       "upkeep": 413.03,
-      "days_rounded": 50
+      "days_rounded": 49
     },
     {
       "town": "Wellington",
       "nation": "Oceanic_Empire",
-      "bank": 2531.73,
+      "bank": 2466.68,
       "upkeep": 65.04,
-      "days_rounded": 39
+      "days_rounded": 38
     },
     {
       "town": "Qeshm",
       "nation": "Persian_Empire",
-      "bank": 85797.42,
-      "upkeep": 338.87,
-      "days_rounded": 254
+      "bank": 85465.13,
+      "upkeep": 332.29,
+      "days_rounded": 258
     },
     {
       "town": "NKL_Port",
       "nation": "Oceanic_Empire",
-      "bank": 1702.48,
+      "bank": 1486.14,
       "upkeep": 217.04,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Saturn",
       "nation": "Vanaco",
-      "bank": 1363.52,
+      "bank": 1023.38,
       "upkeep": 340,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Old_Askandir",
       "nation": "Ottoman_State",
-      "bank": 39857.05,
+      "bank": 39465.05,
       "upkeep": 392,
-      "days_rounded": 102
+      "days_rounded": 101
     },
     {
       "town": "Syndicate_Bastion",
       "nation": "Eastern_Syndicate",
-      "bank": 1859.26,
+      "bank": 1721.23,
       "upkeep": 138.02,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Aethertung",
       "nation": "Oceanic_Empire",
-      "bank": 2606.35,
+      "bank": 2507.37,
       "upkeep": 98.98,
-      "days_rounded": 27
+      "days_rounded": 26
     },
     {
       "town": "Teksan_Dio",
       "nation": "Thracian_Dominion",
-      "bank": 828.14,
+      "bank": 514.94,
       "upkeep": 313.1,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Bordeaux",
       "nation": "Imperium_Romanum",
-      "bank": 2460.62,
+      "bank": 11801.42,
       "upkeep": 659.2,
-      "days_rounded": 4
+      "days_rounded": 18
     },
     {
       "town": "Chad",
       "nation": "Imperium_Romanum",
-      "bank": 3328.17,
+      "bank": 3159.25,
       "upkeep": 168.92,
-      "days_rounded": 20
-    },
-    {
-      "town": "Fort_Sami",
-      "nation": "Republic_Of_Sakha",
-      "bank": 3428.09,
-      "upkeep": 117,
-      "days_rounded": 30
-    },
-    {
-      "town": "Fleur_De_Lys",
-      "nation": "Imperial_North",
-      "bank": 7080.49,
-      "upkeep": 366.93,
-      "days_rounded": 20
+      "days_rounded": 19
     },
     {
       "town": "Little_China_Defence",
       "nation": "Eastern_Syndicate",
-      "bank": 3486.89,
+      "bank": 3331.35,
       "upkeep": 155.53,
-      "days_rounded": 23
+      "days_rounded": 22
     },
     {
-      "town": "Murcia",
-      "nation": "Spanish_Empire",
-      "bank": 2317.9,
-      "upkeep": 340,
-      "days_rounded": 7
+      "town": "Fleur_De_Lys",
+      "nation": "Imperial_North",
+      "bank": 6713.56,
+      "upkeep": 366.93,
+      "days_rounded": 19
+    },
+    {
+      "town": "Fort_Sami",
+      "nation": "Republic_Of_Sakha",
+      "bank": 3311.09,
+      "upkeep": 117,
+      "days_rounded": 29
     },
     {
       "town": "Nuuk",
       "nation": "British_Empire",
-      "bank": 228.22,
+      "bank": 3009.04,
       "upkeep": 219.17,
-      "days_rounded": 2
+      "days_rounded": 14
+    },
+    {
+      "town": "Murcia",
+      "nation": "Spanish_Empire",
+      "bank": 1931.54,
+      "upkeep": 340,
+      "days_rounded": 6
     },
     {
       "town": "SteelRealm",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3195.17,
+      "bank": 2932.52,
       "upkeep": 262.65,
-      "days_rounded": 13
+      "days_rounded": 12
     },
     {
       "town": "Ciudad_Estrellada",
       "nation": "Landinian_Federation",
-      "bank": 60065.1,
+      "bank": 59880.1,
       "upkeep": 185,
-      "days_rounded": 325
-    },
-    {
-      "town": "Corn_Puss_Gap",
-      "nation": "Gran_Colombia",
-      "bank": 3042.24,
-      "upkeep": 171.7,
-      "days_rounded": 18
+      "days_rounded": 324
     },
     {
       "town": "Ordensstaat_Livland",
       "nation": "Imperium_Romanum",
-      "bank": 1732,
+      "bank": 1570.29,
       "upkeep": 161.71,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Port_Sapphire",
       "nation": "Imperial_Federation",
-      "bank": 7072.79,
+      "bank": 6789.79,
       "upkeep": 283,
-      "days_rounded": 25
+      "days_rounded": 24
     },
     {
       "town": "Gleesh_Place",
       "nation": "OCTACORP",
-      "bank": 467872.42,
+      "bank": 467800.42,
       "upkeep": 72,
-      "days_rounded": 6499
-    },
-    {
-      "town": "Cyprus",
-      "nation": "Alexandrine_Dominion",
-      "bank": 5898.98,
-      "upkeep": 224.22,
-      "days_rounded": 27
+      "days_rounded": 6498
     },
     {
       "town": "Sea_Side",
       "nation": "California_Republic",
-      "bank": 1011.18,
+      "bank": 859.18,
       "upkeep": 152,
-      "days_rounded": 7
+      "days_rounded": 6
+    },
+    {
+      "town": "Cyprus",
+      "nation": "Alexandrine_Dominion",
+      "bank": 5674.76,
+      "upkeep": 224.22,
+      "days_rounded": 26
     },
     {
       "town": "Dripstone_Heaven",
       "nation": "Thracian_Dominion",
-      "bank": 853.55,
+      "bank": 520.25,
       "upkeep": 333.3,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Port_Royal",
       "nation": "Imperium_Romanum",
-      "bank": 2386.32,
+      "bank": 2310.12,
       "upkeep": 84.46,
-      "days_rounded": 29
+      "days_rounded": 28
     },
     {
       "town": "North",
       "nation": "Quintessence_Syndicate",
-      "bank": 1881.38,
+      "bank": 1699.08,
       "upkeep": 182.31,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Augustograd",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2152.34,
+      "bank": 1755.79,
       "upkeep": 396.55,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Socotran_Slovakia",
       "nation": "East_African_Federation",
-      "bank": 2789.53,
+      "bank": 2549.53,
       "upkeep": 240,
-      "days_rounded": 12
-    },
-    {
-      "town": "Rivendell",
-      "nation": "Valinor and Home of the T.T.C.",
-      "bank": 101502.47,
-      "upkeep": 693,
-      "days_rounded": 147
-    },
-    {
-      "town": "Kasperskian_Defence",
-      "nation": "Republic_Of_Sakha",
-      "bank": 2824.42,
-      "upkeep": 236,
-      "days_rounded": 12
-    },
-    {
-      "town": "Lartace",
-      "nation": "Alchak_Federation",
-      "bank": 219016.55,
-      "upkeep": 353,
-      "days_rounded": 621
+      "days_rounded": 11
     },
     {
       "town": "Palestine",
       "nation": "Ottoman_State",
-      "bank": 27149.32,
+      "bank": 26609.32,
       "upkeep": 540,
-      "days_rounded": 51
+      "days_rounded": 50
+    },
+    {
+      "town": "Kasperskian_Defence",
+      "nation": "Republic_Of_Sakha",
+      "bank": 2588.42,
+      "upkeep": 236,
+      "days_rounded": 11
+    },
+    {
+      "town": "Rivendell",
+      "nation": "Valinor and Home of the T.T.C.",
+      "bank": 100809.47,
+      "upkeep": 693,
+      "days_rounded": 146
+    },
+    {
+      "town": "Lartace",
+      "nation": "Alchak_Federation",
+      "bank": 218663.57,
+      "upkeep": 353,
+      "days_rounded": 620
     },
     {
       "town": "Central_Socotra",
       "nation": "East_African_Federation",
-      "bank": 3100.12,
+      "bank": 2874.12,
       "upkeep": 226,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Nesebar",
       "nation": "Thracian_Dominion",
-      "bank": 277099.9,
+      "bank": 276435.22,
       "upkeep": 664.58,
-      "days_rounded": 417
-    },
-    {
-      "town": "Sunnyvale",
-      "nation": null,
-      "bank": 4413.19,
-      "upkeep": 482,
-      "days_rounded": 10
+      "days_rounded": 416
     },
     {
       "town": "Tunis",
       "nation": "Imperium_Romanum",
-      "bank": 8870.2,
+      "bank": 8130.66,
       "upkeep": 739.54,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "GoldyTown",
       "nation": "Imperial_North",
-      "bank": 973.01,
+      "bank": 918.57,
       "upkeep": 54.43,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
-      "town": "Congo",
-      "nation": "Alexandrine_Dominion",
-      "bank": 36904.6,
-      "upkeep": 86.86,
-      "days_rounded": 425
+      "town": "Sunnyvale",
+      "nation": null,
+      "bank": 3931.19,
+      "upkeep": 482,
+      "days_rounded": 9
     },
     {
       "town": "IgnisGlacies",
       "nation": "Elite_Penguin_Force",
-      "bank": 14598.09,
+      "bank": 14500.09,
       "upkeep": 98,
-      "days_rounded": 149
+      "days_rounded": 148
+    },
+    {
+      "town": "Congo",
+      "nation": "Alexandrine_Dominion",
+      "bank": 36817.74,
+      "upkeep": 86.86,
+      "days_rounded": 424
     },
     {
       "town": "Fort_Lotus",
       "nation": "The_Great_Lotus_Empire",
-      "bank": 1940.1,
+      "bank": 1724.1,
       "upkeep": 216,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "New_Gallifrey",
       "nation": "Ottoman_State",
-      "bank": 529.25,
+      "bank": 378.25,
       "upkeep": 151,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Avonlea",
       "nation": "Gran_Colombia",
-      "bank": 9198.35,
+      "bank": 8788.29,
       "upkeep": 410.06,
-      "days_rounded": 23
+      "days_rounded": 22
     },
     {
       "town": "Moneyvale",
       "nation": null,
-      "bank": 10642.09,
+      "bank": 10262.09,
       "upkeep": 380,
-      "days_rounded": 29
+      "days_rounded": 28
     },
     {
       "town": "Douglas",
       "nation": "British_Empire",
-      "bank": 477.66,
+      "bank": 431.2,
       "upkeep": 46.46,
-      "days_rounded": 11
-    },
-    {
-      "town": "Old_Nadym",
-      "nation": "Eastern_Syndicate",
-      "bank": 722.8,
-      "upkeep": 138.02,
-      "days_rounded": 6
+      "days_rounded": 10
     },
     {
       "town": "Syndicate_Tower",
       "nation": "Eastern_Syndicate",
-      "bank": 7395.3,
+      "bank": 7138.83,
       "upkeep": 256.47,
-      "days_rounded": 29
+      "days_rounded": 28
     },
     {
-      "town": "Hejaz",
-      "nation": "Ottoman_State",
-      "bank": 666.1,
-      "upkeep": 169,
-      "days_rounded": 4
+      "town": "Old_Nadym",
+      "nation": "Eastern_Syndicate",
+      "bank": 584.78,
+      "upkeep": 138.02,
+      "days_rounded": 5
     },
     {
       "town": "Camp_Drakov",
       "nation": "Quintessence_Syndicate",
-      "bank": 14699.97,
+      "bank": 14247.8,
       "upkeep": 452.17,
-      "days_rounded": 33
+      "days_rounded": 32
     },
     {
-      "town": "Dongguan",
-      "nation": "State_Of_Tang",
-      "bank": 71081.11,
-      "upkeep": 440,
-      "days_rounded": 162
+      "town": "Hejaz",
+      "nation": "Ottoman_State",
+      "bank": 497.1,
+      "upkeep": 169,
+      "days_rounded": 3
     },
     {
       "town": "Enclave_City",
       "nation": "California_Republic",
-      "bank": 2434.78,
+      "bank": 1991.78,
       "upkeep": 443,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Veles_Szur",
       "nation": "Eastern_Columbia",
-      "bank": 35281.29,
+      "bank": 35092.29,
       "upkeep": 189,
-      "days_rounded": 187
+      "days_rounded": 186
     },
     {
       "town": "Galactic_Fijian_Empire",
       "nation": "Oceanic_Empire",
-      "bank": 84663.37,
+      "bank": 84471.78,
       "upkeep": 191.59,
-      "days_rounded": 442
+      "days_rounded": 441
+    },
+    {
+      "town": "Dongguan",
+      "nation": "State_Of_Tang",
+      "bank": 70641.11,
+      "upkeep": 440,
+      "days_rounded": 161
     },
     {
       "town": "East_Cdc",
       "nation": "Gran_Colombia",
-      "bank": 378091.93,
+      "bank": 377398.06,
       "upkeep": 693.87,
-      "days_rounded": 545
+      "days_rounded": 544
     },
     {
       "town": "Tahiti",
       "nation": "Oceanic_Empire",
-      "bank": 38397.48,
+      "bank": 38127.41,
       "upkeep": 270.07,
-      "days_rounded": 143
+      "days_rounded": 142
     },
     {
       "town": "Reed_Headquarters",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2862.59,
+      "bank": 2698.82,
       "upkeep": 163.77,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Frontenac",
       "nation": null,
-      "bank": 14614.83,
+      "bank": 14422.83,
       "upkeep": 192,
-      "days_rounded": 77
+      "days_rounded": 76
     },
     {
       "town": "Arrumberg",
       "nation": "Thracian_Dominion",
-      "bank": 13096.1,
+      "bank": 12762.71,
       "upkeep": 333.3,
-      "days_rounded": 40
+      "days_rounded": 39
     },
     {
       "town": "Naknek",
       "nation": "West_Coast_Republic",
-      "bank": 25867.92,
+      "bank": 25546.83,
       "upkeep": 321.18,
-      "days_rounded": 81
+      "days_rounded": 80
     },
     {
       "town": "Vespera",
       "nation": "Persian_Empire",
-      "bank": 583.53,
-      "upkeep": 258.83,
-      "days_rounded": 3
+      "bank": 329.72,
+      "upkeep": 253.81,
+      "days_rounded": 2
     },
     {
       "town": "The_Krusty_Crab",
       "nation": "Imperial_North",
-      "bank": 4305.92,
+      "bank": 4122.81,
       "upkeep": 183.11,
-      "days_rounded": 24
+      "days_rounded": 23
     },
     {
       "town": "Bermuda",
       "nation": "Imperial_North",
-      "bank": 5588,
+      "bank": 5444.48,
       "upkeep": 143.52,
-      "days_rounded": 39
+      "days_rounded": 38
     },
     {
       "town": "Mercer",
       "nation": "Eastern_Syndicate",
-      "bank": 18150.43,
+      "bank": 17949.58,
       "upkeep": 200.85,
-      "days_rounded": 91
+      "days_rounded": 90
     },
     {
       "town": "Miami",
@@ -4086,86 +4114,100 @@
     {
       "town": "North_Spero",
       "nation": "Republic_Of_Sakha",
-      "bank": 2577.69,
+      "bank": 2289.69,
       "upkeep": 288,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Fort_Vonatkerék",
       "nation": "Quintessence_Syndicate",
-      "bank": 1917.87,
+      "bank": 1748.95,
       "upkeep": 168.92,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "Pushpam_Vengeance",
       "nation": "Oceanic_Empire",
-      "bank": 593.5,
+      "bank": 484.62,
       "upkeep": 108.87,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "North_Austria",
       "nation": "Alchak_Federation",
-      "bank": 274.11,
+      "bank": 112.11,
       "upkeep": 162,
-      "days_rounded": 2
-    },
-    {
-      "town": "Los_Angeles",
-      "nation": "California_Republic",
-      "bank": 5085.46,
-      "upkeep": 1175,
-      "days_rounded": 5
+      "days_rounded": 1
     },
     {
       "town": "Yellowknife_District",
       "nation": "Canada",
-      "bank": 80,
+      "bank": 27,
       "upkeep": 53,
-      "days_rounded": 2
+      "days_rounded": 1
+    },
+    {
+      "town": "Los_Angeles",
+      "nation": "California_Republic",
+      "bank": 3910.47,
+      "upkeep": 1175,
+      "days_rounded": 4
     },
     {
       "town": "North_Samarinda",
       "nation": "Oceanic_Empire",
-      "bank": 21152.19,
+      "bank": 21062.4,
       "upkeep": 89.78,
-      "days_rounded": 236
-    },
-    {
-      "town": "Triumph",
-      "nation": "Eastern_Syndicate",
-      "bank": 2414.97,
-      "upkeep": 298.7,
-      "days_rounded": 9
+      "days_rounded": 235
     },
     {
       "town": "Dalvik",
       "nation": "British_Empire",
-      "bank": 6775.63,
+      "bank": 6375.2,
       "upkeep": 401.98,
-      "days_rounded": 17
+      "days_rounded": 16
+    },
+    {
+      "town": "Triumph",
+      "nation": "Eastern_Syndicate",
+      "bank": 2116.27,
+      "upkeep": 298.7,
+      "days_rounded": 8
     },
     {
       "town": "Sapporo",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3698.48,
+      "bank": 3184.51,
       "upkeep": 513.97,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "Lesser_Doharestan_Port",
       "nation": "Persian_Empire",
-      "bank": 1912.07,
-      "upkeep": 166.55,
-      "days_rounded": 12
+      "bank": 1103.51,
+      "upkeep": 191.59,
+      "days_rounded": 6
     },
     {
       "town": "Ahaztua",
       "nation": "Thracian_Dominion",
-      "bank": 2429797.05,
+      "bank": 2429558.59,
       "upkeep": 238.36,
-      "days_rounded": 10194
+      "days_rounded": 10193
+    },
+    {
+      "town": "Singapore",
+      "nation": "Oceanic_Empire",
+      "bank": 16233.89,
+      "upkeep": 397.33,
+      "days_rounded": 41
+    },
+    {
+      "town": "Wolframgrad",
+      "nation": "Thracian_Dominion",
+      "bank": 8517.23,
+      "upkeep": 326.23,
+      "days_rounded": 27
     },
     {
       "town": "Polabertopia",
@@ -4175,25 +4217,11 @@
       "days_rounded": 340
     },
     {
-      "town": "Wolframgrad",
-      "nation": "Thracian_Dominion",
-      "bank": 8843.56,
-      "upkeep": 326.23,
-      "days_rounded": 28
-    },
-    {
-      "town": "Singapore",
-      "nation": "Oceanic_Empire",
-      "bank": 16631.22,
-      "upkeep": 397.33,
-      "days_rounded": 42
-    },
-    {
       "town": "Luminus",
       "nation": "Oceanic_Empire",
-      "bank": 1350.37,
+      "bank": 1151.7,
       "upkeep": 198.66,
-      "days_rounded": 7
+      "days_rounded": 6
     },
     {
       "town": "Republic_Of_Ironwood",
@@ -4203,88 +4231,88 @@
       "days_rounded": 53
     },
     {
-      "town": "Squishton",
-      "nation": "West_Coast_Republic",
-      "bank": 3004.66,
-      "upkeep": 363.6,
-      "days_rounded": 9
-    },
-    {
       "town": "Astridia",
       "nation": "Imperium_Romanum",
-      "bank": 5137.3,
+      "bank": 4411.15,
       "upkeep": 726.15,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
-      "town": "Stellaris",
-      "nation": "Oceanic_Empire",
-      "bank": 1115.64,
-      "upkeep": 253.81,
-      "days_rounded": 5
-    },
-    {
-      "town": "Greenland",
-      "nation": "British_Empire",
-      "bank": 72491,
-      "upkeep": 74.74,
-      "days_rounded": 970
+      "town": "Squishton",
+      "nation": "West_Coast_Republic",
+      "bank": 9641.06,
+      "upkeep": 363.6,
+      "days_rounded": 27
     },
     {
       "town": "Schrutopia",
       "nation": "Persian_Empire",
-      "bank": 1331.96,
-      "upkeep": 126.17,
-      "days_rounded": 11
+      "bank": 1208.23,
+      "upkeep": 123.72,
+      "days_rounded": 10
     },
     {
-      "town": "Sharance",
-      "nation": "Kingdom_Of_Ethiopia",
-      "bank": 337,
-      "upkeep": 30,
-      "days_rounded": 12
+      "town": "Stellaris",
+      "nation": "Oceanic_Empire",
+      "bank": 861.83,
+      "upkeep": 253.81,
+      "days_rounded": 4
+    },
+    {
+      "town": "Greenland",
+      "nation": "British_Empire",
+      "bank": 72416.26,
+      "upkeep": 74.74,
+      "days_rounded": 969
     },
     {
       "town": "Exodus",
       "nation": "Imperial_North",
-      "bank": 42.22,
+      "bank": 18.18,
       "upkeep": 24.03,
-      "days_rounded": 2
+      "days_rounded": 1
+    },
+    {
+      "town": "Sharance",
+      "nation": "Kingdom_Of_Ethiopia",
+      "bank": 307,
+      "upkeep": 30,
+      "days_rounded": 11
     },
     {
       "town": "Bastion_Defence",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2307.62,
+      "bank": 2050.12,
       "upkeep": 257.5,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "New_Moonstone",
       "nation": "Imperial_North",
-      "bank": 1906.23,
+      "bank": 1777.55,
       "upkeep": 128.67,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Landromat",
       "nation": null,
-      "bank": 36,
+      "bank": 15,
       "upkeep": 21,
-      "days_rounded": 2
+      "days_rounded": 1
     },
     {
       "town": "South_Nadym",
       "nation": "Eastern_Syndicate",
-      "bank": 8828.34,
+      "bank": 8702.68,
       "upkeep": 125.66,
-      "days_rounded": 71
+      "days_rounded": 70
     },
     {
       "town": "New_Huslia",
       "nation": "West_Coast_Republic",
-      "bank": 13897.57,
+      "bank": 13316.82,
       "upkeep": 580.75,
-      "days_rounded": 24
+      "days_rounded": 23
     },
     {
       "town": "Cultist_Tower",
@@ -4296,485 +4324,471 @@
     {
       "town": "Thracia_Dio",
       "nation": "Imperium_Romanum",
-      "bank": 1705.77,
+      "bank": 1525.52,
       "upkeep": 180.25,
-      "days_rounded": 10
+      "days_rounded": 9
     },
     {
       "town": "Nova_Valyria_Port",
       "nation": "Imperial_North",
-      "bank": 5016.51,
+      "bank": 4769.77,
       "upkeep": 246.74,
-      "days_rounded": 21
-    },
-    {
-      "town": "Rhiannon",
-      "nation": "Alexandrine_Dominion",
-      "bank": 11445.55,
-      "upkeep": 170.69,
-      "days_rounded": 68
+      "days_rounded": 20
     },
     {
       "town": "Sol",
       "nation": "Vanaco",
-      "bank": 2382.57,
+      "bank": 1362.57,
       "upkeep": 1020,
-      "days_rounded": 3
+      "days_rounded": 2
+    },
+    {
+      "town": "Rhiannon",
+      "nation": "Alexandrine_Dominion",
+      "bank": 11274.86,
+      "upkeep": 170.69,
+      "days_rounded": 67
     },
     {
       "town": "Argenton",
       "nation": "Thracian_Dominion",
-      "bank": 8247.5,
+      "bank": 7985.81,
       "upkeep": 261.59,
-      "days_rounded": 32
+      "days_rounded": 31
     },
     {
       "town": "California",
       "nation": "West_Coast_Republic",
-      "bank": 6864.87,
+      "bank": 6424.51,
       "upkeep": 440.36,
-      "days_rounded": 16
+      "days_rounded": 15
     },
     {
       "town": "JosefVaros",
       "nation": "Imperium_Romanum",
-      "bank": 1105.82,
+      "bank": 1041.96,
       "upkeep": 63.86,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "Elysium",
       "nation": "Eastern_Syndicate",
-      "bank": 12718.96,
+      "bank": 11926.2,
       "upkeep": 803.4,
-      "days_rounded": 16
-    },
-    {
-      "town": "Oriental",
-      "nation": "The_Great_Lotus_Empire",
-      "bank": 826.48,
-      "upkeep": 87,
-      "days_rounded": 10
+      "days_rounded": 15
     },
     {
       "town": "New_Salisbury",
       "nation": "Russo_Japanese_Empire",
-      "bank": 3075630.08,
+      "bank": 3075057.4,
       "upkeep": 572.68,
-      "days_rounded": 5371
+      "days_rounded": 5370
+    },
+    {
+      "town": "Oriental",
+      "nation": "The_Great_Lotus_Empire",
+      "bank": 739.48,
+      "upkeep": 87,
+      "days_rounded": 9
     },
     {
       "town": "Togen",
       "nation": "Russo_Japanese_Empire",
-      "bank": 11195.53,
+      "bank": 10792.8,
       "upkeep": 402.73,
-      "days_rounded": 28
-    },
-    {
-      "town": "Kalatia",
-      "nation": "Imperial_North",
-      "bank": 811.18,
-      "upkeep": 60.8,
-      "days_rounded": 14
+      "days_rounded": 27
     },
     {
       "town": "Astraeus",
       "nation": "Persian_Empire",
-      "bank": 2088.18,
-      "upkeep": 310.03,
-      "days_rounded": 7
-    },
-    {
-      "town": "Little_Saskatchewan",
-      "nation": "Imperial_North",
-      "bank": 5251.87,
-      "upkeep": 106.05,
-      "days_rounded": 50
+      "bank": 1784.16,
+      "upkeep": 304.01,
+      "days_rounded": 6
     },
     {
       "town": "Aussa",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 4574.29,
+      "bank": 4444.29,
       "upkeep": 130,
-      "days_rounded": 36
-    },
-    {
-      "town": "Nueva_Lanus",
-      "nation": "Quintessence_Syndicate",
-      "bank": 17869.3,
-      "upkeep": 233.81,
-      "days_rounded": 77
-    },
-    {
-      "town": "Ordanbek",
-      "nation": "The_Great_Lotus_Empire",
-      "bank": 14873.99,
-      "upkeep": 428,
       "days_rounded": 35
+    },
+    {
+      "town": "Little_Saskatchewan",
+      "nation": "Imperial_North",
+      "bank": 5145.83,
+      "upkeep": 106.05,
+      "days_rounded": 49
     },
     {
       "town": "Invicta",
       "nation": "Persian_Empire",
-      "bank": 53779.2,
-      "upkeep": 187.46,
-      "days_rounded": 287
+      "bank": 53595.38,
+      "upkeep": 183.82,
+      "days_rounded": 292
+    },
+    {
+      "town": "Ordanbek",
+      "nation": "The_Great_Lotus_Empire",
+      "bank": 14449.99,
+      "upkeep": 428,
+      "days_rounded": 34
+    },
+    {
+      "town": "Nueva_Lanus",
+      "nation": "Quintessence_Syndicate",
+      "bank": 17635.48,
+      "upkeep": 233.81,
+      "days_rounded": 76
     },
     {
       "town": "Port_Semzha",
       "nation": "Imperium_Romanum",
-      "bank": 17889.08,
+      "bank": 17410.13,
       "upkeep": 478.95,
-      "days_rounded": 38
+      "days_rounded": 37
     },
     {
       "town": "Uranus",
       "nation": "Vanaco",
-      "bank": 3332.83,
+      "bank": 3008.5,
       "upkeep": 324,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Onyx",
       "nation": "Thracian_Dominion",
-      "bank": 2430.24,
+      "bank": 2145.32,
       "upkeep": 284.82,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Silver_Springs",
       "nation": "Alexandrine_Dominion",
-      "bank": 481,
+      "bank": 380,
       "upkeep": 101,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "Kelafo",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 1647.61,
+      "bank": 1413.61,
       "upkeep": 234,
-      "days_rounded": 8
+      "days_rounded": 7
     },
     {
       "town": "St._Michael",
       "nation": "Russo_Japanese_Empire",
-      "bank": 12794.29,
+      "bank": 12314.31,
       "upkeep": 479.98,
-      "days_rounded": 27
+      "days_rounded": 26
     },
     {
       "town": "Vestfold",
       "nation": "Imperium_Romanum",
-      "bank": 2777.06,
+      "bank": 2503.08,
       "upkeep": 273.98,
-      "days_rounded": 11
+      "days_rounded": 10
     },
     {
       "town": "Sindhlands",
       "nation": "Persian_Empire",
-      "bank": 54704.35,
-      "upkeep": 58.4,
-      "days_rounded": 937
+      "bank": 55133.09,
+      "upkeep": 57.26,
+      "days_rounded": 963
     },
     {
       "town": "St.Augustina",
       "nation": "Spanish_Empire",
-      "bank": 1681.92,
+      "bank": 1453.28,
       "upkeep": 195,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Meowngolia",
       "nation": "Imperium_Romanum",
-      "bank": 1477613.36,
+      "bank": 1476973.73,
       "upkeep": 639.63,
-      "days_rounded": 2311
+      "days_rounded": 2310
+    },
+    {
+      "town": "Regresso",
+      "nation": null,
+      "bank": 20500,
+      "upkeep": 20,
+      "days_rounded": 1025
     },
     {
       "town": "Yemen",
       "nation": "Persian_Empire",
-      "bank": 830.48,
-      "upkeep": 245.14,
-      "days_rounded": 4
-    },
-    {
-      "town": "Karsian_Vanguard",
-      "nation": null,
-      "bank": 11968.02,
-      "upkeep": 221,
-      "days_rounded": 55
+      "bank": 590.1,
+      "upkeep": 240.37,
+      "days_rounded": 3
     },
     {
       "town": "Cultist_Order",
       "nation": null,
-      "bank": 6657.21,
+      "bank": 6472.21,
       "upkeep": 185,
-      "days_rounded": 36
+      "days_rounded": 35
     },
     {
-      "town": "Cerberus",
-      "nation": "Thracian_Dominion",
-      "bank": 7138.62,
-      "upkeep": 165.64,
-      "days_rounded": 44
-    },
-    {
-      "town": "New_Utrecht",
-      "nation": "Oceanic_Empire",
-      "bank": 1414.56,
-      "upkeep": 224.11,
-      "days_rounded": 7
+      "town": "Karsian_Vanguard",
+      "nation": null,
+      "bank": 11747.02,
+      "upkeep": 221,
+      "days_rounded": 54
     },
     {
       "town": "Flowersvile",
       "nation": "Thracian_Dominion",
-      "bank": 2887.24,
+      "bank": 2640.7,
       "upkeep": 246.44,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
-      "town": "Sri_Lanka",
-      "nation": "Russo_Japanese_Empire",
-      "bank": 47228.84,
-      "upkeep": 204.97,
-      "days_rounded": 231
+      "town": "New_Utrecht",
+      "nation": "Oceanic_Empire",
+      "bank": 1190.44,
+      "upkeep": 224.11,
+      "days_rounded": 6
+    },
+    {
+      "town": "Cerberus",
+      "nation": "Thracian_Dominion",
+      "bank": 6972.88,
+      "upkeep": 165.64,
+      "days_rounded": 43
     },
     {
       "town": "SecretEvilEmpire",
       "nation": "Gran_Colombia",
-      "bank": 1125.92,
+      "bank": 1038.05,
       "upkeep": 87.87,
-      "days_rounded": 13
+      "days_rounded": 12
     },
     {
       "town": "Finisterra",
       "nation": null,
-      "bank": 4,
+      "bank": 644,
       "upkeep": 40,
-      "days_rounded": 0
+      "days_rounded": 17
+    },
+    {
+      "town": "Sri_Lanka",
+      "nation": "Russo_Japanese_Empire",
+      "bank": 47023.87,
+      "upkeep": 204.97,
+      "days_rounded": 230
     },
     {
       "town": "Konigsberg",
       "nation": "Imperium_Romanum",
-      "bank": 874395.88,
+      "bank": 873311.41,
       "upkeep": 1320.46,
-      "days_rounded": 663
+      "days_rounded": 662
     },
     {
       "town": "Cratopolis",
       "nation": "Eastern_Syndicate",
-      "bank": 9437.5,
+      "bank": 6600.69,
       "upkeep": 336.81,
-      "days_rounded": 29
+      "days_rounded": 20
     },
     {
       "town": "Westvale",
       "nation": "Imperial_North",
-      "bank": 8488.12,
+      "bank": 8240.67,
       "upkeep": 247.44,
-      "days_rounded": 35
+      "days_rounded": 34
     },
     {
       "town": "Polaris",
       "nation": "Vanaco",
-      "bank": 70076.53,
+      "bank": 69781.53,
       "upkeep": 290,
-      "days_rounded": 242
+      "days_rounded": 241
     },
     {
       "town": "Allakaket",
       "nation": "West_Coast_Republic",
-      "bank": 10844.15,
+      "bank": 10640.13,
       "upkeep": 204.02,
-      "days_rounded": 54
-    },
-    {
-      "town": "Luminara",
-      "nation": null,
-      "bank": null,
-      "upkeep": 20,
-      "days_rounded": null
+      "days_rounded": 53
     },
     {
       "town": "Cyberstan",
       "nation": "Vanaco",
-      "bank": 5000.16,
+      "bank": 4709.66,
       "upkeep": 290,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "New_Gdynia",
       "nation": "Vanaco",
-      "bank": 1456.29,
+      "bank": 940.15,
       "upkeep": 516,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Panama",
       "nation": "the caribbean empire. No taxes",
-      "bank": 335591.98,
+      "bank": 335002.98,
       "upkeep": 589,
-      "days_rounded": 570
+      "days_rounded": 569
     },
     {
       "town": "Port_Satsuma",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1457.99,
+      "bank": 1119.12,
       "upkeep": 338.87,
-      "days_rounded": 5
+      "days_rounded": 4
     },
     {
       "town": "King_Nor_Palace",
       "nation": "Gran_Colombia",
-      "bank": 3518.37,
+      "bank": 3269.91,
       "upkeep": 248.46,
-      "days_rounded": 15
+      "days_rounded": 14
     },
     {
       "town": "Tumble_Town",
       "nation": "Eastern_Syndicate",
-      "bank": 13825.55,
+      "bank": 13596.89,
       "upkeep": 228.66,
-      "days_rounded": 61
+      "days_rounded": 60
     },
     {
       "town": "Hachinohe",
       "nation": "Russo_Japanese_Empire",
-      "bank": 66344.23,
+      "bank": 65660.31,
       "upkeep": 683.92,
-      "days_rounded": 98
+      "days_rounded": 97
     },
     {
       "town": "Ordenstaat_Borneo",
       "nation": "Eastern_Syndicate",
-      "bank": 1092.8,
+      "bank": 883.7,
       "upkeep": 209.09,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Ispanica",
       "nation": "Imperium_Romanum",
-      "bank": 407.22,
+      "bank": 346.45,
       "upkeep": 60.77,
-      "days_rounded": 7
-    },
-    {
-      "town": "IloN",
-      "nation": "East_African_Federation",
-      "bank": 2467,
-      "upkeep": 234,
-      "days_rounded": 11
+      "days_rounded": 6
     },
     {
       "town": "Independence",
       "nation": "Gran_Colombia",
-      "bank": 25695.01,
+      "bank": 25169.81,
       "upkeep": 525.2,
-      "days_rounded": 49
+      "days_rounded": 48
+    },
+    {
+      "town": "IloN",
+      "nation": "East_African_Federation",
+      "bank": 2233,
+      "upkeep": 234,
+      "days_rounded": 10
     },
     {
       "town": "Valkarie",
-      "nation": "Thracian_Dominion",
-      "bank": 7683.7,
-      "upkeep": 134.33,
-      "days_rounded": 58
+      "nation": "Persian_Empire",
+      "bank": 7589.66,
+      "upkeep": 94.03,
+      "days_rounded": 81
     },
     {
       "town": "Cherbourg",
       "nation": "Imperium_Romanum",
-      "bank": 7842.35,
+      "bank": 7511.72,
       "upkeep": 330.63,
-      "days_rounded": 24
+      "days_rounded": 23
     },
     {
       "town": "Diamantina",
       "nation": "Oceanic_Empire",
-      "bank": 18543.56,
+      "bank": 18326.51,
       "upkeep": 217.04,
-      "days_rounded": 86
+      "days_rounded": 85
     },
     {
       "town": "Holy_Mirage",
       "nation": "Imperium_Romanum",
-      "bank": 186432.7,
-      "upkeep": 304.88,
-      "days_rounded": 612
+      "bank": 186108.79,
+      "upkeep": 305.91,
+      "days_rounded": 609
     },
     {
       "town": "Nafun",
       "nation": "Persian_Empire",
-      "bank": 435.25,
-      "upkeep": 73.54,
+      "bank": 363.13,
+      "upkeep": 72.11,
       "days_rounded": 6
     },
     {
       "town": "Port_Kwa",
       "nation": "Imperium_Romanum",
-      "bank": 75734.08,
+      "bank": 75386.97,
       "upkeep": 347.11,
-      "days_rounded": 219
+      "days_rounded": 218
+    },
+    {
+      "town": "Turtle_Bastion",
+      "nation": "Eastern_Syndicate",
+      "bank": 588.66,
+      "upkeep": 91.67,
+      "days_rounded": 7
     },
     {
       "town": "Liberta",
       "nation": "West_Coast_Republic",
-      "bank": 536.18,
+      "bank": 463.46,
       "upkeep": 72.72,
-      "days_rounded": 8
-    },
-    {
-      "town": "Turtle_Bastion",
-      "nation": "Persian_Empire",
-      "bank": 2377.66,
-      "upkeep": 64.16,
-      "days_rounded": 38
+      "days_rounded": 7
     },
     {
       "town": "New_Porto",
       "nation": "Oceanic_Empire",
-      "bank": 398.79,
+      "bank": 362.73,
       "upkeep": 36.05,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "Winterfell",
       "nation": "British_Empire",
-      "bank": 3618.41,
+      "bank": 3490.14,
       "upkeep": 128.27,
-      "days_rounded": 29
+      "days_rounded": 28
     },
     {
       "town": "Yamato",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2335.09,
+      "bank": 1381.57,
       "upkeep": 1013.52,
-      "days_rounded": 3
-    },
-    {
-      "town": "North_Star",
-      "nation": "Republic_Of_Sakha",
-      "bank": 99107.13,
-      "upkeep": 348,
-      "days_rounded": 285
+      "days_rounded": 2
     },
     {
       "town": "DelRey",
       "nation": "Gran_Colombia",
-      "bank": 2331.29,
+      "bank": 2176.76,
       "upkeep": 154.53,
-      "days_rounded": 16
+      "days_rounded": 15
+    },
+    {
+      "town": "North_Star",
+      "nation": "Republic_Of_Sakha",
+      "bank": 97759.13,
+      "upkeep": 348,
+      "days_rounded": 281
     },
     {
       "town": "Agrigent",
       "nation": "Alexandrine_Dominion",
-      "bank": 3976.64,
+      "bank": 3401.95,
       "upkeep": 574.69,
-      "days_rounded": 7
-    },
-    {
-      "town": "Port_Novgorod",
-      "nation": "Polish_Empire",
-      "bank": 6946.26,
-      "upkeep": 213,
-      "days_rounded": 33
+      "days_rounded": 6
     },
     {
       "town": "F.A.A.F.O._Potzland",
@@ -4784,18 +4798,25 @@
       "days_rounded": 13
     },
     {
+      "town": "Port_Novgorod",
+      "nation": "Polish_Empire",
+      "bank": 6594.33,
+      "upkeep": 213,
+      "days_rounded": 31
+    },
+    {
       "town": "Sardinia",
       "nation": "Spanish_Empire",
-      "bank": 6751.88,
+      "bank": 6207.84,
       "upkeep": 409,
-      "days_rounded": 17
+      "days_rounded": 16
     },
     {
       "town": "Pirate_Bay",
       "nation": "Potarian_Seaguards",
-      "bank": 2285.2,
+      "bank": 2115.2,
       "upkeep": 170,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Pan_Point",
@@ -4807,191 +4828,177 @@
     {
       "town": "Potarian_Citadel",
       "nation": "Potarian_Seaguards",
-      "bank": 121226.81,
+      "bank": 121181.81,
       "upkeep": 45,
-      "days_rounded": 2694
+      "days_rounded": 2693
     },
     {
       "town": "Newburn",
       "nation": "Imperial_Federation",
-      "bank": 510.54,
+      "bank": 2757.54,
       "upkeep": 253,
-      "days_rounded": 3
+      "days_rounded": 11
     },
     {
       "town": "New_Mistveil",
       "nation": "Persian_Empire",
-      "bank": 477.84,
-      "upkeep": 189.62,
-      "days_rounded": 3
+      "bank": 291.9,
+      "upkeep": 185.94,
+      "days_rounded": 2
     },
     {
       "town": "Turkic_Republic",
       "nation": null,
-      "bank": 195,
+      "bank": 160,
       "upkeep": 35,
-      "days_rounded": 6
+      "days_rounded": 5
     },
     {
       "town": "Palliser",
       "nation": "The_Protocol_State",
-      "bank": 44324,
+      "bank": 44014,
       "upkeep": 310,
-      "days_rounded": 143
+      "days_rounded": 142
     },
     {
       "town": "Port_Yamdena",
       "nation": "Oceanic_Empire",
-      "bank": 4813.05,
+      "bank": 4653.27,
       "upkeep": 159.78,
-      "days_rounded": 31
+      "days_rounded": 30
     },
     {
       "town": "Hainan",
       "nation": "State_Of_Tang",
-      "bank": 18450.94,
+      "bank": 18207.94,
       "upkeep": 243,
-      "days_rounded": 76
+      "days_rounded": 75
     },
     {
       "town": "Triple_T_Town",
       "nation": null,
-      "bank": 162.89,
+      "bank": 120.89,
       "upkeep": 42,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Cragshire",
       "nation": "Vanaco",
-      "bank": 32704.01,
+      "bank": 32139.74,
       "upkeep": 561,
-      "days_rounded": 59
+      "days_rounded": 58
     },
     {
       "town": "Port_Johnson",
       "nation": "Oceanic_Empire",
-      "bank": 148.44,
+      "bank": 80.57,
       "upkeep": 67.87,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Camp_Ironwood",
       "nation": null,
-      "bank": 6909.61,
+      "bank": 6658.61,
       "upkeep": 251,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "Yamdena",
       "nation": "Oceanic_Empire",
-      "bank": 81094.55,
+      "bank": 80018.49,
       "upkeep": 1076.05,
-      "days_rounded": 76
+      "days_rounded": 75
     },
     {
       "town": "Siniygorod",
       "nation": null,
-      "bank": 859,
+      "bank": 831,
       "upkeep": 28,
-      "days_rounded": 31
+      "days_rounded": 30
     },
     {
       "town": "Lagos",
       "nation": "Alexandrine_Dominion",
-      "bank": 458.62,
+      "bank": 1018.65,
       "upkeep": 454.5,
-      "days_rounded": 2
-    },
-    {
-      "town": "Colvmbia",
-      "nation": "Imperial_North",
-      "bank": 2794.57,
-      "upkeep": 430.56,
-      "days_rounded": 7
+      "days_rounded": 3
     },
     {
       "town": "Eternal_Embers",
       "nation": null,
-      "bank": 6386.44,
+      "bank": 6110.44,
       "upkeep": 276,
-      "days_rounded": 24
+      "days_rounded": 23
     },
     {
-      "town": "Olimpiad",
-      "nation": "Imperia_Lysia",
-      "bank": 6687,
-      "upkeep": 272,
-      "days_rounded": 25
-    },
-    {
-      "town": "Toronto",
+      "town": "Colvmbia",
       "nation": "Imperial_North",
-      "bank": 4464.25,
-      "upkeep": 318.15,
-      "days_rounded": 15
+      "bank": 2364.01,
+      "upkeep": 430.56,
+      "days_rounded": 6
     },
     {
       "town": "L.B._Aerodrome",
       "nation": "Canada",
-      "bank": 8993,
-      "upkeep": 143,
-      "days_rounded": 63
+      "bank": 8746,
+      "upkeep": 151,
+      "days_rounded": 58
+    },
+    {
+      "town": "Toronto",
+      "nation": "Imperial_North",
+      "bank": 4146.1,
+      "upkeep": 318.15,
+      "days_rounded": 14
     },
     {
       "town": "Hermes",
       "nation": "Vanaco",
-      "bank": 1266.48,
+      "bank": 836.35,
       "upkeep": 430,
-      "days_rounded": 3
+      "days_rounded": 2
     },
     {
       "town": "Alberta",
       "nation": "Canada",
-      "bank": 1608,
+      "bank": 1562,
       "upkeep": 46,
-      "days_rounded": 35
+      "days_rounded": 34
     },
     {
       "town": "Chamdo",
       "nation": "State_Of_Tang",
-      "bank": 851247.07,
+      "bank": 850928.07,
       "upkeep": 319,
-      "days_rounded": 2669
+      "days_rounded": 2668
     },
     {
       "town": "Mercury",
       "nation": "Spanish_Empire",
-      "bank": 4513.78,
+      "bank": 4298.5,
       "upkeep": 125,
-      "days_rounded": 37
+      "days_rounded": 35
     },
     {
       "town": "Port_Socotra",
       "nation": "East_African_Federation",
-      "bank": 59946.73,
+      "bank": 59555.73,
       "upkeep": 391,
-      "days_rounded": 154
+      "days_rounded": 153
     },
     {
       "town": "Aurelia",
       "nation": "Spanish_Empire",
-      "bank": 23840.86,
+      "bank": 22811.59,
       "upkeep": 498,
-      "days_rounded": 48
+      "days_rounded": 46
     },
     {
-      "town": "Arstotzka",
-      "nation": null,
-      "bank": 3998,
-      "upkeep": 48,
-      "days_rounded": 84
-    },
-    {
-      "town": "LemIsland",
-      "nation": "State_Of_Tang",
-      "bank": 3623.2,
-      "upkeep": 66,
-      "days_rounded": 55
+      "town": "Harfell",
+      "nation": "Imperial_North",
+      "bank": 916.91,
+      "upkeep": 19.79,
+      "days_rounded": 47
     },
     {
       "town": "Almondir",
@@ -5001,249 +5008,263 @@
       "days_rounded": 4
     },
     {
-      "town": "Harfell",
-      "nation": "Imperial_North",
-      "bank": 936.7,
-      "upkeep": 19.79,
-      "days_rounded": 48
+      "town": "LemIsland",
+      "nation": "State_Of_Tang",
+      "bank": 3557.2,
+      "upkeep": 66,
+      "days_rounded": 54
+    },
+    {
+      "town": "Arstotzka",
+      "nation": null,
+      "bank": 3950,
+      "upkeep": 48,
+      "days_rounded": 83
     },
     {
       "town": "Swannage_Pier",
       "nation": "Republic_Of_Sakha",
-      "bank": 718.02,
+      "bank": 1430.02,
       "upkeep": 320,
-      "days_rounded": 3
+      "days_rounded": 5
     },
     {
       "town": "Kalvrixia",
       "nation": "Thracian_Dominion",
-      "bank": 2488.51,
+      "bank": 2195.51,
       "upkeep": 292.9,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Matecha",
       "nation": "Gran_Colombia",
-      "bank": 3358.62,
+      "bank": 3234.39,
       "upkeep": 124.23,
-      "days_rounded": 28
+      "days_rounded": 27
     },
     {
       "town": "New_Gold_Port",
       "nation": "Gold Port Corporation",
-      "bank": 258187.27,
+      "bank": 257444.27,
       "upkeep": 743,
-      "days_rounded": 348
-    },
-    {
-      "town": "Triunfo",
-      "nation": null,
-      "bank": 10382.53,
-      "upkeep": 478,
-      "days_rounded": 22
+      "days_rounded": 347
     },
     {
       "town": "Majhna_Jugoslavija",
       "nation": "Kingdom_Of_Ethiopia",
-      "bank": 147,
+      "bank": 23,
       "upkeep": 124,
-      "days_rounded": 2
+      "days_rounded": 0
+    },
+    {
+      "town": "Triunfo",
+      "nation": null,
+      "bank": 9904.58,
+      "upkeep": 478,
+      "days_rounded": 21
     },
     {
       "town": "Port_Europa",
       "nation": "Alchak_Federation",
-      "bank": 50773.13,
+      "bank": 50310.13,
       "upkeep": 463,
-      "days_rounded": 110
+      "days_rounded": 109
     },
     {
       "town": "Camellia",
       "nation": "Imperial_North",
-      "bank": 4860.6,
+      "bank": 81753.89,
       "upkeep": 374.71,
-      "days_rounded": 13
+      "days_rounded": 219
     },
     {
       "town": "Guimaraes",
       "nation": null,
-      "bank": 4717.63,
+      "bank": 4375.63,
       "upkeep": 342,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Port_Tora",
       "nation": "Oceanic_Empire",
-      "bank": 26758.64,
+      "bank": 26411.75,
       "upkeep": 358.44,
-      "days_rounded": 75
+      "days_rounded": 74
     },
     {
       "town": "Shibbu",
       "nation": "Thracian_Dominion",
-      "bank": 8832.46,
+      "bank": 8766.71,
       "upkeep": 65.65,
-      "days_rounded": 135
+      "days_rounded": 134
+    },
+    {
+      "town": "Sedanau",
+      "nation": "Oceanic_Empire",
+      "bank": 1122.3,
+      "upkeep": 29.69,
+      "days_rounded": 38
     },
     {
       "town": "Pushpam",
       "nation": "Oceanic_Empire",
-      "bank": 3523.68,
+      "bank": 3259.97,
       "upkeep": 263.71,
-      "days_rounded": 14
+      "days_rounded": 13
     },
     {
       "town": "Justice",
       "nation": "Spanish_Empire",
-      "bank": 725.49,
+      "bank": 520.98,
       "upkeep": 190,
-      "days_rounded": 4
+      "days_rounded": 3
     },
     {
       "town": "Red_Ocean",
       "nation": "Imperial_North",
-      "bank": 8719.46,
+      "bank": 8682.69,
       "upkeep": 36.76,
-      "days_rounded": 238
+      "days_rounded": 237
     },
     {
       "town": "Tripoli",
       "nation": "Imperium_Romanum",
-      "bank": 3363.87,
+      "bank": 2968.35,
       "upkeep": 395.52,
-      "days_rounded": 9
+      "days_rounded": 8
     },
     {
       "town": "Vinland",
       "nation": "Russo_Japanese_Empire",
-      "bank": 44563.77,
+      "bank": 44404.12,
       "upkeep": 159.65,
-      "days_rounded": 280
+      "days_rounded": 279
     },
     {
       "town": "Vanguard_Baza",
       "nation": "Russo_Japanese_Empire",
-      "bank": 334.75,
+      "bank": 150.38,
       "upkeep": 184.37,
-      "days_rounded": 2
+      "days_rounded": 1
     },
     {
       "town": "New_Canada_Defense",
       "nation": "Canada",
-      "bank": 30,
+      "bank": 307,
       "upkeep": 63,
-      "days_rounded": 0
+      "days_rounded": 5
     },
     {
       "town": "New_Shocktown",
       "nation": "Oceanic_Empire",
-      "bank": 280.67,
+      "bank": 103.92,
       "upkeep": 176.75,
-      "days_rounded": 2
+      "days_rounded": 1
     },
     {
       "town": "Chione",
       "nation": "Elite_Penguin_Force",
-      "bank": 6226.38,
+      "bank": 6057.38,
       "upkeep": 169,
-      "days_rounded": 37
+      "days_rounded": 36
     },
     {
       "town": "Kita_No_Ryu",
       "nation": "Russo_Japanese_Empire",
-      "bank": 8206.22,
+      "bank": 8112.49,
       "upkeep": 93.73,
-      "days_rounded": 88
+      "days_rounded": 87
     },
     {
       "town": "Cardinance",
       "nation": "Imperial_North",
-      "bank": 1379.81,
+      "bank": 1259.62,
       "upkeep": 120.18,
-      "days_rounded": 12
+      "days_rounded": 11
     },
     {
       "town": "Moonrest",
       "nation": "OCTACORP",
-      "bank": 25362.43,
+      "bank": 25308.43,
       "upkeep": 54,
-      "days_rounded": 470
+      "days_rounded": 469
     },
     {
       "town": "Hades",
       "nation": "Thracian_Dominion",
-      "bank": 4909.12,
+      "bank": 4631.27,
       "upkeep": 277.75,
-      "days_rounded": 18
+      "days_rounded": 17
     },
     {
       "town": "The_Spire_Of_Jospan",
       "nation": "Persian_Empire",
-      "bank": 9085.2,
-      "upkeep": 167.99,
+      "bank": 8920.47,
+      "upkeep": 164.73,
       "days_rounded": 55
     },
     {
       "town": "Santiago",
       "nation": "Gran_Colombia",
-      "bank": 4391.25,
+      "bank": 4029.67,
       "upkeep": 361.58,
-      "days_rounded": 13
+      "days_rounded": 12
     },
     {
       "town": "VaultTech",
       "nation": "The_Protocol_State",
-      "bank": 40912.32,
+      "bank": 40758.32,
       "upkeep": 154,
-      "days_rounded": 266
+      "days_rounded": 265
     },
     {
       "town": "Nova_Pozzos",
       "nation": null,
-      "bank": 770,
+      "bank": 744,
       "upkeep": 26,
-      "days_rounded": 30
+      "days_rounded": 29
     },
     {
       "town": "Shirogitsune_Port",
       "nation": null,
-      "bank": 218377.59,
+      "bank": 218193.59,
       "upkeep": 184,
-      "days_rounded": 1187
+      "days_rounded": 1186
     },
     {
       "town": "Puerto_Lando",
       "nation": "Landinian_Federation",
-      "bank": 144734.12,
+      "bank": 144221.12,
       "upkeep": 533,
-      "days_rounded": 272
+      "days_rounded": 271
     },
     {
       "town": "Zirck",
       "nation": "Russo_Japanese_Empire",
-      "bank": 1462.83,
+      "bank": 1420.6,
       "upkeep": 42.23,
-      "days_rounded": 35
+      "days_rounded": 34
     },
     {
       "town": "Karma",
       "nation": "Thracian_Dominion",
-      "bank": 4648.48,
+      "bank": 4410.02,
       "upkeep": 238.36,
-      "days_rounded": 20
+      "days_rounded": 19
     },
     {
       "town": "Syndicate_Sidequest",
       "nation": "Eastern_Syndicate",
-      "bank": 5341.76,
+      "bank": 5194.48,
       "upkeep": 147.29,
-      "days_rounded": 37
+      "days_rounded": 36
     },
     {
       "town": "Yingkou",
       "nation": "Russo_Japanese_Empire",
-      "bank": 2137.88,
+      "bank": 1529.15,
       "upkeep": 608.73,
-      "days_rounded": 4
+      "days_rounded": 3
     }
   ]
 }
